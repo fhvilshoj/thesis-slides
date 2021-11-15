@@ -21,6 +21,7 @@ const eslint = require('gulp-eslint')
 const minify = require('gulp-clean-css')
 const connect = require('gulp-connect')
 const autoprefixer = require('gulp-autoprefixer')
+const spawn = require('child_process').spawn
 
 const root = yargs.argv.root || '.'
 const port = yargs.argv.port || 8000
@@ -115,6 +116,14 @@ gulp.task('js-es6', () => {
     });
 })
 gulp.task('js', gulp.parallel('js-es5', 'js-es6'));
+
+gulp.task('ipe', function (cb) {
+    var cmd = spawn('/home/fhv/anaconda3/bin/python', ['assets/extract_svgs.py'], {stdio: 'inherit'});
+    cmd.on('close', function (code) {
+        console.log('Task exited with code ' + code);
+        cb(code);
+    });
+});
 
 // Creates a UMD and ES module bundle for each of our
 // built-in plugins
@@ -271,10 +280,11 @@ gulp.task('build', gulp.parallel('js', 'css', 'plugins'))
 gulp.task('package', gulp.series('default', () =>
 
     gulp.src([
-        './index.html',
+        './**.html',
         './dist/**',
         './lib/**',
         './images/**',
+        './assets/**',
         './plugin/**',
         './**.md'
     ]).pipe(zip('reveal-js-presentation.zip')).pipe(gulp.dest('./'))
@@ -308,6 +318,8 @@ gulp.task('serve', () => {
         'css/*.scss',
         'css/print/*.{sass,scss,css}'
     ], gulp.series('css-core', 'reload'))
+
+    gulp.watch(['assets/ipe-graphics.pdf'], gulp.series('ipe', 'reload'))
 
     gulp.watch(['test/*.html'], gulp.series('test'))
 

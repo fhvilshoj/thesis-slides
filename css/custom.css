@@ -1,0 +1,13 @@
+
+.monospace {
+    font-family: "Space Mono";
+}
+
+.slides section.has-dark-background h2 {
+    color: #fff;
+}
+
+.slides section.has-light-background,
+.slides section.has-light-background h2 {
+    color: #222;
+}

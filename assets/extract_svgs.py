@@ -47,13 +47,15 @@ def main(ipe_prefix='', working_dir='.'):
         file_suffix = "" if res.view is None else "_v%d" % res.view
         template = '%siperender -svg -resolution 200 -page %%d %s %s.pdf %s/svgs/p%%d%s.svg' % (ipe_prefix, view, name, working_dir, file_suffix)
         cmd = template % (res.page, res.page)
-        r = run(cmd, check=True, shell=True)
-        return r.returncode
+        r = run(cmd, shell=True, check=True, stdout=None, capture_output=True)
+        return r.returncode == 0
 
 
     with Executor(max_workers=4) as exe:
         jobs = [exe.submit(extract_page, r) for r in to_extract]
         codes = [j.result() for j in jobs]
+    if not all(codes):
+        raise ValueError("Something went wrong")
 
 if __name__ == "__main__":
     working_dir = "/".join(os.path.realpath(__file__).split('/')[:-1])

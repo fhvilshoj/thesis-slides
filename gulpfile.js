@@ -118,7 +118,7 @@ gulp.task('js-es6', () => {
 gulp.task('js', gulp.parallel('js-es5', 'js-es6'));
 
 gulp.task('ipe', function (cb) {
-    var cmd = spawn('/home/fhv/anaconda3/bin/python', ['assets/extract_svgs.py'], {stdio: 'inherit'});
+    var cmd = spawn('python3', ['assets/extract_svgs.py'], {stdio: 'inherit'});
     cmd.on('close', function (code) {
         console.log('Task exited with code ' + code);
         cb(code);

@@ -24,7 +24,7 @@ const autoprefixer = require('gulp-autoprefixer')
 const spawn = require('child_process').spawn
 
 const root = yargs.argv.root || '.'
-const port = yargs.argv.port || 8000
+const port = yargs.argv.port || 5042
 
 const banner = `/*!
 * reveal.js ${pkg.version}

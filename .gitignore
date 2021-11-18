@@ -13,3 +13,4 @@ dist/*.map
 /assets/ipe/
 /assets/svgs/
 /assets/ipe-config.ini
+/dist/custom.css

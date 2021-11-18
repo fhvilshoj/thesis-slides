@@ -355,6 +355,10 @@ gulp.task('serve', () => {
         'css/print/*.{sass,scss,css}'
     ], gulp.series('css-core', 'reload'))
 
+    gulp.watch([
+        'css/custom.css'
+    ], gulp.series('css-custom', 'reload'))
+
     gulp.watch(['assets/ipe-graphics.pdf'], gulp.series('ipe', 'reload'))
 
     gulp.watch(['test/*.html'], gulp.series('test'))

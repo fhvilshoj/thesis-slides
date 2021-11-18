@@ -11,3 +11,79 @@
 .slides section.has-light-background h2 {
     color: #222;
 }
+:root {
+    --au-blue: rgb(0, 61, 115);
+    --au-blue-dark: rgb(0, 37, 70);
+    --au-purple: rgb(101, 90, 159);
+    --au-purple-dark: rgb(40, 28, 65);
+    --au-cyan: rgb(55, 160, 203);
+    --au-cyan-dark: rgb(0, 62, 92);
+    --au-turkis: rgb(0, 171, 164);
+    --au-turkis-dark: rgb(0, 69, 67);
+    --au-green: rgb(139, 173, 63);
+    --au-green-dark: rgb(66, 88, 33);
+    --au-gul: rgb(250, 187, 0);
+    --au-gul-dark: rgb(99, 75, 3);
+    --au-orange: rgb(238, 127, 0);
+    --au-orange-dark: rgb(95, 52, 8);
+    --au-red: rgb(226, 0, 26);
+    --au-red-dark: rgb(91, 12, 12);
+    --au-magenta: rgb(226, 0, 122);
+    --au-magenta-dark: rgb(95, 0, 48);
+    --au-gray: rgb(135, 135, 135);
+    --au-gray-dark: rgb(75, 75, 74);
+}
+
+section .text-blue { color: var(--au-blue); }
+section .text-blue-dark { color: var(--au-blue-dark); }
+section .text-purple { color: var(--au-purple); }
+section .text-purple-dark { color: var(--au-purple-dark); }
+section .text-cyan-dark { color: var(--au-cyan-dark); }
+section .text-turkis { color: var(--au-turkis); }
+section .text-turkis-dark { color: var(--au-turkis-dark); }
+section .text-green { color: var(--au-green); }
+section .text-green-dark { color: var(--au-green-dark); }
+section .text-gul { color: var(--au-gul); }
+section .text-gul-dark { color: var(--au-gul-dark); }
+section .text-orange { color: var(--au-orange); }
+section .text-orange-dark { color: var(--au-orange-dark); }
+section .text-red { color: var(--au-red); }
+section .text-red-dark { color: var(--au-red-dark); }
+section .text-magenta { color: var(--au-magenta); }
+section .text-magenta-dark { color: var(--au-magenta-dark); }
+section .text-gray { color: var(--au-gray); }
+section .text-gray-dark { color: var(--au-gray-dark); }
+
+
+header { width: 100% }
+header.f-header {
+    position: absolute;
+    padding: 0.5em;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    font-size: medium;
+    color: white;
+
+    background-image: url("../assets/aulogo.svg");
+    background-position: right 1.5em bottom 5px;
+    background-size: 7.0em;
+    background-repeat: no-repeat;
+}
+
+.no-bar header { background-image: none; }
+
+.motivation-header header { background-color: var(--au-blue-dark); }
+.motivation-header header:after { content: "1/5: Motivation"; }
+
+.algo-header header { background-color: var(--au-purple-dark); }
+.algo-header header:after { content: "2/5: Efficient Neural Network Training"; }
+
+.cf-header header { background-color: var(--au-turkis-dark); }
+.cf-header header:after { content: "3/5: Counterfactual Examples"; }
+
+.eval-header header { background-color: var(--au-green-dark); }
+.eval-header header:after { content: "4/5: Evaluating Counterfactual Examples"; }
+
+.conclusion-header header { background-color: var(--au-blue-dark); }
+.conclusion-header header:after { content: "5/5: Conclusion"; }

@@ -13,58 +13,12 @@
 
     <!-- Theme used for syntax highlighted code -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css">
-
-    <style type="text/css">
-        header.f-header {
-            position: absolute;
-            top: 0.5em;
-            left: 0.5em;
-            z-index: 500;
-            font-size: medium;
-            color: rgb(0,37,70);
-        }
-
-        .motivation-header header:after {
-            content: "1/5: Motivation";
-        }
-
-        .algo-header header:after {
-            content: "2/5: Efficient Neural Network Training";
-        }
-
-        .cf-header header:after {
-            content: "3/5: Counterfactual Examples";
-        }
-
-        .eval-header header:after {
-            content: "4/5: Evaluating Counterfactual Examples";
-        }
-
-        .conclusion-header header:after {
-            content: "5/5: Conclusion";
-        }
-    </style>
-
-    <!--
-        AU COLORS:      Light          		Dark
-             Blå: 		rgb(0,61,115), 		rgb(0,37,70)
-             Magenta: 	rgb(226,0,122), 	rgb(95,0,48)
-             Lilla: 	rgb(101,90,159), 	rgb(40,28,65)
-             Cyan: 		rgb(55,160,203), 	rgb(0,62,92)
-             Turkis: 	rgb(0,171,164), 	rgb(0,69,67)
-             Grøn: 		rgb(139,173,63), 	rgb(66,88,33)
-             Gul: 		rgb(250,187,0), 	rgb(99,75,3)
-             Orange: 	rgb(238,127,0), 	rgb(95,52,8)
-             Rød: 		rgb(226,0,26), 		rgb(91,12,12)
-             Magenta: 	rgb(226,0,122), 	rgb(95,0,48)
-             Grå: 		rgb(135,135,135), 	rgb(75,75,74)
-     -->
 </head>
 <body>
 <div class="reveal">
     <header class="f-header" style=""></header>
     <div class="slides">
-        <section>
+        <section data-state="no-bar">
             <h3 class="r-fit-text">[ADD The correct title here]</h3>
 
             <ul>
@@ -72,11 +26,10 @@
                 <li><i style="color: darkred">Y</i> images</li>
             </ul>
 
-            <p><i style="color: lightseagreen">Please</i> feel free to ask questions! </p>
+            <p><i class="text-cyan">Please</i> feel free to ask questions! </p>
         </section>
 
-
-        <section data-background-color="rgb(0, 37, 70)">
+        <section data-state="no-bar" data-background-color="var(--au-blue-dark)">
             <h2>Motivation</h2>
         </section>
         <section data-state="motivation-header">
@@ -86,7 +39,7 @@
             <p>header2 example</p>
         </section>
 
-        <section data-background-color="rgb(0, 37, 70)">
+        <section data-state="no-bar" data-background-color="var(--au-purple-dark)">
             <h2>Efficient Neural Network Training</h2>
         </section>
         <section data-state="algo-header">
@@ -98,7 +51,7 @@
              Discussion
         -->
 
-        <section data-background-color="rgb(0, 37, 70)">
+        <section data-state="no-bar" data-background-color="var(--au-turkis-dark)">
             <h2>Counterfactual Examples</h2>
         </section>
         <section data-state="cf-header">
@@ -111,7 +64,7 @@
         -->
 
 
-        <section data-background-color="rgb(0, 37, 70)">
+        <section data-state="no-bar" data-background-color="var(--au-green-dark)">
             <h2>Evaluating Counterfactual Examples</h2>
         </section>
         <section data-state="eval-header">
@@ -124,9 +77,10 @@
              Discussion
         -->
 
-        <section data-background-color="rgb(0, 37, 70)">
+        <section data-state="no-bar" data-background-color="var(--au-blue-dark)">
             <h2>Conclusion</h2>
         </section>
+
         <section data-state="conclusion-header">
             <h2>Hello World!</h2>
         </section>
@@ -315,27 +269,6 @@
         </section>
     </div>
 </div>
-
-<style type="text/css">
-    /* 1. Style header/footer <div> so they are positioned as desired. */
-    #header-left {
-        position: absolute;
-        top: 0%;
-        left: 0%;
-    }
-
-    #header-right {
-        position: absolute;
-        top: 0%;
-        right: 0%;
-    }
-
-    #footer-left {
-        position: absolute;
-        bottom: 0%;
-        left: 0%;
-    }
-</style>
 
 <script src="dist/reveal.js"></script>
 <script src="plugin/notes/notes.js"></script>

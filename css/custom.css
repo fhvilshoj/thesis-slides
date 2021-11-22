@@ -1,3 +1,6 @@
+section {
+    padding-top: 20px;
+}
 
 .monospace {
     font-family: "Space Mono";
@@ -11,6 +14,19 @@
 .slides section.has-light-background h2 {
     color: #222;
 }
+
+.f-container{
+    display: flex;
+}
+.f-col {
+    margin: 10px;
+    flex: 1;
+}
+
+.f-col img {
+    margin: auto;
+}
+
 :root {
     --au-blue: rgb(0, 61, 115);
     --au-blue-dark: rgb(0, 37, 70);

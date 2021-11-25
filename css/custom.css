@@ -6,6 +6,10 @@ section {
     font-family: "Space Mono";
 }
 
+.reveal a {
+    color: var(--au-blue);
+}
+
 .slides section.has-dark-background h2 {
     color: #fff;
 }
@@ -26,6 +30,37 @@ section {
 .f-col img {
     margin: auto;
 }
+
+div.f-definition {
+    font-weight: lighter;
+    display: block;
+    width: 90%;
+    min-height: 60%;
+    margin: 0 auto;
+    font-size: smaller;
+}
+
+.f-emph {
+    font-style: italic;
+    font-weight: bolder;
+}
+
+div.f-definition .f-header {
+    background-color: var(--au-blue-dark);
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 3px 5px;
+    color: white;
+    text-align: left;
+    font-weight: bolder;
+}
+
+div.f-definition .f-content {
+    display: block;
+    text-align: left;
+}
+
 
 :root {
     --au-blue: rgb(0, 61, 115);

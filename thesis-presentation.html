@@ -34,16 +34,19 @@
                 <li><i style="color: darkred">Y</i> images</li> <!-- TODO -->
                 <li>Slide numbers and questions.</li>
             </ul>
-
-            <!--            <div style="display: block">-->
-            <!--                <div style="width: 45%; display: inline-block; right; text-align: center; margin: 15px;">-->
-            <!--                    <img src="assets/ira.jpeg" style="max-height: 150px; float: right"/>-->
-            <!--                </div>-->
-            <!--                <div style="width: 45%; display: inline-block; text-align: center; margin: 15px;">-->
-            <!--                    <img src="assets/alekos.jpeg" style="max-height: 150px; float: left"/>-->
-            <!--                </div>-->
-            <!--            </div>-->
-
+            <div class="section-footer" style="margin-top: 30px">
+                <small class="text-gray">
+                    By <a class="text-blue" href="https://fhvilshoj.github.com" target="_blank">Frederik Hvilshøj</a>,
+                    Supervised by
+                    <a class="text-blue"
+                       href="https://pure.au.dk/portal/en/persons/ira-assent(012c1c28-bfa9-4107-bd8f-97dae008b06d).html"
+                       target="_blank">Ira Assent</a>
+                    and
+                    <a class="text-blue"
+                       href="https://pure.au.dk/portal/da/persons/alexandros-iosifidis(7c71a32d-a849-4a2e-b5d9-06970c846ed1).html"
+                       target="_blank">Alexandros Iosifidis</a>.
+                </small>
+            </div>
         </section>
 
         <section data-state="no-bar" data-background-color="var(--au-blue-dark)">
@@ -68,27 +71,165 @@
                         href="https://fortune.com/2020/11/30/deepmind-solved-protein-folding-alphafold/">Fortune.com</a></small>
                 </p>
             </section>
-            <section>
-                <p>Scaling is expensice</p>
-                <img data-id="1" src="assets/param-chart.svg" style="max-width: 80%; max-height: 60%">
+            <section data-auto-animate>
+                <p>Scaling is expensive</p>
+                <p><small class="text-blue-dark">ImageNet Image classification</small></p>
+                <!--                <img data-id="1" src="assets/param-chart.svg" style="max-width: 80%; max-height: 60%">-->
+                <img data-id="1" src="assets/param-chart.svg" class="r-stretch">
                 <p data-id="2"><small style="font-size: small">Source: <a
                         href="https://paperswithcode.com/sota/image-classification-on-imagenet?metric=Top%205%20Accuracy&dimension=Number%20of%20params">Papers
                     with code.</a></small></p>
             </section>
+            <section data-auto-animate>
+                <p>Scaling is expensive</p>
+                <p><small class="text-blue-dark">Generative language models</small></p>
+                <!--                <img data-id="1" src="https://developer-blogs.nvidia.com/wp-content/uploads/2021/10/Model-Size-Chart.png" style="max-width: 80%; max-height: 60%">-->
+                <img data-id="1"
+                     src="https://developer-blogs.nvidia.com/wp-content/uploads/2021/10/Model-Size-Chart.png"
+                     class="r-stretch">
+                <p data-id="2"><small style="font-size: small">Source: <a
+                        href="https://developer.nvidia.com/blog/using-deepspeed-and-megatron-to-train-megatron-turing-nlg-530b-the-worlds-largest-and-most-powerful-generative-language-model/">NVIDIA
+                    Developer blog</a></small></p>
+            </section>
         </section>
 
         <section data-state="motivation-header">
-            <section>The main hypothesis</section>
-            <section>RQ1: [TODO]</section>
-            <section>RQ2: [TODO]</section>
-            <section>RQ3: [TODO]</section>
+            <section data-auto-animate>
+                <div data-id="hypothesis">
+                    We hypothesize that crossing generative models with explainability can
+                    produce state-of-the-art methods for explaining neural networks.
+                </div>
+            </section>
+            <section data-auto-animate>
+                <div data-id="hypothesis" style="font-size: smaller; color: var(--au-gray); margin-bottom: 50px;">
+                    We hypothesize that crossing generative models with explainability can
+                    produce state-of-the-art methods for explaining neural networks.
+                </div>
+                <div class="f-container">
+                    <div class="f-col" data-id="rq1">
+                        <div class="f-definition f-col">
+                            <div class="f-header" style="background-color: var(--au-purple-dark)">RQ1</div>
+                            <div class="f-content">
+                                How can the <i class="f-emph">efficiency</i> of machine learning <i class="f-emph">algorithms</i>
+                                be improved?
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-col" style="visibility: hidden;" data-id="rq2">
+                        <div class="f-definition f-col">
+                            <div class="f-header" style="background-color: var(--au-turkis-dark)">RQ2</div>
+                            <div class="f-content">
+                                How can <i class="f-emph">generative models</i> be utilized for <i class="f-emph">explaining</i>
+                                neural networks?
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-col" style="visibility: hidden;" data-id="rq3">
+                        <div class="f-definition">
+                            <div class="f-header" style="background-color: var(--au-green-dark)">RQ3</div>
+                            <div class="f-content">
+                                How are methods for explaining neural networks best <i class="f-emph">evaluated</i>?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section data-auto-animate>
+                <div data-id="hypothesis" style="font-size: smaller; color: var(--au-gray); margin-bottom: 50px;">
+                    We hypothesize that crossing generative models with explainability can
+                    produce state-of-the-art methods for explaining neural networks.
+                </div>
+                <div class="f-container">
+                    <div class="f-col" data-id="rq1">
+                        <div class="f-definition f-col">
+                            <div class="f-header" style="background-color: var(--au-purple-dark)">RQ1</div>
+                            <div class="f-content">
+                                How can the <i class="f-emph">efficiency</i> of machine learning <i class="f-emph">algorithms</i>
+                                be improved?
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-col" data-id="rq2">
+                        <div class="f-definition f-col">
+                            <div class="f-header" style="background-color: var(--au-turkis-dark)">RQ2</div>
+                            <div class="f-content">
+                                How can <i class="f-emph">generative models</i> be utilized for <i class="f-emph">explaining</i>
+                                neural networks?
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-col" style="visibility: hidden" data-id="rq3">
+                        <div class="f-definition">
+                            <div class="f-header" style="background-color: var(--au-green-dark)">RQ3</div>
+                            <div class="f-content">
+                                How are methods for explaining neural networks best <i class="f-emph">evaluated</i>?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section data-auto-animate>
+                <div data-id="hypothesis" style="font-size: smaller; color: var(--au-gray); margin-bottom: 50px;">
+                    We hypothesize that crossing generative models with explainability can
+                    produce state-of-the-art methods for explaining neural networks.
+                </div>
+                <div class="f-container">
+                    <div class="f-col" data-id="rq1">
+                        <div class="f-definition f-col">
+                            <div class="f-header" style="background-color: var(--au-purple-dark)">RQ1</div>
+                            <div class="f-content">
+                                How can the <i class="f-emph">efficiency</i> of machine learning <i class="f-emph">algorithms</i>
+                                be improved?
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-col" data-id="rq2">
+                        <div class="f-definition f-col">
+                            <div class="f-header" style="background-color: var(--au-turkis-dark)">RQ2</div>
+                            <div class="f-content">
+                                How can <i class="f-emph">generative models</i> be utilized for <i class="f-emph">explaining</i>
+                                neural networks?
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-col" data-id="rq3">
+                        <div class="f-definition">
+                            <div class="f-header" style="background-color: var(--au-green-dark)">RQ3</div>
+                            <div class="f-content">
+                                How are methods for explaining neural networks best <i class="f-emph">evaluated</i>?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section>
+            <ul>
+                <li>
+                    <p class="r-stretch"><b class="text-purple">Paper 1</b> What if Neural Networks Had SVDs?</p>
+                    <small>Alexander Mathiasen, Frederik Hvilshøj, Jakob Rødsgaard Jørgensen, Anshul Nasery, and Davide
+                        Mottin. In NeurIPS, 2020.
+                    </small>
+                </li>
+                <li><b class="text-purple">Paper 2</b> Backpropagating through Fréchet Inception Distance<br>
+                    <small>Alexander Mathiasen and Frederik Hvilshøj. CoRR,
+                        <a href="https://arxiv.org/abs/2009.14075" target="_blank">abs/2009.14075</a>, 2020.
+                    </small>
+                </li>
+                <li> <b class="text-turkis">Paper 3</b> ECINN: Efficient Counterfactuals from Invertible Neural Networks.
+                    <small>Frederik Hvilshøj, Alexandros Iosifidis, and Ira Assent.  In BMVC, 2021.</small>
+                </li>
+                <li><b class="text-green">Paper 4</b> On Quantitative Evaluations of Counterfactuals.
+                    <small>Frederik Hvilshøj, Alexandros Iosifidis, and Ira Assent.  CoRR, <a href="https://arxiv.org/abs/2111.00177">abs/2111.00177</a>, 2021. </small>
+                </li>
+            </ul>
         </section>
 
         <section data-state="no-bar" data-background-color="var(--au-purple-dark)">
             <h2>Efficient Neural Network Training</h2>
         </section>
         <section data-state="algo-header">
-            <p>header1 example</p>
+            <p>What if </p>
         </section>
         <!--
              What if Neural Networks had SVDs?

@@ -203,7 +203,7 @@
                 </div>
             </section>
         </section>
-        <section>
+        <section data-state="motivation-header">
             <ul>
                 <li>
                     <p class="r-stretch"><b class="text-purple">Paper 1</b> What if Neural Networks Had SVDs?</p>
@@ -227,9 +227,126 @@
 
         <section data-state="no-bar" data-background-color="var(--au-purple-dark)">
             <h2>Efficient Neural Network Training</h2>
+            <p>
+                RQ1: How can the <i class="f-emph">efficiency</i> of machine learning <i class="f-emph">algorithms</i>
+                be improved?
+            </p>
         </section>
         <section data-state="algo-header">
-            <p>What if </p>
+            <section data-auto-animate>
+                <h3 data-id="header">What if Neural Networks had SVDs?</h3>
+            </section>
+            <section data-auto-animate data-state="algo-header">
+                <h3 data-id=header" style="font-size: smaller; color: var(--au-gray); margin-bottom: 50px;">What if Neural Networks had SVDs?</h3>
+                <span data-id="1">
+                \[
+                    W\in \mathbb{R}^{d \times d}
+                \]
+                </span>
+            </section>
+            <section data-auto-animate data-state="algo-header">
+                <h3 data-id=header" style="font-size: smaller; color: var(--au-gray); margin-bottom: 50px;">What if Neural Networks had SVDs?</h3>
+                <span data-id="1">
+                \[
+                W\in \mathbb{R}^{d \times d}
+                \]
+                </span>
+                <span data-id="2">
+                   $ W = U \Sigma V^\intercal,$
+                    <span style="margin-left: 20px; font-size: smaller; color: var(--au-gray)">
+                        $U,V,\Sigma \in \mathbb{R}^{d\times d}$
+                    </span>
+                </span>
+            </section>
+            <section data-auto-animate data-state="algo-header">
+                <h3 data-id=header" style="font-size: smaller; color: var(--au-gray); margin-bottom: 50px;">What if Neural Networks had SVDs?</h3>
+                <span data-id="1">
+                \[
+                W\in \mathbb{R}^{d \times d}
+                \]
+                </span>
+                <span data-id="2">
+                   $ W = U \Sigma V^\intercal,$
+                    <span style="margin-left: 20px; font-size: smaller; color: var(--au-gray)">
+                        $U,V,\Sigma \in \mathbb{R}^{d\times d}$
+                    </span>
+                </span>
+                <span data-id="3">
+                    \[
+                        U^{-1} = U^\intercal, V^{-1} = V^\intercal \quad\Rightarrow\quad W^{-1} = V\Sigma U^\intercal
+                    \]
+                </span>
+            </section>
+            <section data-auto-animate>
+                <span data-id="2" class="text-gray">
+                   $ W = U \Sigma V^\intercal,$
+                    <span style="margin-left: 20px; font-size: smaller; color: var(--au-gray)">
+                        $U,V,\Sigma \in \mathbb{R}^{d\times d}$
+                    </span>
+                </span>
+
+                <span data-id="3" class="text-gray">
+                    \[
+                        U^{-1} = U^\intercal, V^{-1} = V^\intercal \quad\Rightarrow\quad W^{-1} = V\Sigma^{-1} U^\intercal
+                    \]
+                </span>
+                <div data-id="4">
+                    <p>The neural network setting</p>
+                    \[
+                    y = \sigma( \color{blue}Wx ) \quad \color{blue}W^{\color{blue}-\color{blue}1}\sigma^{-1}(y) = x
+                    \]
+                </div>
+
+            </section>
+            <section data-auto-animate>
+                <span data-id="2" class="text-gray">
+                   $ W = U \Sigma V^\intercal,$
+                    <span style="margin-left: 20px; font-size: smaller; color: var(--au-gray)">
+                        $U,V,\Sigma \in \mathbb{R}^{d\times d}$
+                    </span>
+                </span>
+
+                <span data-id="3" class="text-gray">
+                    \[
+                        U^{-1} = U^\intercal, V^{-1} = V^\intercal \quad\Rightarrow\quad W^{-1} = V\Sigma^{-1} U^\intercal
+                    \]
+                </span>
+                <div data-id="4">
+                    <p>The neural network setting</p>
+                    \[
+                    y = \sigma( \color{blue}U\color{blue}\Sigma \color{blue}V^{\color{blue}\intercal} x ) \quad \color{blue}V\color{blue}\Sigma^{\color{blue}-\color{blue}1}\color{blue}U^{\color{blue}\intercal}\sigma^{-1}(y) = x
+                    \]
+                </div>
+
+            </section>
+            <section data-auto-animate>
+                <span data-id="2" class="text-gray">
+                   $ W = U \Sigma V^\intercal,$
+                    <span style="margin-left: 20px; font-size: smaller; color: var(--au-gray)">
+                        $U,V,\Sigma \in \mathbb{R}^{d\times d}$
+                    </span>
+                </span>
+
+                <span data-id="3" class="text-gray">
+                    \[
+                        U^{-1} = U^\intercal, V^{-1} = V^\intercal \quad\Rightarrow\quad W^{-1} = V\Sigma^{-1} U^\intercal
+                    \]
+                </span>
+                <div data-id="4">
+                    <p>The neural network setting</p>
+                    \[
+                    y = \sigma( \color{blue}U\color{blue}\Sigma \color{blue}V^{\color{blue}\intercal} x ) \quad \color{blue}V\color{blue}\Sigma^{\color{blue}-\color{blue}1}\color{blue}U^{\color{blue}\intercal}\sigma^{-1}(y) = x
+                    \]
+                </div>
+                <p data-id="5">$O(d^3)$ to $O(d)$</p>
+            </section>
+            <section data-auto-animate>
+                <p><span class="text-gray-dark">Problem:</span> Gradient descent on $U$ and $V$ does <u class="text-blue">not</u> maintain orthogonality.</p>
+            </section>
+            <section data-auto-animate>
+                <p><span class="text-gray-dark">Problem:</span> Gradient descent on $U$ and $V$ does <u class="text-blue">not</u> maintain orthogonality.</p>
+                <p><span class="text-gray-dark">Solution:</span> Different parametrization of $U$ and $V$ [93]</p>
+            </section>
         </section>
         <!--
              What if Neural Networks had SVDs?
@@ -270,188 +387,37 @@
         <section data-state="conclusion-header">
             <h2>Hello World!</h2>
         </section>
+        <section>
+            <section><h1>hej</h1></section>
+        </section>
+        <section>
+            <section><h1>hej</h1></section>
+        </section>
+        <section>
+            <section><h1>hej</h1></section>
+        </section>
+        <section>
+            <section><h1>hej</h1></section>
+            <section><h1>hej</h1></section>
+            <section><h1>hej</h1></section>
+            <section><h1>hej</h1></section>
+        </section>
+        <section>
+            <section><h1>hej</h1></section>
+        </section>
         <!--
              Discussion
              Conclusion
              Future Work
         -->
+        <section class="references">
+            <p>References:</p>
+            <ul>
+                <li>[93] Jiong Zhang, Qi Lei, and Inderjit S. Dhillon. Stabilizing gradients for deep
+                    neural networks via efficient SVD parameterization. In ICML, 2018. 8, 10, 11, 12
+                </li>
+            </ul>
 
-
-        <!-- EXAMPLES TO BE REMOVED BEFORE PRESENTATION -->
-        <section>Slide 1</section>
-        <section>Slide 2</section>
-
-        <section>test</section>
-        <section data-state="algo-header">
-            <section data-auto-animate>
-                <img src="assets/svgs/p1_v1.svg" class="r-stretch"/>
-            </section>
-            <section data-auto-animate>
-                <img src="assets/svgs/p1_v2.svg" class="r-stretch"/>
-            </section>
-            <section data-auto-animate>
-                <img src="assets/svgs/p1_v3.svg" class="r-stretch"/>
-            </section>
-            <section data-auto-animate data-auto-animate-id="svgs">
-                <svg width="538pt" height="538pt" viewBox="0 0 538 538" class="r-stretch">
-                    <g fill="none" stroke="#000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width=".4">
-                        <path data-id="s1" stroke-width="1.111112"
-                              d="M357.5 268.6092c0-49.0898-39.7968-88.8867-88.8906-88.8867-49.0898 0-88.8867 39.7969-88.8867 88.8867 0 49.0938 39.7969 88.8907 88.8867 88.8907 49.0938 0 88.8907-39.797 88.8907-88.8907Zm0 0"/>
-                    </g>
-                </svg>
-            </section>
-            <section data-auto-animate data-auto-animate-id="svgs">
-                <svg width="538pt" height="538pt" viewBox="0 0 538 538" class="r-stretch">
-                    <g fill="none" stroke="#000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width=".4">
-                        <path data-id="s2" stroke-width="1.111112"
-                              d="M535.2774 268.6092c0-147.2734-119.3906-266.664-266.668-266.664-147.2734 0-266.664 119.3906-266.664 266.664 0 147.2774 119.3906 266.668 266.664 266.668 147.2774 0 266.668-119.3906 266.668-266.668Zm0 0"/>
-                        <path data-id="s1" stroke-width="1.111112"
-                              d="M357.5 268.6092c0-49.0898-39.7968-88.8867-88.8906-88.8867-49.0898 0-88.8867 39.7969-88.8867 88.8867 0 49.0938 39.7969 88.8907 88.8867 88.8907 49.0938 0 88.8907-39.797 88.8907-88.8907Zm0 0"/>
-                    </g>
-                </svg>
-            </section>
-            <section data-auto-animate data-auto-animate-id="svgs">
-                <svg width="538pt" height="538pt" viewBox="0 0 538 538" class="r-stretch">
-                    <g fill="none" stroke="#000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width=".4">
-                        <path data-id="s3" stroke-width="1.111112"
-                              d="M446.3907 268.6092c0-98.1836-79.5937-177.7773-177.7813-177.7773-98.1836 0-177.7773 79.5937-177.7773 177.7773 0 98.1875 79.5937 177.7813 177.7773 177.7813 98.1876 0 177.7813-79.5938 177.7813-177.7813Zm0 0"/>
-                        <path data-id="s2" stroke-width="1.111112"
-                              d="M535.2774 268.6092c0-147.2734-119.3906-266.664-266.668-266.664-147.2734 0-266.664 119.3906-266.664 266.664 0 147.2774 119.3906 266.668 266.664 266.668 147.2774 0 266.668-119.3906 266.668-266.668Zm0 0"/>
-                        <path data-id="s1" stroke-width="1.111112"
-                              d="M357.5 268.6092c0-49.0898-39.7968-88.8867-88.8906-88.8867-49.0898 0-88.8867 39.7969-88.8867 88.8867 0 49.0938 39.7969 88.8907 88.8867 88.8907 49.0938 0 88.8907-39.797 88.8907-88.8907Zm0 0"/>
-                    </g>
-                </svg>
-            </section>
-            <section>
-                <h1>New try</h1>
-            </section>
-            <section data-auto-animate>
-                <img src="assets/svgs/min/p1_v1.svg" class="r-stretch" data-id="1">
-            </section>
-            <section data-auto-animate>
-                <img src="assets/svgs/min/p1_v2.svg" class="r-stretch" data-id="2">
-            </section>
-            <section data-auto-animate>
-                <img src="assets/svgs/min/p1_v3.svg" class="r-stretch" data-id="3">
-            </section>
-            <section><h1>Try again</h1></section>
-            <section data-auto-animate>
-                <svg width="713pt" height="313pt" viewBox="0 0 713 313">
-                    <g data-id="surface1">
-                        <path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;"
-                              d="M 63.999688 736.002453 L 63.999688 624.001671 L 176.000469 624.001671 L 176.000469 736.002453 Z M 63.999688 736.002453 "
-                              transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>
-                        <path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;"
-                              d="M 80 719.999327 L 80 640.000577 L 160.000156 640.000577 L 160.000156 719.999327 Z M 80 719.999327 "
-                              transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>
-                        <path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;"
-                              d="M 96.000312 704.000421 L 96.000312 655.999484 L 143.999844 655.999484 L 143.999844 704.000421 Z M 96.000312 704.000421 "
-                              transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>
-                        <path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;"
-                              d="M 112.000625 688.000109 L 112.000625 671.999796 L 127.999531 671.999796 L 127.999531 688.000109 Z M 112.000625 688.000109 "
-                              transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>
-                    </g>
-                    <g data-id="surface2">
-                        <path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;"
-                              d="M 207.999687 735.99964 L 207.999687 624.000265 L 320.000469 624.000265 L 320.000469 735.99964 Z M 207.999687 735.99964 "
-                              transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>
-                        <path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;"
-                              d="M 224 719.999327 L 224 640.000577 L 304.000156 640.000577 L 304.000156 719.999327 Z M 224 719.999327 "
-                              transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>
-                        <path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;"
-                              d="M 240.000313 704.000421 L 240.000313 655.999484 L 287.999844 655.999484 L 287.999844 704.000421 Z M 240.000313 704.000421 "
-                              transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>
-                        <path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;"
-                              d="M 256.000625 688.000109 L 256.000625 671.999796 L 271.999531 671.999796 L 271.999531 688.000109 Z M 256.000625 688.000109 "
-                              transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>
-                    </g>
-                </svg>
-            </section>
-            <section data-auto-animate>
-                <svg width="713pt" height="313pt" viewBox="0 0 713 313">
-                    <g data-id="surface1">
-                        <path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;"
-                              d="M 63.999688 736.002453 L 63.999688 624.001671 L 176.000469 624.001671 L 176.000469 736.002453 Z M 63.999688 736.002453 "
-                              transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>
-                        <path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;"
-                              d="M 80 719.999327 L 80 640.000577 L 160.000156 640.000577 L 160.000156 719.999327 Z M 80 719.999327 "
-                              transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>
-                        <path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;"
-                              d="M 96.000312 704.000421 L 96.000312 655.999484 L 143.999844 655.999484 L 143.999844 704.000421 Z M 96.000312 704.000421 "
-                              transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>
-                        <!--								<path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 112.000625 688.000109 L 112.000625 671.999796 L 127.999531 671.999796 L 127.999531 688.000109 Z M 112.000625 688.000109 " transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>-->
-                    </g>
-                    <g data-id="surface2">
-                        <path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;"
-                              d="M 207.999687 735.99964 L 207.999687 624.000265 L 320.000469 624.000265 L 320.000469 735.99964 Z M 207.999687 735.99964 "
-                              transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>
-                        <path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;"
-                              d="M 224 719.999327 L 224 640.000577 L 304.000156 640.000577 L 304.000156 719.999327 Z M 224 719.999327 "
-                              transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>
-                        <path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;"
-                              d="M 240.000313 704.000421 L 240.000313 655.999484 L 287.999844 655.999484 L 287.999844 704.000421 Z M 240.000313 704.000421 "
-                              transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>
-                        <!--								<path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 256.000625 688.000109 L 256.000625 671.999796 L 271.999531 671.999796 L 271.999531 688.000109 Z M 256.000625 688.000109 " transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>-->
-                    </g>
-                </svg>
-            </section>
-            <section data-auto-animate>
-                <svg width="713pt" height="313pt" viewBox="0 0 713 313">
-                    <g data-id="surface1">
-                        <path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;"
-                              d="M 63.999688 736.002453 L 63.999688 624.001671 L 176.000469 624.001671 L 176.000469 736.002453 Z M 63.999688 736.002453 "
-                              transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>
-                        <path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;"
-                              d="M 80 719.999327 L 80 640.000577 L 160.000156 640.000577 L 160.000156 719.999327 Z M 80 719.999327 "
-                              transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>
-                        <!--								<path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 96.000312 704.000421 L 96.000312 655.999484 L 143.999844 655.999484 L 143.999844 704.000421 Z M 96.000312 704.000421 " transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>-->
-                        <!--								<path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 112.000625 688.000109 L 112.000625 671.999796 L 127.999531 671.999796 L 127.999531 688.000109 Z M 112.000625 688.000109 " transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>-->
-                    </g>
-                    <g data-id="surface2">
-                        <path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;"
-                              d="M 207.999687 735.99964 L 207.999687 624.000265 L 320.000469 624.000265 L 320.000469 735.99964 Z M 207.999687 735.99964 "
-                              transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>
-                        <path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;"
-                              d="M 224 719.999327 L 224 640.000577 L 304.000156 640.000577 L 304.000156 719.999327 Z M 224 719.999327 "
-                              transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>
-                        <!--								<path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 240.000313 704.000421 L 240.000313 655.999484 L 287.999844 655.999484 L 287.999844 704.000421 Z M 240.000313 704.000421 " transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>-->
-                        <!--								<path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 256.000625 688.000109 L 256.000625 671.999796 L 271.999531 671.999796 L 271.999531 688.000109 Z M 256.000625 688.000109 " transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>-->
-                    </g>
-                </svg>
-            </section>
-            <section data-auto-animate>
-                <svg width="713pt" height="313pt" viewBox="0 0 713 313">
-                    <g data-id="surface1">
-                        <path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;"
-                              d="M 63.999688 736.002453 L 63.999688 624.001671 L 176.000469 624.001671 L 176.000469 736.002453 Z M 63.999688 736.002453 "
-                              transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>
-                        <!--								<path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 80 719.999327 L 80 640.000577 L 160.000156 640.000577 L 160.000156 719.999327 Z M 80 719.999327 " transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>-->
-                        <!--								<path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 96.000312 704.000421 L 96.000312 655.999484 L 143.999844 655.999484 L 143.999844 704.000421 Z M 96.000312 704.000421 " transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>-->
-                        <!--								<path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 112.000625 688.000109 L 112.000625 671.999796 L 127.999531 671.999796 L 127.999531 688.000109 Z M 112.000625 688.000109 " transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>-->
-                    </g>
-                    <g data-id="surface2">
-                        <path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;"
-                              d="M 207.999687 735.99964 L 207.999687 624.000265 L 320.000469 624.000265 L 320.000469 735.99964 Z M 207.999687 735.99964 "
-                              transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>
-                        <!--								<path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 224 719.999327 L 224 640.000577 L 304.000156 640.000577 L 304.000156 719.999327 Z M 224 719.999327 " transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>-->
-                        <!--								<path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 240.000313 704.000421 L 240.000313 655.999484 L 287.999844 655.999484 L 287.999844 704.000421 Z M 240.000313 704.000421 " transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>-->
-                        <!--								<path style="fill:none;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 256.000625 688.000109 L 256.000625 671.999796 L 271.999531 671.999796 L 271.999531 688.000109 Z M 256.000625 688.000109 " transform="matrix(2.777778,0,0,-2.777778,-177.222222,2045.005944)"/>-->
-                    </g>
-                </svg>
-            </section>
-        </section>
-        <section>
-            <img src="assets/svgs/p2_v1.svg" class="r-stretch"/>
-        </section>
-        <section data-auto-animate data-auto-animate-id="math1">
-            \[
-            p_\theta(x) = p_z(f(x))
-            \]
-        </section>
-        <section data-auto-animate data-auto-animate-id="math1">
-            \[
-            p_\theta(x) = p_z(f(x))\frac{\partial f(x)}{\partial x}
-            \]
         </section>
     </div>
     <footer class="f-footer" style="">
@@ -470,17 +436,76 @@
 <script src="plugin/math/math.js"></script>
 <script src="plugin/markdown/markdown.js"></script>
 <script src="plugin/highlight/highlight.js"></script>
+<script type="text/javascript">
+    const key_presses = [];
+    const append = function(arr, item) {
+        const idx = arr.length;
+        arr.splice( idx, 0, item );
+    }
+    const pop = function(arr) {
+        const l = arr.length;
+        if (l === 0){
+            return false;
+        }
+        return arr.splice(l-1,l)[0];
+    };
+    const go_to_slide = function(evt) {
+        if (evt.keyCode === 13) { // enter
+            if (key_presses.indexOf('enter') !== -1){
+                let val = pop(key_presses);
+                let size = 1;
+                let v = 0;
+                while(val !== 'enter') {
+                    v = v + size *  val;
+                    size = size * 10;
+                    val = pop(key_presses)
+                }
+
+                let h = 0;
+                size = 1;
+                val = pop(key_presses);
+                while(val !== false) {
+                    h = h + size * val;
+                    size = size * 10;
+                    val = pop(key_presses);
+                }
+                Reveal.slide(h-1, v-1);
+            } else {
+                append(key_presses, 'enter');
+            }
+        } else {
+            append(key_presses, parseInt(evt.key, 10));
+        }
+    };
+</script>
 <script>
     Reveal.initialize({
         hash: true,
         showNotes: true,
+        slideNumber: true,
 
         history: true,
         transition: 'linear',
 
+        keyboard: {
+            13: go_to_slide,
+            48: go_to_slide,
+            49: go_to_slide,
+            50: go_to_slide,
+            51: go_to_slide,
+            52: go_to_slide,
+            53: go_to_slide,
+            54: go_to_slide,
+            55: go_to_slide,
+            56: go_to_slide,
+            57: go_to_slide,
+        },
+
         mathjax2: {
             config: 'TeX-AMS_HTML-full',
+            loader: {load: ['[tex]/color']},
             TeX: {
+                packages: {'[+]': ['color']},
                 Macros: {
                     R: '\\mathbb{R}',
                     set: ['\\left\\{#1 \\; ; \\; #2\\right\\}', 2]

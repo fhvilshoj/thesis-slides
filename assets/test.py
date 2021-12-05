@@ -34,16 +34,17 @@ to_plot = np.array([(x_to_x(x), y_to_y(y)) for x, y in to_plot])
 # to_plot = to_plot[np.argsort(to_plot[:,0])]
 
 import matplotlib.pyplot as plt
-fig, ax = plt.subplots(figsize=(10, 6))
+fig, ax = plt.subplots(figsize=(7.5, 4.5))
 
 ax.scatter(*to_plot.T)
 ax.set_xscale('log')
 
 ax.set_title("ImageNet Top-5 accuracy") 
-ax.set_xlabel('#Paramteres')
+ax.set_xlabel('#Paramteres (mio)')
 ax.set_ylabel('Top-5 accuracy')
 
 fig.tight_layout()
 fig.savefig('param-chart.svg', bbox_inches='tight')
+# plt.show()
 
 

@@ -317,7 +317,6 @@
                     y = \sigma( \color{blue}U\color{blue}\Sigma \color{blue}V^{\color{blue}\intercal} x ) \quad \color{blue}V\color{blue}\Sigma^{\color{blue}-\color{blue}1}\color{blue}U^{\color{blue}\intercal}\sigma^{-1}(y) = x
                     \]
                 </div>
-
             </section>
             <section data-auto-animate>
                 <span data-id="2" class="text-gray">
@@ -341,11 +340,195 @@
                 <p data-id="5">$O(d^3)$ to $O(d)$</p>
             </section>
             <section data-auto-animate>
-                <p><span class="text-gray-dark">Problem:</span> Gradient descent on $U$ and $V$ does <u class="text-blue">not</u> maintain orthogonality.</p>
+                <p><span class="text-purple">Problem:</span> Gradient descent on $U$ and $V$ does <u class="text-blue">not</u> maintain orthogonality.</p>
             </section>
             <section data-auto-animate>
-                <p><span class="text-gray-dark">Problem:</span> Gradient descent on $U$ and $V$ does <u class="text-blue">not</u> maintain orthogonality.</p>
-                <p><span class="text-gray-dark">Solution:</span> Different parametrization of $U$ and $V$ [93]</p>
+                <p><span class="text-purple">Problem:</span> Gradient descent on $U$ and $V$ does <u class="text-blue">not</u> maintain orthogonality.</p>
+                <p><span class="text-purple">Solution:</span> Different parametrization of $U$ and $V$ [93]</p>
+            </section>
+            <section data-auto-animate>
+                <div data-id="1">
+                    \[
+                        U=\prod_{i=1}^{d} H_{i} \quad H_{i}=I-2 \frac{v_{i} v_{i}^{T}}{\left\|v_{i}\right\|_{2}^{2}} \quad v_{i} \in \mathbb{R}^{d}
+                    \]
+                </div>
+            </section>
+            <section data-auto-animate>
+                <div data-id="1">
+                    \[
+                    U=\prod_{i=1}^{d} H_{i} \quad H_{i}=I-2 \frac{v_{i} v_{i}^{T}}{\left\|v_{i}\right\|_{2}^{2}} \quad v_{i} \in \mathbb{R}^{d}
+                    \]
+                </div>
+                <div data-id="2">
+                    \[
+                        UX = H_1\cdots (H_{d-1}(H_d\cdot X) \dots )
+                    \]
+                </div>
+            </section>
+            <section data-auto-animate>
+                <div data-id="1">
+                    \[
+                    U=\prod_{i=1}^{d} H_{i} \quad H_{i}=I-2 \frac{v_{i} v_{i}^{T}}{\left\|v_{i}\right\|_{2}^{2}} \quad v_{i} \in \mathbb{R}^{d}
+                    \]
+                </div>
+                <div data-id="2">
+                    \[
+                    UX = H_1\cdots (H_{d-1}(H_d\cdot X) \dots )
+                    \]
+                </div>
+                <p data-id="3">For $X \in \mathbb{R}^{d\times m}$, complexity is $O(d^2m)$ 👍 </p>
+                <p data-id="4">Very sequential 👎</p>
+            </section>
+            <section>
+                <img src="assets/fasth_compare.png" class="r-stretch"/>
+            </section>
+            <section>
+                <h4 style="display: inline" class="text-purple">Problem: </h4>
+                <p style="display: inline;">Given $X$ and $v_1, ..., v_d$, can we compute the product
+                    $$\left[\prod_{i=1}^{d} I-2 \frac{v_{i} v_{i}^{\top}}{\left\|v_{i}\right\|_{2}^{2}}\right] X=\left[\prod_{i=1}^{d} H_{i}\right] X$$
+                     in $O(d^2n)$ time with less than $O(d)$ sequential work?
+                </p><br/>
+            </section>
+            <section data-auto-animate>
+                <h4 style="display: inline" class="text-purple">Solution: </h4>
+                <p style="display: inline;">Compute sub-products in parallel.</p>
+            </section>
+            <section data-auto-animate>
+                <h4 style="display: inline" class="text-purple">Solution: </h4>
+                <p style="display: inline;">Compute sub-products in parallel.</p>
+                <div data-auto-animate-id="1" class="lemma smaller-font">
+                    <p>
+                        <b>Lemma 1: [8]</b>
+                        For any $t$ Householder matrices $H_1,...,H_t$, there exists $W, Y\in \mathbb{R}^{d\times t}$ st.
+                        $I− WY^\intercal = H_1 \cdots H_t$. <br/>
+                        Computing $W$ and $Y$ takes $O(dt^2)$ time and $t$ sequential matrix-matrix multiplications.
+                    </p>
+                </div>
+            </section>
+            <section data-auto-animate>
+                <h4 style="display: inline" class="text-purple">Solution: </h4>
+                <p style="display: inline;">Compute sub-products in parallel.</p>
+                <div data-auto-animate-id="1"class="lemma smaller-font">
+                    <p>
+                        <b>Lemma 1: [8]</b>
+                        For any $t$ Householder matrices $H_1,...,H_t$, there exists $W, Y\in \mathbb{R}^{d\times t}$ st.
+                        $I− WY^\intercal = H_1 \cdots H_t$. <br/>
+                        Computing $W$ and $Y$ takes $O(dt^2)$ time and $t$ sequential matrix-matrix multiplications.
+                    </p>
+                </div>
+                <div class="smaller-font">
+                    <p><span class="text-purple">Step 1:</span> Compute sub-products in parallel.</p>
+                    <p>$
+                        \begin{array}{cccc}
+                        H_{1} \ldots H_{t} & H_{t+1} \ldots H_{2 t} & \ldots & H_{d-t+1} \ldots H_{d} \\
+                        \| & \| & \ldots & \| \\
+                        G_{1}=I-W_{1} Y_{1}^{\top} & G_{2}=I-W_{2} Y_{2}^{\top} & \ldots & G_{d / t}=I-W_{d / t} Y_{d / t}^{\top}
+                        \end{array}
+                        $</p>
+                </div>
+            </section>
+            <section data-auto-animate>
+                <h4 style="display: inline" class="text-purple">Solution: </h4>
+                <p style="display: inline;">Compute sub-products in parallel.</p>
+                <div data-auto-animate-id="1" class="lemma smaller-font">
+                    <p>
+                        <b>Lemma 1: [8]</b>
+                        For any $t$ Householder matrices $H_1,...,H_t$, there exists $W, Y\in \mathbb{R}^{d\times t}$ st.
+                        $I− WY^\intercal = H_1 \cdots H_t$. <br/>
+                        Computing $W$ and $Y$ takes $O(dt^2)$ time and $t$ sequential matrix-matrix multiplications.
+                    </p>
+                </div>
+                <div class="smaller-font">
+                    <p><span class="text-purple">Step 1:</span> Compute sub-products in parallel.</p>
+                    <p>$
+                    \begin{array}{cccc}
+                    H_{1} \ldots H_{t} & H_{t+1} \ldots H_{2 t} & \ldots & H_{d-t+1} \ldots H_{d} \\
+                    \| & \| & \ldots & \| \\
+                    G_{1}=I-W_{1} Y_{1}^{\top} & G_{2}=I-W_{2} Y_{2}^{\top} & \ldots & G_{d / t}=I-W_{d / t} Y_{d / t}^{\top}
+                    \end{array}
+                        $
+                    </p>
+                </div>
+                <div class="smaller-font">
+                    <p><span class="text-purple">Step 2:</span> Compute full product sequentially.</p>
+                    \[
+                        UX = G_1(G_2(...(G_{d/t}X)...)
+                    \]
+                </div>
+            </section>
+            <section data-auto-animate>
+                <h4>Time complexity:</h4>
+                <div data-auto-animate-id="1" class="smaller-font">
+                    <p>Asymptotic running time:</p>
+                    <table>
+                        <tr>
+                            <td><i class="text-purple">Step 1:</i></td>
+                            <td>Computing $d/t$ products: </td>
+                            <td>$O(d/t \cdot dt^2) = O(d^2t)$</td>
+                        </tr>
+                        <tr>
+                            <td><i class="text-purple">Step 2:</i></td>
+                            <td>Computing the full product: </td>
+                            <td>$O(d/t \cdot dtm) = O(d^2m)$</td>
+                        </tr>
+                        <tr>
+                            <td><i class="text-purple">Total:</i></td>
+                            <td>If $t = m$</td>
+                            <td>$O(d^2m)$ ✅</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <section data-auto-animate>
+                <h4>Time complexity:</h4>
+                <div data-auto-animate-id="1" class="smaller-font">
+                    <p>Asymptotic running time:</p>
+                    <table>
+                        <tr>
+                            <td><i class="text-purple">Step 1:</i></td>
+                            <td>Computing $d/t$ products: </td>
+                            <td>$O(d/t \cdot dt^2) = O(d^2t)$</td>
+                        </tr>
+                        <tr>
+                            <td><i class="text-purple">Step 2:</i></td>
+                            <td>Computing the full product: </td>
+                            <td>$O(d/t \cdot dtm) = O(d^2m)$</td>
+                        </tr>
+                        <tr>
+                            <td><i class="text-purple">Total:</i></td>
+                            <td>If $t = m$</td>
+                            <td>$O(d^2m)$ ✅</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div data-auto-animate-id="2" class="smaller-font">
+                    <p>Sequential work.</p>
+                    <table>
+                        <tr>
+                            <td><i class="text-purple">Step 1:</i></td>
+                            <td>Computing $d/t$ products: </td>
+                            <td>$O(t)$</td>
+                        </tr>
+                        <tr>
+                            <td><i class="text-purple">Step 2:</i></td>
+                            <td>Computing the full product: </td>
+                            <td>$O(d/t)$</td>
+                        </tr>
+                        <tr>
+                            <td><i class="text-purple">Total: </i></td>
+                            <td></td>
+                            <td>$O(t + d/t)$ ✅</td>
+                        </tr>
+                    </table>
+
+                </div>
+            </section>
+            <section>
+                <img src="assets/fasth_compare2.png" class="r-stretch"/>
+            </section>
+            <section>
+                <img src="assets/fasth_training.png" class="r-stretch"/>
             </section>
         </section>
         <!--
@@ -356,6 +539,10 @@
 
         <section data-state="no-bar" data-background-color="var(--au-turkis-dark)">
             <h2>Counterfactual Examples</h2>
+            <p>
+                RQ2: How can <i class="f-emph">generative models</i> be utilized for <i class="f-emph">explaining</i>
+                neural networks?
+            </p>
         </section>
         <section data-state="cf-header">
             <p>header1 example</p>
@@ -369,6 +556,9 @@
 
         <section data-state="no-bar" data-background-color="var(--au-green-dark)">
             <h2>Evaluating Counterfactual Examples</h2>
+            <p>
+                RQ3: How are methods for explaining neural networks best <i class="f-emph">evaluated</i>?
+            </p>
         </section>
         <section data-state="eval-header">
 
@@ -385,25 +575,7 @@
         </section>
 
         <section data-state="conclusion-header">
-            <h2>Hello World!</h2>
-        </section>
-        <section>
-            <section><h1>hej</h1></section>
-        </section>
-        <section>
-            <section><h1>hej</h1></section>
-        </section>
-        <section>
-            <section><h1>hej</h1></section>
-        </section>
-        <section>
-            <section><h1>hej</h1></section>
-            <section><h1>hej</h1></section>
-            <section><h1>hej</h1></section>
-            <section><h1>hej</h1></section>
-        </section>
-        <section>
-            <section><h1>hej</h1></section>
+            <h2>Hello there!</h2>
         </section>
         <!--
              Discussion
@@ -413,6 +585,9 @@
         <section class="references">
             <p>References:</p>
             <ul>
+                <li>[8] Christian Bischof and Charles Van Loan. The WY Representation for Products
+                    of Householder Matrices. SIAM Journal on Scientific and Statistical Computing,
+                    1987.</li>
                 <li>[93] Jiong Zhang, Qi Lei, and Inderjit S. Dhillon. Stabilizing gradients for deep
                     neural networks via efficient SVD parameterization. In ICML, 2018. 8, 10, 11, 12
                 </li>

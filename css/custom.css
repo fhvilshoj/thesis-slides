@@ -2,6 +2,10 @@ section {
     padding-top: 20px;
 }
 
+.reveal section {
+    font-size: x-large;
+}
+
 .references p {
     font-size: 20px;
 }

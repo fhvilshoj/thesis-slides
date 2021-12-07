@@ -695,12 +695,42 @@
                     =\sum_{i=1}^{d-1} \sqrt{\lambda_{i}\underbrace{\left(C_{r} C_{r}^{\top} C_{f} C_{f}^{\top}\right)}_{d\times d \text{ 👎}}}
                     =\sum_{i=1}^{m-1} \sqrt{\lambda_{i}\underbrace{\left(C_{f}^{\top} C_{r} C_{r}^{\top} C_{f}\right)}_{m\times m \text{ 👍}}}
                 \]
-                <p>Reduces time complexity from $O(d^3)$ to $O(m^3)$</p>
+                <p>Reduces time complexity from $O(d^3)$ to $O(m^3)$ $^*$</p>
+                <p style="margin-top: 2em;">
+                   <small>$^*$ Full running time is $O(d^2 m + m^3)$.</small>
+                </p>
             </section>
-            <section>
+            <section data-auto-animate>
+                <h4>Example</h4>
+                <p><span class="text-purple">Typically</span> $n = m = 10 000$ and $d = 2048$. <span style="margin-right: 1em""></span>Original ($2048^3$) $\ll$ FastFID ($10 000^3$) 🔥</p>
+            </section>
+            <section data-auto-animate>
                 <h4>Example</h4>
                 <p><span class="text-purple">Typically</span> $n = m = 10 000$ and $d = 2048$. <span style="margin-right: 1em""></span>Original ($2048^3$) $\ll$ FastFID ($10 000^3$) 🔥</p>
                 <p><span class="text-purple">During training</span> $n = 10 000$, $m=128$ and $d = 2048$. <span style="margin-right: 1em">Original ($\underset{\sim 10s}{2048^3}$) $\gg$ FastFID ($\underset{\sim0.1s}{128^3}$) 🏆</span></p>
+            </section>
+            <section data-auto-animate>
+                <h4>Example</h4>
+                <p><span class="text-purple">Typically</span> $n = m = 10 000$ and $d = 2048$. <span style="margin-right: 1em""></span>Original ($2048^3$) $\ll$ FastFID ($10 000^3$) 🔥</p>
+                <p><span class="text-purple">During training</span> $n = 10 000$, $m=128$ and $d = 2048$. <span style="margin-right: 1em">Original ($\underset{\sim 10s}{2048^3}$) $\gg$ FastFID ($\underset{\sim0.1s}{128^3}$) 🏆</span></p>
+                <img src="assets/fastfid_runningtimes.png" style="width: 100%;"/>
+            </section>
+            <section>
+                <h4>Using FID as a loss</h4>
+                <div class="r-stack">
+                    <img src="assets/sngan.png" height="500" class="fragment fade-in-then-out">
+                    <img src="assets/dcgan.png" height="500" class="fragment fade-in-then-out">
+                    <img src="assets/sagan.png" height="500" class="fragment fade-in-then-out">
+                    <img src="assets/dogs.png" height="500" class="fragment fade-in">
+                </div>
+            </section>
+            <section data-state="no-bar" data-background-color="var(--au-purple-dark)" style="font-size: larger">
+                <h4>Efficient Neural Network Training</h4>
+                <ul>
+                    <li>Two fast algorithms 🏃💨</li>
+                    <li>$\Rightarrow$ potentially improving generative models 🧬</li>
+                    <li>$\Rightarrow$ potentially improving explainability methods 🪄</li>
+                </ul>
             </section>
         </section>
 
@@ -843,7 +873,7 @@
             57: go_to_slide,
         },
 
-        mathjax3: {
+        mathjax2: {
             config: 'TeX-AMS_HTML-full',
             loader: {load: ['[tex]/color']},
             TeX: {
@@ -856,7 +886,7 @@
         },
 
         // Learn about plugins: https://revealjs.com/plugins/
-        plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax3 ]
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax2 ]
     });
 </script>
 </body>

@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="dist/theme/white.css">
     <link rel="stylesheet" href="dist/custom.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- Theme used for syntax highlighted code -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css">
 </head>
@@ -26,7 +28,7 @@
         </div>
     </header>
     <div class="slides">
-        <section data-state="no-bar" data-auto-animate>
+        <section data-state="no-bar" style="font-size: larger" data-auto-animate>
             <h3 data-id="title" class="r-fit-text">Fast and Explainable Deep Neural Networks</h3>
 
             <ul class="text-blue">
@@ -54,10 +56,11 @@
         </section>
         <section data-state="motivation-header">
             <section data-auto-animate>
-<!--                <video data-id="1" src="assets/classification.mp4" autoplay="autoplay"-->
-<!--                       style="max-width: 100%; max-height: 80%;"></video>-->
+                <!--                <video data-id="1" src="assets/classification.mp4" autoplay="autoplay"-->
+                <!--                       style="max-width: 100%; max-height: 80%;"></video>-->
                 <video autoplay="" muted="" playsinline="" class=r-stretch loop="">
-                    <source src="https://cdn.openai.com/research-covers/glow/videos/prafulla_people_loop.mp4" type="video/mp4">
+                    <source src="https://cdn.openai.com/research-covers/glow/videos/prafulla_people_loop.mp4"
+                            type="video/mp4">
                     Your browser does not support video
                 </video>
                 <p data-id="2"><small style="font-size: small;">Source: <a
@@ -98,7 +101,7 @@
         </section>
 
         <section data-state="motivation-header">
-            <section data-auto-animate>
+            <section class="larger-font" data-auto-animate>
                 <div data-id="hypothesis">
                     We hypothesize that crossing generative models with explainability can
                     produce state-of-the-art methods for explaining neural networks.
@@ -207,10 +210,10 @@
                 </div>
             </section>
         </section>
-        <section data-state="motivation-header">
+        <section data-state="motivation-header" class="larger-font">
             <ul>
                 <li>
-                    <p class="r-stretch"><b class="text-purple">Paper 1</b> What if Neural Networks Had SVDs?</p>
+                    <b class="text-purple">Paper 1</b> What if Neural Networks Had SVDs?<br>
                     <small>Alexander Mathiasen, Frederik Hvilshøj, Jakob Rødsgaard Jørgensen, Anshul Nasery, and Davide
                         Mottin. In NeurIPS, 2020.
                     </small>
@@ -220,11 +223,12 @@
                         <a href="https://arxiv.org/abs/2009.14075" target="_blank">abs/2009.14075</a>, 2020.
                     </small>
                 </li>
-                <li> <b class="text-turkis">Paper 3</b> ECINN: Efficient Counterfactuals from Invertible Neural Networks.
-                    <small>Frederik Hvilshøj, Alexandros Iosifidis, and Ira Assent.  In BMVC, 2021.</small>
+                <li><b class="text-turkis">Paper 3</b> ECINN: Efficient Counterfactuals from Invertible Neural Networks.
+                    <small>Frederik Hvilshøj, Alexandros Iosifidis, and Ira Assent. In BMVC, 2021.</small>
                 </li>
                 <li><b class="text-green">Paper 4</b> On Quantitative Evaluations of Counterfactuals.
-                    <small>Frederik Hvilshøj, Alexandros Iosifidis, and Ira Assent.  CoRR, <a href="https://arxiv.org/abs/2111.00177">abs/2111.00177</a>, 2021. </small>
+                    <small>Frederik Hvilshøj, Alexandros Iosifidis, and Ira Assent. CoRR, <a
+                            href="https://arxiv.org/abs/2111.00177">abs/2111.00177</a>, 2021. </small>
                 </li>
             </ul>
         </section>
@@ -241,7 +245,8 @@
                 <h3 data-id="header">What if Neural Networks had SVDs?</h3>
             </section>
             <section data-auto-animate>
-                <h3 data-id=header" style="font-size: smaller; color: var(--au-gray); margin-bottom: 50px;">What if Neural Networks had SVDs?</h3>
+                <h3 data-id=header" style="font-size: smaller; color: var(--au-gray); margin-bottom: 50px;">What if
+                    Neural Networks had SVDs?</h3>
                 <span data-id="1">
                 \[
                     W\in \mathbb{R}^{d \times d}
@@ -249,7 +254,8 @@
                 </span>
             </section>
             <section data-auto-animate>
-                <h3 data-id=header" style="font-size: smaller; color: var(--au-gray); margin-bottom: 50px;">What if Neural Networks had SVDs?</h3>
+                <h3 data-id=header" style="font-size: smaller; color: var(--au-gray); margin-bottom: 50px;">What if
+                    Neural Networks had SVDs?</h3>
                 <span data-id="1">
                 \[
                 W\in \mathbb{R}^{d \times d}
@@ -263,7 +269,8 @@
                 </span>
             </section>
             <section data-auto-animate>
-                <h3 data-id=header" style="font-size: smaller; color: var(--au-gray); margin-bottom: 50px;">What if Neural Networks had SVDs?</h3>
+                <h3 data-id=header" style="font-size: smaller; color: var(--au-gray); margin-bottom: 50px;">What if
+                    Neural Networks had SVDs?</h3>
                 <span data-id="1">
                 \[
                 W\in \mathbb{R}^{d \times d}
@@ -281,7 +288,7 @@
                     \]
                 </span>
             </section>
-            <section data-auto-animate>
+            <section data-transition="none">
                 <span data-id="2" class="text-gray">
                    $ W = U \Sigma V^\intercal,$
                     <span style="margin-left: 20px; font-size: smaller; color: var(--au-gray)">
@@ -302,7 +309,7 @@
                 </div>
 
             </section>
-            <section data-auto-animate>
+            <section data-transition="none">
                 <span data-id="2" class="text-gray">
                    $ W = U \Sigma V^\intercal,$
                     <span style="margin-left: 20px; font-size: smaller; color: var(--au-gray)">
@@ -318,11 +325,13 @@
                 <div data-id="4">
                     <p>The neural network setting</p>
                     \[
-                    y = \sigma( \color{blue}U\color{blue}\Sigma \color{blue}V^{\color{blue}\intercal} x ) \quad \color{blue}V\color{blue}\Sigma^{\color{blue}-\color{blue}1}\color{blue}U^{\color{blue}\intercal}\sigma^{-1}(y) = x
+                    y = \sigma( \color{blue}U\color{blue}\Sigma \color{blue}V^{\color{blue}\intercal} x ) \quad
+                    \color{blue}V\color{blue}\Sigma^{\color{blue}-\color{blue}1}\color{blue}U^{\color{blue}\intercal}\sigma^{-1}(y)
+                    = x
                     \]
                 </div>
             </section>
-            <section data-auto-animate>
+            <section data-transition="none">
                 <span data-id="2" class="text-gray">
                    $ W = U \Sigma V^\intercal,$
                     <span style="margin-left: 20px; font-size: smaller; color: var(--au-gray)">
@@ -338,41 +347,48 @@
                 <div data-id="4">
                     <p>The neural network setting</p>
                     \[
-                    y = \sigma( \color{blue}U\color{blue}\Sigma \color{blue}V^{\color{blue}\intercal} x ) \quad \color{blue}V\color{blue}\Sigma^{\color{blue}-\color{blue}1}\color{blue}U^{\color{blue}\intercal}\sigma^{-1}(y) = x
+                    y = \sigma( \color{blue}U\color{blue}\Sigma \color{blue}V^{\color{blue}\intercal} x ) \quad
+                    \color{blue}V\color{blue}\Sigma^{\color{blue}-\color{blue}1}\color{blue}U^{\color{blue}\intercal}\sigma^{-1}(y)
+                    = x
                     \]
                 </div>
                 <p data-id="5">$O(d^3)$ to $O(d)$</p>
             </section>
             <section data-auto-animate>
-                <p><span class="text-purple">Problem:</span> Gradient descent on $U$ and $V$ does <u class="text-purple">not</u> maintain orthogonality.</p>
+                <p><span class="text-purple">Problem:</span> Gradient descent on $U$ and $V$ does <u
+                        class="text-purple">not</u> maintain orthogonality.</p>
             </section>
             <section data-auto-animate>
-                <p><span class="text-purple">Problem:</span> Gradient descent on $U$ and $V$ does <u class="text-purple">not</u> maintain orthogonality.</p>
+                <p><span class="text-purple">Problem:</span> Gradient descent on $U$ and $V$ does <u
+                        class="text-purple">not</u> maintain orthogonality.</p>
                 <p><span class="text-purple">Solution:</span> Different parametrization of $U$ and $V$ [93]</p>
             </section>
             <section data-auto-animate>
                 <div data-id="1">
                     \[
-                        U=\prod_{i=1}^{d} H_{i} \quad H_{i}=I-2 \frac{v_{i} v_{i}^{T}}{\left\|v_{i}\right\|_{2}^{2}} \quad v_{i} \in \mathbb{R}^{d}
+                    U=\prod_{i=1}^{d} H_{i} \quad H_{i}=I-2 \frac{v_{i} v_{i}^{T}}{\left\|v_{i}\right\|_{2}^{2}} \quad
+                    v_{i} \in \mathbb{R}^{d}
                     \]
                 </div>
             </section>
             <section data-auto-animate>
                 <div data-id="1">
                     \[
-                    U=\prod_{i=1}^{d} H_{i} \quad H_{i}=I-2 \frac{v_{i} v_{i}^{T}}{\left\|v_{i}\right\|_{2}^{2}} \quad v_{i} \in \mathbb{R}^{d}
+                    U=\prod_{i=1}^{d} H_{i} \quad H_{i}=I-2 \frac{v_{i} v_{i}^{T}}{\left\|v_{i}\right\|_{2}^{2}} \quad
+                    v_{i} \in \mathbb{R}^{d}
                     \]
                 </div>
                 <div data-id="2">
                     \[
-                        UX = H_1\cdots (H_{d-1}(H_d\cdot X) \dots )
+                    UX = H_1\cdots (H_{d-1}(H_d\cdot X) \dots )
                     \]
                 </div>
             </section>
             <section data-auto-animate>
                 <div data-id="1">
                     \[
-                    U=\prod_{i=1}^{d} H_{i} \quad H_{i}=I-2 \frac{v_{i} v_{i}^{T}}{\left\|v_{i}\right\|_{2}^{2}} \quad v_{i} \in \mathbb{R}^{d}
+                    U=\prod_{i=1}^{d} H_{i} \quad H_{i}=I-2 \frac{v_{i} v_{i}^{T}}{\left\|v_{i}\right\|_{2}^{2}} \quad
+                    v_{i} \in \mathbb{R}^{d}
                     \]
                 </div>
                 <div data-id="2">
@@ -384,13 +400,15 @@
                 <p data-id="4">Very sequential 👎</p>
             </section>
             <section>
-                <img src="assets/fasth_compare.png" class="r-stretch"/>
+                <p>Matrix Inversion</p>
+                <img src="assets/fasth_compare.png" height="400"/>
             </section>
             <section>
                 <h4 style="display: inline" class="text-purple">Problem: </h4>
                 <p style="display: inline;">Given $X$ and $v_1, ..., v_d$, can we compute the product
-                    $$\left[\prod_{i=1}^{d} I-2 \frac{v_{i} v_{i}^{\top}}{\left\|v_{i}\right\|_{2}^{2}}\right] X=\left[\prod_{i=1}^{d} H_{i}\right] X$$
-                     in $O(d^2n)$ time with less than $O(d)$ sequential work?
+                    $$\left[\prod_{i=1}^{d} I-2 \frac{v_{i} v_{i}^{\top}}{\left\|v_{i}\right\|_{2}^{2}}\right]
+                    X=\left[\prod_{i=1}^{d} H_{i}\right] X$$
+                    in $O(d^2n)$ time with less than $O(d)$ sequential work?
                 </p><br/>
             </section>
             <section data-auto-animate>
@@ -403,7 +421,8 @@
                 <div data-auto-animate-id="1" class="lemma smaller-font">
                     <p>
                         <b>Lemma 1: [8]</b>
-                        For any $t$ Householder matrices $H_1,...,H_t$, there exists $W, Y\in \mathbb{R}^{d\times t}$ st.
+                        For any $t$ Householder matrices $H_1,...,H_t$, there exists $W, Y\in \mathbb{R}^{d\times t}$
+                        st.
                         $I− WY^\intercal = H_1 \cdots H_t$. <br/>
                         Computing $W$ and $Y$ takes $O(dt^2)$ time and $t$ sequential matrix-matrix multiplications.
                     </p>
@@ -412,10 +431,11 @@
             <section data-auto-animate>
                 <h4 style="display: inline" class="text-purple">Solution: </h4>
                 <p style="display: inline;">Compute sub-products in parallel.</p>
-                <div data-auto-animate-id="1"class="lemma smaller-font">
+                <div data-auto-animate-id="1" class="lemma smaller-font">
                     <p>
                         <b>Lemma 1: [8]</b>
-                        For any $t$ Householder matrices $H_1,...,H_t$, there exists $W, Y\in \mathbb{R}^{d\times t}$ st.
+                        For any $t$ Householder matrices $H_1,...,H_t$, there exists $W, Y\in \mathbb{R}^{d\times t}$
+                        st.
                         $I− WY^\intercal = H_1 \cdots H_t$. <br/>
                         Computing $W$ and $Y$ takes $O(dt^2)$ time and $t$ sequential matrix-matrix multiplications.
                     </p>
@@ -426,7 +446,8 @@
                         \begin{array}{cccc}
                         H_{1} \ldots H_{t} & H_{t+1} \ldots H_{2 t} & \ldots & H_{d-t+1} \ldots H_{d} \\
                         \| & \| & \ldots & \| \\
-                        G_{1}=I-W_{1} Y_{1}^{\top} & G_{2}=I-W_{2} Y_{2}^{\top} & \ldots & G_{d / t}=I-W_{d / t} Y_{d / t}^{\top}
+                        G_{1}=I-W_{1} Y_{1}^{\top} & G_{2}=I-W_{2} Y_{2}^{\top} & \ldots & G_{d / t}=I-W_{d / t} Y_{d /
+                        t}^{\top}
                         \end{array}
                         $</p>
                 </div>
@@ -437,7 +458,8 @@
                 <div data-auto-animate-id="1" class="lemma smaller-font">
                     <p>
                         <b>Lemma 1: [8]</b>
-                        For any $t$ Householder matrices $H_1,...,H_t$, there exists $W, Y\in \mathbb{R}^{d\times t}$ st.
+                        For any $t$ Householder matrices $H_1,...,H_t$, there exists $W, Y\in \mathbb{R}^{d\times t}$
+                        st.
                         $I− WY^\intercal = H_1 \cdots H_t$. <br/>
                         Computing $W$ and $Y$ takes $O(dt^2)$ time and $t$ sequential matrix-matrix multiplications.
                     </p>
@@ -445,18 +467,19 @@
                 <div class="smaller-font">
                     <p><span class="text-purple">Step 1:</span> Compute sub-products in parallel.</p>
                     <p>$
-                    \begin{array}{cccc}
-                    H_{1} \ldots H_{t} & H_{t+1} \ldots H_{2 t} & \ldots & H_{d-t+1} \ldots H_{d} \\
-                    \| & \| & \ldots & \| \\
-                    G_{1}=I-W_{1} Y_{1}^{\top} & G_{2}=I-W_{2} Y_{2}^{\top} & \ldots & G_{d / t}=I-W_{d / t} Y_{d / t}^{\top}
-                    \end{array}
+                        \begin{array}{cccc}
+                        H_{1} \ldots H_{t} & H_{t+1} \ldots H_{2 t} & \ldots & H_{d-t+1} \ldots H_{d} \\
+                        \| & \| & \ldots & \| \\
+                        G_{1}=I-W_{1} Y_{1}^{\top} & G_{2}=I-W_{2} Y_{2}^{\top} & \ldots & G_{d / t}=I-W_{d / t} Y_{d /
+                        t}^{\top}
+                        \end{array}
                         $
                     </p>
                 </div>
                 <div class="smaller-font">
                     <p><span class="text-purple">Step 2:</span> Compute full product sequentially.</p>
                     \[
-                        UX = G_1(G_2(...(G_{d/t}X)...)
+                    UX = G_1(G_2(...(G_{d/t}X)...)
                     \]
                 </div>
             </section>
@@ -467,12 +490,12 @@
                     <table>
                         <tr>
                             <td><i class="text-purple">Step 1:</i></td>
-                            <td>Computing $d/t$ products: </td>
+                            <td>Computing $d/t$ products:</td>
                             <td>$O(d/t \cdot dt^2) = O(d^2t)$</td>
                         </tr>
                         <tr>
                             <td><i class="text-purple">Step 2:</i></td>
-                            <td>Computing the full product: </td>
+                            <td>Computing the full product:</td>
                             <td>$O(d/t \cdot dtm) = O(d^2m)$</td>
                         </tr>
                         <tr>
@@ -490,12 +513,12 @@
                     <table>
                         <tr>
                             <td><i class="text-purple">Step 1:</i></td>
-                            <td>Computing $d/t$ products: </td>
+                            <td>Computing $d/t$ products:</td>
                             <td>$O(d/t \cdot dt^2) = O(d^2t)$</td>
                         </tr>
                         <tr>
                             <td><i class="text-purple">Step 2:</i></td>
-                            <td>Computing the full product: </td>
+                            <td>Computing the full product:</td>
                             <td>$O(d/t \cdot dtm) = O(d^2m)$</td>
                         </tr>
                         <tr>
@@ -511,12 +534,12 @@
                     <table>
                         <tr>
                             <td><i class="text-purple">Step 1:</i></td>
-                            <td>Computing $d/t$ products: </td>
+                            <td>Computing $d/t$ products:</td>
                             <td>$O(t)$</td>
                         </tr>
                         <tr>
                             <td><i class="text-purple">Step 2:</i></td>
-                            <td>Computing the full product: </td>
+                            <td>Computing the full product:</td>
                             <td>$O(d/t)$</td>
                         </tr>
                         <tr>
@@ -528,11 +551,13 @@
 
                 </div>
             </section>
-            <section>
-                <img src="assets/fasth_compare2.png" class="r-stretch"/>
+            <section data-transition="none">
+                <p>SVD as weight matrices</p>
+                <img src="assets/fasth_compare2.png" height="400"/>
             </section>
-            <section>
-                <img src="assets/fasth_training.png" class="r-stretch"/>
+            <section data-transition="none">
+                <p>SVD for matrix operations</p>
+                <img src="assets/fasth_training.png" height="400"/>
             </section>
         </section>
         <section data-state="algo-header">
@@ -547,9 +572,547 @@
             </section>
             <section>
                 <p class="smaller-font">CIFAR10 Fréchet Inception Distance</p>
-                <svg version="1.1" class="highcharts-root" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="800" height="350" viewBox="0 0 1110 350"><desc>Created with Highcharts 9.3.0</desc><defs><clipPath id="highcharts-5ak6p94-1-"><rect x="0" y="0" width="1030" height="264" fill="none"></rect></clipPath><clipPath id="highcharts-5ak6p94-56-"><rect x="0" y="0" width="1030" height="264" fill="none"></rect></clipPath></defs><rect fill="#ffffff" class="highcharts-background" x="0" y="0" width="1110" height="350" rx="0" ry="0"></rect><rect fill="none" class="highcharts-plot-background" x="70" y="10" width="1030" height="264"></rect><g class="highcharts-pane-group" data-z-index="0"></g><g class="highcharts-grid highcharts-xaxis-grid" data-z-index="1"><path fill="none" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 135.5 10 L 135.5 274" opacity="1"></path><path fill="none" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 246.5 10 L 246.5 274" opacity="1"></path><path fill="none" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 355.5 10 L 355.5 274" opacity="1"></path><path fill="none" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 465.5 10 L 465.5 274" opacity="1"></path><path fill="none" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 574.5 10 L 574.5 274" opacity="1"></path><path fill="none" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 685.5 10 L 685.5 274" opacity="1"></path><path fill="none" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 795.5 10 L 795.5 274" opacity="1"></path><path fill="none" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 906.5 10 L 906.5 274" opacity="1"></path><path fill="none" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 1015.5 10 L 1015.5 274" opacity="1"></path></g><g class="highcharts-grid highcharts-yaxis-grid" data-z-index="1"><path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 70 274.5 L 1100 274.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 70 208.5 L 1100 208.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 70 142.5 L 1100 142.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 70 76.5 L 1100 76.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 70 9.5 L 1100 9.5" opacity="1"></path></g><rect fill="none" class="highcharts-plot-border" data-z-index="1" x="70" y="10" width="1030" height="264"></rect><g class="highcharts-axis highcharts-xaxis" data-z-index="2"><path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 135.5 274 L 135.5 284" opacity="1"></path><path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 246.5 274 L 246.5 284" opacity="1"></path><path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 355.5 274 L 355.5 284" opacity="1"></path><path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 465.5 274 L 465.5 284" opacity="1"></path><path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 574.5 274 L 574.5 284" opacity="1"></path><path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 685.5 274 L 685.5 284" opacity="1"></path><path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 795.5 274 L 795.5 284" opacity="1"></path><path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 906.5 274 L 906.5 284" opacity="1"></path><path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 1015.5 274 L 1015.5 284" opacity="1"></path><path fill="none" class="highcharts-axis-line" stroke="#ccd6eb" stroke-width="1" data-z-index="7" d="M 70 274.5 L 1100 274.5"></path></g><g class="highcharts-axis highcharts-yaxis" data-z-index="2"><text x="24.71875" data-z-index="7" text-anchor="middle" transform="translate(0,0) rotate(270 24.71875 142)" class="highcharts-axis-title" style="color:#666666;font-size:12px;fill:#666666;" y="142">FID</text><path fill="none" class="highcharts-axis-line" data-z-index="7" d="M 70 10 L 70 274"></path></g><g class="highcharts-series-group" data-z-index="3"><g class="highcharts-series highcharts-series-0 highcharts-scatter-series highcharts-tracker" data-z-index="1" opacity="1" transform="translate(70,10) scale(1 1)" clip-path="url(#highcharts-5ak6p94-56-)"></g><g class="highcharts-markers highcharts-series-0 highcharts-scatter-series highcharts-tracker" data-z-index="1" opacity="1" transform="translate(70,10) scale(1 1)" clip-path="none"><path fill="#ddd" d="M 286 113.52000000000001 A 0 0 0 1 1 286 113.52000000000001 Z" class="highcharts-halo highcharts-color-undefined tag-23" data-z-index="-1" fill-opacity="0.25" visibility="hidden"></path><path fill="#ddd" d="M 202 111.58000000000001 A 4 4 0 1 1 202.00399999933333 111.57999800000017 Z" opacity="1" class="highcharts-point tag-23"></path><path fill="#ddd" d="M 265 119.5 A 4 4 0 1 1 265.00399999933336 119.49999800000016 Z" opacity="1" class="highcharts-point tag-23"></path><path fill="#ddd" d="M 286 117.52000000000001 A 4 4 0 1 1 286.00399999933336 117.51999800000017 Z" opacity="1" class="highcharts-point tag-23" stroke-width="0.00004079527423431206"></path><path fill="#ddd" d="M 375 150.35500000000002 A 4 4 0 1 1 375.00399999933336 150.3549980000002 Z" opacity="1" class="highcharts-point tag-23"></path><path fill="#ddd" d="M 391 148.507 A 4 4 0 1 1 391.00399999933336 148.50699800000018 Z" opacity="1" class="highcharts-point tag-23"></path><path fill="#ddd" d="M 413 148.87 A 4 4 0 1 1 413.00399999933336 148.86999800000018 Z" opacity="1" class="highcharts-point tag-23"></path><path fill="#ddd" d="M 439 107.191 A 4 4 0 1 1 439.00399999933336 107.19099800000016 Z" opacity="1" class="highcharts-point tag-23"></path><path fill="#ddd" d="M 482 54.82000000000002 A 4 4 0 1 1 482.00399999933336 54.81999800000019 Z" opacity="1" class="highcharts-point tag-22"></path><path fill="#ddd" d="M 490 48.978999999999985 A 4 4 0 1 1 490.00399999933336 48.97899800000015 Z" opacity="1" class="highcharts-point tag-22"></path><path fill="#ddd" d="M 493 136.561 A 4 4 0 1 1 493.00399999933336 136.56099800000018 Z" opacity="1" class="highcharts-point tag-23"></path><path fill="#ddd" d="M 511 118.44400000000002 A 4 4 0 1 1 511.00399999933336 118.44399800000018 Z" opacity="1" class="highcharts-point tag-0"></path><path fill="#ddd" d="M 565 29.733400000000017 A 4 4 0 1 1 565.0039999993334 29.733398000000186 Z" opacity="1" class="highcharts-point tag-23"></path><path fill="#ddd" d="M 569 112.50399999999999 A 4 4 0 1 1 569.0039999993334 112.50399800000015 Z" opacity="1" class="highcharts-point tag-23"></path><path fill="#ddd" d="M 575 153.952 A 4 4 0 1 1 575.0039999993334 153.95199800000017 Z" opacity="1" class="highcharts-point tag-23 tag-3"></path><path fill="#ddd" d="M 598 162.36700000000002 A 4 4 0 1 1 598.0039999993334 162.3669980000002 Z" opacity="1" class="highcharts-point tag-0"></path><path fill="#ddd" d="M 656 146.59300000000002 A 4 4 0 1 1 656.0039999993334 146.5929980000002 Z" opacity="1" class="highcharts-point tag-0"></path><path fill="#ddd" d="M 673 148.40800000000002 A 4 4 0 1 1 673.0039999993334 148.4079980000002 Z" opacity="1" class="highcharts-point tag-0"></path><path fill="#ddd" d="M 673 130.489 A 4 4 0 1 1 673.0039999993334 130.48899800000018 Z" opacity="1" class="highcharts-point tag-0"></path><path fill="#ddd" d="M 716 166.12900000000002 A 4 4 0 1 1 716.0039999993334 166.1289980000002 Z" opacity="1" class="highcharts-point tag-24"></path><path fill="#ddd" d="M 717 186.787 A 4 4 0 1 1 717.0039999993334 186.78699800000018 Z" opacity="1" class="highcharts-point tag-23"></path><path fill="#ddd" d="M 717 182.893 A 4 4 0 1 1 717.0039999993334 182.89299800000018 Z" opacity="1" class="highcharts-point tag-23"></path><path fill="#ddd" d="M 717 165.469 A 4 4 0 1 1 717.0039999993334 165.46899800000017 Z" opacity="1" class="highcharts-point tag-23"></path><path fill="#ddd" d="M 718 157.41700000000003 A 4 4 0 1 1 718.0039999993334 157.4169980000002 Z" opacity="1" class="highcharts-point tag-0"></path><path fill="#ddd" d="M 719 146.59300000000002 A 4 4 0 1 1 719.0039999993334 146.5929980000002 Z" opacity="1" class="highcharts-point tag-0"></path><path fill="#ddd" d="M 719 68.51500000000001 A 4 4 0 1 1 719.0039999993334 68.51499800000018 Z" opacity="1" class="highcharts-point tag-0"></path><path fill="#ddd" d="M 732 175.039 A 4 4 0 1 1 732.0039999993334 175.03899800000016 Z" opacity="1" class="highcharts-point tag-23"></path><path fill="#ddd" d="M 735 164.842 A 4 4 0 1 1 735.0039999993334 164.8419980000002 Z" opacity="1" class="highcharts-point tag-23"></path><path fill="#ddd" d="M 769 189.955 A 4 4 0 1 1 769.0039999993334 189.9549980000002 Z" opacity="1" class="highcharts-point tag-24"></path><path fill="#ddd" d="M 781 161.77300000000002 A 4 4 0 1 1 781.0039999993334 161.7729980000002 Z" opacity="1" class="highcharts-point tag-21"></path><path fill="#ddd" d="M 781 161.54200000000003 A 4 4 0 1 1 781.0039999993334 161.5419980000002 Z" opacity="1" class="highcharts-point tag-21"></path><path fill="#ddd" d="M 784 122.536 A 4 4 0 1 1 784.0039999993334 122.53599800000016 Z" opacity="1" class="highcharts-point tag-21"></path><path fill="#ddd" d="M 791 169.66 A 4 4 0 1 1 791.0039999993334 169.65999800000017 Z" opacity="1" class="highcharts-point tag-23"></path><path fill="#ddd" d="M 810 142.93 A 4 4 0 1 1 810.0039999993334 142.92999800000018 Z" opacity="1" class="highcharts-point tag-21"></path><path fill="#ddd" d="M 814 194.047 A 4 4 0 1 1 814.0039999993334 194.04699800000017 Z" opacity="1" class="highcharts-point tag-24"></path><path fill="#ddd" d="M 817 170.25400000000002 A 4 4 0 1 1 817.0039999993334 170.2539980000002 Z" opacity="1" class="highcharts-point tag-22 tag-23"></path><path fill="#ddd" d="M 820 162.994 A 4 4 0 1 1 820.0039999993334 162.99399800000018 Z" opacity="1" class="highcharts-point tag-0"></path><path fill="#ddd" d="M 820 161.344 A 4 4 0 1 1 820.0039999993334 161.34399800000017 Z" opacity="1" class="highcharts-point tag-0"></path><path fill="#ddd" d="M 840 171.11200000000002 A 4 4 0 1 1 840.0039999993334 171.1119980000002 Z" opacity="1" class="highcharts-point tag-0"></path><path fill="#ddd" d="M 847 130.88500000000002 A 4 4 0 1 1 847.0039999993334 130.8849980000002 Z" opacity="1" class="highcharts-point tag-0"></path><path fill="#ddd" d="M 860 160.387 A 4 4 0 1 1 860.0039999993334 160.38699800000018 Z" opacity="1" class="highcharts-point tag-0"></path><path fill="#ddd" d="M 863 171.442 A 4 4 0 1 1 863.0039999993334 171.44199800000018 Z" opacity="1" class="highcharts-point tag-23"></path><path fill="#ddd" d="M 894 193.849 A 4 4 0 1 1 894.0039999993334 193.84899800000017 Z" opacity="1" class="highcharts-point tag-23"></path><path fill="#ddd" d="M 894 174.082 A 4 4 0 1 1 894.0039999993334 174.08199800000017 Z" opacity="1" class="highcharts-point tag-0"></path><path fill="#ddd" d="M 901 96.5122 A 4 4 0 1 1 901.0039999993334 96.51219800000017 Z" opacity="1" class="highcharts-point tag-23"></path><path fill="#ddd" d="M 931 86.83000000000001 A 4 4 0 1 1 931.0039999993334 86.82999800000017 Z" opacity="1" class="highcharts-point tag-22"></path><path fill="#ddd" d="M 932 194.839 A 4 4 0 1 1 932.0039999993334 194.83899800000017 Z" opacity="1" class="highcharts-point tag-21 tag-24"></path><path fill="#ddd" d="M 932 194.311 A 4 4 0 1 1 932.0039999993334 194.31099800000018 Z" opacity="1" class="highcharts-point tag-0"></path><path fill="#ddd" d="M 932 179.263 A 4 4 0 1 1 932.0039999993334 179.26299800000018 Z" opacity="1" class="highcharts-point tag-21 tag-24"></path><path fill="#ddd" d="M 934 192.69400000000002 A 4 4 0 1 1 934.0039999993334 192.6939980000002 Z" opacity="1" class="highcharts-point tag-23"></path><path fill="#ddd" d="M 945 188.8 A 4 4 0 1 1 945.0039999993334 188.7999980000002 Z" opacity="1" class="highcharts-point tag-0"></path><path fill="#ddd" d="M 950 186.91899999999998 A 4 4 0 1 1 950.0039999993334 186.91899800000016 Z" opacity="1" class="highcharts-point tag-4"></path><path fill="#ddd" d="M 950 180.022 A 4 4 0 1 1 950.0039999993334 180.02199800000017 Z" opacity="1" class="highcharts-point tag-4"></path><path fill="#ddd" d="M 1012 191.506 A 4 4 0 1 1 1012.0039999993334 191.50599800000018 Z" opacity="1" class="highcharts-point tag-24 tag-138"></path><path fill="#ddd" d="M 1019 194.54200000000003 A 4 4 0 1 1 1019.0039999993334 194.5419980000002 Z" opacity="1" class="highcharts-point tag-0"></path></g><g class="highcharts-series highcharts-series-3 highcharts-line-series" data-z-index="2" opacity="1" transform="translate(70,10) scale(1 1)" clip-path="url(#highcharts-5ak6p94-56-)"><path fill="none" d="M 10.393213759558 101.31000000000003 L 62.780791806001 116.16000000000003 L 204.28746813834 126.38999999999999 L 225.36293057082 139.887 L 339.17042770619 149.391 L 511.9892196525 155.232 L 530.05390173748 157.014 L 588.46304047892 160.38 L 714.31365900428 162.69 L 717.92659542128 183.81 L 718.52875149077 187.539 L 814.87372261067 190.74 L 932.89631223254 191.07" class="highcharts-graph" data-z-index="1" stroke="#21ccc7" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path><path fill="none" d="M 10.393213759558 101.31000000000003 L 62.780791806001 116.16000000000003 L 204.28746813834 126.38999999999999 L 225.36293057082 139.887 L 339.17042770619 149.391 L 511.9892196525 155.232 L 530.05390173748 157.014 L 588.46304047892 160.38 L 714.31365900428 162.69 L 717.92659542128 183.81 L 718.52875149077 187.539 L 814.87372261067 190.74 L 932.89631223254 191.07" visibility="visible" data-z-index="2" class="highcharts-tracker-line" stroke-linecap="round" stroke-linejoin="round" stroke="rgba(192,192,192,0.0001)" stroke-width="22"></path></g><g class="highcharts-markers highcharts-series-3 highcharts-line-series highcharts-tracker" data-z-index="2" opacity="1" transform="translate(70,10) scale(1 1)" clip-path="none"><path fill="#21ccc7" d="M 225 139.887 A 0 0 0 1 1 225 139.887 Z" class="highcharts-halo highcharts-color-undefined tag-23" data-z-index="-1" fill-opacity="0.25" visibility="hidden"></path><path fill="#21ccc7" d="M 10 105.31000000000003 A 4 4 0 1 1 10.003999999333336 105.30999800000019 Z" opacity="1" class="highcharts-point tag-23"></path><path fill="#21ccc7" d="M 62 120.16000000000003 A 4 4 0 1 1 62.00399999933334 120.15999800000019 Z" opacity="1" class="highcharts-point tag-23"></path><path fill="#21ccc7" d="M 204 130.39 A 4 4 0 1 1 204.00399999933333 130.38999800000016 Z" opacity="1" class="highcharts-point tag-23"></path><path fill="#21ccc7" d="M 225 143.887 A 4 4 0 1 1 225.00399999933333 143.88699800000018 Z" opacity="1" class="highcharts-point tag-23" stroke-width="0.0015819147410403023"></path><path fill="#21ccc7" d="M 339 153.391 A 4 4 0 1 1 339.00399999933336 153.39099800000017 Z" opacity="1" class="highcharts-point tag-23"></path><path fill="#21ccc7" d="M 511 159.232 A 4 4 0 1 1 511.00399999933336 159.23199800000017 Z" opacity="1" class="highcharts-point tag-23"></path><path fill="#21ccc7" d="M 530 161.014 A 4 4 0 1 1 530.0039999993334 161.01399800000019 Z" opacity="1" class="highcharts-point tag-23"></path><path fill="#21ccc7" d="M 588 164.38 A 4 4 0 1 1 588.0039999993334 164.37999800000017 Z" opacity="1" class="highcharts-point tag-23"></path><path fill="#21ccc7" d="M 714 166.69 A 4 4 0 1 1 714.0039999993334 166.68999800000017 Z" opacity="1" class="highcharts-point tag-23"></path><path fill="#21ccc7" d="M 717 187.81 A 4 4 0 1 1 717.0039999993334 187.80999800000018 Z" opacity="1" class="highcharts-point tag-23"></path><path fill="#21ccc7" d="M 718 191.539 A 4 4 0 1 1 718.0039999993334 191.53899800000016 Z" opacity="1" class="highcharts-point tag-24"></path><path fill="#21ccc7" d="M 814 194.74 A 4 4 0 1 1 814.0039999993334 194.73999800000018 Z" opacity="1" class="highcharts-point tag-24"></path><path fill="#21ccc7" d="M 932 195.07 A 4 4 0 1 1 932.0039999993334 195.06999800000017 Z" opacity="1" class="highcharts-point tag-21 tag-24"></path></g><g class="highcharts-series highcharts-series-1 highcharts-errorbar-series highcharts-tracker" data-z-index="3" opacity="1" transform="translate(70,10) scale(1 1)" clip-path="url(#highcharts-5ak6p94-56-)"></g><g class="highcharts-markers highcharts-series-1 highcharts-errorbar-series" data-z-index="3" opacity="1" transform="translate(70,10) scale(1 1)" clip-path="none"></g><g class="highcharts-series highcharts-series-2 highcharts-errorbar-series highcharts-tracker" data-z-index="3" opacity="1" transform="translate(70,10) scale(1 1)" clip-path="url(#highcharts-5ak6p94-56-)"></g><g class="highcharts-markers highcharts-series-2 highcharts-errorbar-series" data-z-index="3" opacity="1" transform="translate(70,10) scale(1 1)" clip-path="none"></g></g><g class="highcharts-data-labels highcharts-series-3 highcharts-line-series highcharts-tracker" data-z-index="3" opacity="1" transform="translate(70,10) scale(1 1)"><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined" data-z-index="1" transform="translate(-5,79)"><text x="5" data-z-index="1" y="16" style="color:#4a4a4a;font-size:11px;font-weight:normal;fill:#4a4a4a;"><tspan class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round" style="">WGAN-GP<tspan x="5" y="16">​</tspan></tspan>WGAN-GP</text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined" data-z-index="1" transform="translate(-5,94)"><text x="5" data-z-index="1" y="16" style="color:#4a4a4a;font-size:11px;font-weight:normal;fill:#4a4a4a;"><tspan class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round" style="">WGAN-GP + TT Update Rule<tspan x="5" y="16">​</tspan></tspan>WGAN-GP + TT Update Rule</text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined" data-z-index="1" transform="translate(174,104)"><text x="5" data-z-index="1" y="16" style="color:#4a4a4a;font-size:11px;font-weight:normal;fill:#4a4a4a;"><tspan class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round" style="">SN-GANs<tspan x="5" y="16">​</tspan></tspan>SN-GANs</text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined" data-z-index="1" transform="translate(195,118)"><text x="5" data-z-index="1" y="16" style="color:#4a4a4a;font-size:11px;font-weight:normal;fill:#4a4a4a;"><tspan class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round" style="">Dist-GAN<tspan x="5" y="16">​</tspan></tspan>Dist-GAN</text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined" data-z-index="1" transform="translate(314,127)"><text x="5" data-z-index="1" y="16" style="color:#4a4a4a;font-size:11px;font-weight:normal;fill:#4a4a4a;"><tspan class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round" style="">BigGAN<tspan x="5" y="16">​</tspan></tspan>BigGAN</text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined" data-z-index="1" transform="translate(477,133)"><text x="5" data-z-index="1" y="16" style="color:#4a4a4a;font-size:11px;font-weight:normal;fill:#4a4a4a;"><tspan class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round" style="">WGAN-ALP<tspan x="5" y="16">​</tspan></tspan>WGAN-ALP</text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-data-label-hidden" data-z-index="1" transform="translate(501,135)" opacity="0" style="pointer-events:none;"><text x="5" data-z-index="1" y="16" style="color:#4a4a4a;font-size:11px;font-weight:normal;fill:#4a4a4a;"><tspan class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round" style="">AutoGAN<tspan x="5" y="16">​</tspan></tspan>AutoGAN</text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined" data-z-index="1" transform="translate(564,138)"><text x="5" data-z-index="1" y="16" style="color:#4a4a4a;font-size:11px;font-weight:normal;fill:#4a4a4a;"><tspan class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round" style="">MSGAN<tspan x="5" y="16">​</tspan></tspan>MSGAN</text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined" data-z-index="1" transform="translate(687,141)"><text x="5" data-z-index="1" y="16" style="color:#4a4a4a;font-size:11px;font-weight:normal;fill:#4a4a4a;"><tspan class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round" style="">PPOGAN<tspan x="5" y="16">​</tspan></tspan>PPOGAN</text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined" data-z-index="1" transform="translate(645,162)"><text x="5" data-z-index="1" y="16" style="color:#4a4a4a;font-size:11px;font-weight:normal;fill:#4a4a4a;"><tspan class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round" style="">DiffAugment-CR-BigGAN<tspan x="5" y="16">​</tspan></tspan>DiffAugment-CR-BigGAN</text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-data-label-hidden" data-z-index="1" transform="translate(661,166)" opacity="0" style="pointer-events:none;"><text x="5" data-z-index="1" y="16" style="color:#4a4a4a;font-size:11px;font-weight:normal;fill:#4a4a4a;"><tspan class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round" style="">Denoising Diffusion<tspan x="5" y="16">​</tspan></tspan>Denoising Diffusion</text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined" data-z-index="1" transform="translate(786,169)"><text x="5" data-z-index="1" y="16" style="color:#4a4a4a;font-size:11px;font-weight:normal;fill:#4a4a4a;"><tspan class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round" style="">NCSN++<tspan x="5" y="16">​</tspan></tspan>NCSN++</text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined" data-z-index="1" transform="translate(899,169)"><text x="5" data-z-index="1" y="16" style="color:#4a4a4a;font-size:11px;font-weight:normal;fill:#4a4a4a;"><tspan class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round" style="">LSGM (FID)<tspan x="5" y="16">​</tspan></tspan>LSGM (FID)</text></g></g><g class="highcharts-exporting-group" data-z-index="3"><rect fill="#ffffff" class="highcharts-button-box" x="0.5" y="0.5" width="24" height="22" rx="2" ry="2" stroke="none" stroke-width="1"></rect><text x="0" data-z-index="1" y="15.5" style="color:#333333;font-weight:normal;fill:#333333;"></text></g></g><text x="555" text-anchor="middle" class="highcharts-title" data-z-index="4" style="color:#333333;font-size:18px;fill:#333333;" y="24"></text><text x="555" text-anchor="middle" class="highcharts-subtitle" data-z-index="4" style="color:#666666;fill:#666666;" y="24"></text><text x="10" text-anchor="start" class="highcharts-caption" data-z-index="4" style="color:#666666;fill:#666666;" y="347"></text><g class="highcharts-legend highcharts-no-tooltip" data-z-index="7" transform="translate(392,307)"><rect fill="#ffffff" class="highcharts-legend-box" rx="0" ry="0" x="0" y="0" width="326" height="28" visibility="visible"></rect><g data-z-index="1"><g><g class="highcharts-legend-item highcharts-scatter-series highcharts-color-undefined highcharts-series-0" data-z-index="1" transform="translate(8,3)"><path fill="none" d="M 0 13 L 16 13" class="highcharts-graph"></path><path fill="#ddd" d="M 8 17 A 4 4 0 1 1 8.003999999333336 16.99999800000017 Z" class="highcharts-point" opacity="1"></path><text x="21" style="color:#414141;cursor:pointer;font-size:14px;font-weight:normal;fill:#414141;" text-anchor="start" data-z-index="2" y="17">Other models</text></g><g class="highcharts-legend-item highcharts-line-series highcharts-color-undefined highcharts-series-3" data-z-index="1" transform="translate(141.234375,3)"><path fill="none" d="M 0 13 L 16 13" class="highcharts-graph" stroke="#21ccc7" stroke-width="2"></path><path fill="#21ccc7" d="M 8 17 A 4 4 0 1 1 8.003999999333336 16.99999800000017 Z" class="highcharts-point" opacity="1"></path><text x="21" y="17" style="color:#414141;cursor:pointer;font-size:14px;font-weight:normal;fill:#414141;" text-anchor="start" data-z-index="2">Models with lowest FID</text></g></g></g></g><g class="highcharts-axis-labels highcharts-xaxis-labels" data-z-index="7"><text x="135.7915721535" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="293" opacity="1">Jul '17</text><text x="246.58828894137" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="293" opacity="1">Jan '18</text><text x="355.57853752075" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="293" opacity="1">Jul '18</text><text x="466.37525430863" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="293" opacity="1">Jan '19</text><text x="575.36550288801" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="293" opacity="1">Jul '19</text><text x="686.16221967589" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="293" opacity="1">Jan '20</text><text x="795.75462432477" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="293" opacity="1">Jul '20</text><text x="906.55134111264" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="293" opacity="1">Jan '21</text><text x="1015.541589692" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="293" opacity="1">Jul '21</text></g><g class="highcharts-axis-labels highcharts-yaxis-labels" data-z-index="7"><text x="55" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="279" opacity="1">-20</text><text x="55" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="213" opacity="1">0</text><text x="55" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="147" opacity="1">20</text><text x="55" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="81" opacity="1">40</text><text x="55" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="15" opacity="1">60</text></g><g class="highcharts-label highcharts-tooltip highcharts-color-undefined" style="cursor:default;white-space:nowrap;pointer-events:none;" data-z-index="8" transform="translate(291,-9999)" opacity="0" visibility="hidden"><path fill="none" class="highcharts-label-box highcharts-tooltip-box highcharts-shadow" d="M 3.5 0.5 L 128.5 0.5 C 131.5 0.5 131.5 0.5 131.5 3.5 L 131.5 28.5 C 131.5 31.5 131.5 31.5 128.5 31.5 L 70.5 31.5 L 64.5 37.5 L 58.5 31.5 L 3.5 31.5 C 0.5 31.5 0.5 31.5 0.5 28.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" stroke="#000000" stroke-opacity="0.049999999999999996" stroke-width="5" transform="translate(1, 1)"></path><path fill="none" class="highcharts-label-box highcharts-tooltip-box highcharts-shadow" d="M 3.5 0.5 L 128.5 0.5 C 131.5 0.5 131.5 0.5 131.5 3.5 L 131.5 28.5 C 131.5 31.5 131.5 31.5 128.5 31.5 L 70.5 31.5 L 64.5 37.5 L 58.5 31.5 L 3.5 31.5 C 0.5 31.5 0.5 31.5 0.5 28.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" stroke="#000000" stroke-opacity="0.09999999999999999" stroke-width="3" transform="translate(1, 1)"></path><path fill="none" class="highcharts-label-box highcharts-tooltip-box highcharts-shadow" d="M 3.5 0.5 L 128.5 0.5 C 131.5 0.5 131.5 0.5 131.5 3.5 L 131.5 28.5 C 131.5 31.5 131.5 31.5 128.5 31.5 L 70.5 31.5 L 64.5 37.5 L 58.5 31.5 L 3.5 31.5 C 0.5 31.5 0.5 31.5 0.5 28.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" stroke="#000000" stroke-opacity="0.15" stroke-width="1" transform="translate(1, 1)"></path><path fill="rgba(247,247,247,0.85)" class="highcharts-label-box highcharts-tooltip-box" d="M 3.5 0.5 L 128.5 0.5 C 131.5 0.5 131.5 0.5 131.5 3.5 L 131.5 28.5 C 131.5 31.5 131.5 31.5 128.5 31.5 L 70.5 31.5 L 64.5 37.5 L 58.5 31.5 L 3.5 31.5 C 0.5 31.5 0.5 31.5 0.5 28.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" stroke="#ddd" stroke-width="1"></path><text x="8" data-z-index="1" y="20" style="color:#333333;font-size:12px;fill:#333333;"><tspan style="font-weight:bold;">RSGAN-GP:</tspan> 25.600</text></g></svg>
+                <svg version="1.1" class="highcharts-root"
+                     style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;"
+                     xmlns="http://www.w3.org/2000/svg" width="800" height="350" viewBox="0 0 1110 350">
+                    <desc>Created with Highcharts 9.3.0</desc>
+                    <defs>
+                        <clipPath id="highcharts-5ak6p94-1-">
+                            <rect x="0" y="0" width="1030" height="264" fill="none"></rect>
+                        </clipPath>
+                        <clipPath id="highcharts-5ak6p94-56-">
+                            <rect x="0" y="0" width="1030" height="264" fill="none"></rect>
+                        </clipPath>
+                    </defs>
+                    <rect fill="#ffffff" class="highcharts-background" x="0" y="0" width="1110" height="350" rx="0"
+                          ry="0"></rect>
+                    <rect fill="none" class="highcharts-plot-background" x="70" y="10" width="1030" height="264"></rect>
+                    <g class="highcharts-pane-group" data-z-index="0"></g>
+                    <g class="highcharts-grid highcharts-xaxis-grid" data-z-index="1">
+                        <path fill="none" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line"
+                              d="M 135.5 10 L 135.5 274" opacity="1"></path>
+                        <path fill="none" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line"
+                              d="M 246.5 10 L 246.5 274" opacity="1"></path>
+                        <path fill="none" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line"
+                              d="M 355.5 10 L 355.5 274" opacity="1"></path>
+                        <path fill="none" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line"
+                              d="M 465.5 10 L 465.5 274" opacity="1"></path>
+                        <path fill="none" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line"
+                              d="M 574.5 10 L 574.5 274" opacity="1"></path>
+                        <path fill="none" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line"
+                              d="M 685.5 10 L 685.5 274" opacity="1"></path>
+                        <path fill="none" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line"
+                              d="M 795.5 10 L 795.5 274" opacity="1"></path>
+                        <path fill="none" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line"
+                              d="M 906.5 10 L 906.5 274" opacity="1"></path>
+                        <path fill="none" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line"
+                              d="M 1015.5 10 L 1015.5 274" opacity="1"></path>
+                    </g>
+                    <g class="highcharts-grid highcharts-yaxis-grid" data-z-index="1">
+                        <path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1"
+                              class="highcharts-grid-line" d="M 70 274.5 L 1100 274.5" opacity="1"></path>
+                        <path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1"
+                              class="highcharts-grid-line" d="M 70 208.5 L 1100 208.5" opacity="1"></path>
+                        <path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1"
+                              class="highcharts-grid-line" d="M 70 142.5 L 1100 142.5" opacity="1"></path>
+                        <path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1"
+                              class="highcharts-grid-line" d="M 70 76.5 L 1100 76.5" opacity="1"></path>
+                        <path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1"
+                              class="highcharts-grid-line" d="M 70 9.5 L 1100 9.5" opacity="1"></path>
+                    </g>
+                    <rect fill="none" class="highcharts-plot-border" data-z-index="1" x="70" y="10" width="1030"
+                          height="264"></rect>
+                    <g class="highcharts-axis highcharts-xaxis" data-z-index="2">
+                        <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1"
+                              d="M 135.5 274 L 135.5 284" opacity="1"></path>
+                        <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1"
+                              d="M 246.5 274 L 246.5 284" opacity="1"></path>
+                        <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1"
+                              d="M 355.5 274 L 355.5 284" opacity="1"></path>
+                        <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1"
+                              d="M 465.5 274 L 465.5 284" opacity="1"></path>
+                        <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1"
+                              d="M 574.5 274 L 574.5 284" opacity="1"></path>
+                        <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1"
+                              d="M 685.5 274 L 685.5 284" opacity="1"></path>
+                        <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1"
+                              d="M 795.5 274 L 795.5 284" opacity="1"></path>
+                        <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1"
+                              d="M 906.5 274 L 906.5 284" opacity="1"></path>
+                        <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1"
+                              d="M 1015.5 274 L 1015.5 284" opacity="1"></path>
+                        <path fill="none" class="highcharts-axis-line" stroke="#ccd6eb" stroke-width="1"
+                              data-z-index="7" d="M 70 274.5 L 1100 274.5"></path>
+                    </g>
+                    <g class="highcharts-axis highcharts-yaxis" data-z-index="2">
+                        <text x="24.71875" data-z-index="7" text-anchor="middle"
+                              transform="translate(0,0) rotate(270 24.71875 142)" class="highcharts-axis-title"
+                              style="color:#666666;font-size:12px;fill:#666666;" y="142">FID
+                        </text>
+                        <path fill="none" class="highcharts-axis-line" data-z-index="7" d="M 70 10 L 70 274"></path>
+                    </g>
+                    <g class="highcharts-series-group" data-z-index="3">
+                        <g class="highcharts-series highcharts-series-0 highcharts-scatter-series highcharts-tracker"
+                           data-z-index="1" opacity="1" transform="translate(70,10) scale(1 1)"
+                           clip-path="url(#highcharts-5ak6p94-56-)"></g>
+                        <g class="highcharts-markers highcharts-series-0 highcharts-scatter-series highcharts-tracker"
+                           data-z-index="1" opacity="1" transform="translate(70,10) scale(1 1)" clip-path="none">
+                            <path fill="#ddd" d="M 286 113.52000000000001 A 0 0 0 1 1 286 113.52000000000001 Z"
+                                  class="highcharts-halo highcharts-color-undefined tag-23" data-z-index="-1"
+                                  fill-opacity="0.25" visibility="hidden"></path>
+                            <path fill="#ddd"
+                                  d="M 202 111.58000000000001 A 4 4 0 1 1 202.00399999933333 111.57999800000017 Z"
+                                  opacity="1" class="highcharts-point tag-23"></path>
+                            <path fill="#ddd" d="M 265 119.5 A 4 4 0 1 1 265.00399999933336 119.49999800000016 Z"
+                                  opacity="1" class="highcharts-point tag-23"></path>
+                            <path fill="#ddd"
+                                  d="M 286 117.52000000000001 A 4 4 0 1 1 286.00399999933336 117.51999800000017 Z"
+                                  opacity="1" class="highcharts-point tag-23"
+                                  stroke-width="0.00004079527423431206"></path>
+                            <path fill="#ddd"
+                                  d="M 375 150.35500000000002 A 4 4 0 1 1 375.00399999933336 150.3549980000002 Z"
+                                  opacity="1" class="highcharts-point tag-23"></path>
+                            <path fill="#ddd" d="M 391 148.507 A 4 4 0 1 1 391.00399999933336 148.50699800000018 Z"
+                                  opacity="1" class="highcharts-point tag-23"></path>
+                            <path fill="#ddd" d="M 413 148.87 A 4 4 0 1 1 413.00399999933336 148.86999800000018 Z"
+                                  opacity="1" class="highcharts-point tag-23"></path>
+                            <path fill="#ddd" d="M 439 107.191 A 4 4 0 1 1 439.00399999933336 107.19099800000016 Z"
+                                  opacity="1" class="highcharts-point tag-23"></path>
+                            <path fill="#ddd"
+                                  d="M 482 54.82000000000002 A 4 4 0 1 1 482.00399999933336 54.81999800000019 Z"
+                                  opacity="1" class="highcharts-point tag-22"></path>
+                            <path fill="#ddd"
+                                  d="M 490 48.978999999999985 A 4 4 0 1 1 490.00399999933336 48.97899800000015 Z"
+                                  opacity="1" class="highcharts-point tag-22"></path>
+                            <path fill="#ddd" d="M 493 136.561 A 4 4 0 1 1 493.00399999933336 136.56099800000018 Z"
+                                  opacity="1" class="highcharts-point tag-23"></path>
+                            <path fill="#ddd"
+                                  d="M 511 118.44400000000002 A 4 4 0 1 1 511.00399999933336 118.44399800000018 Z"
+                                  opacity="1" class="highcharts-point tag-0"></path>
+                            <path fill="#ddd"
+                                  d="M 565 29.733400000000017 A 4 4 0 1 1 565.0039999993334 29.733398000000186 Z"
+                                  opacity="1" class="highcharts-point tag-23"></path>
+                            <path fill="#ddd"
+                                  d="M 569 112.50399999999999 A 4 4 0 1 1 569.0039999993334 112.50399800000015 Z"
+                                  opacity="1" class="highcharts-point tag-23"></path>
+                            <path fill="#ddd" d="M 575 153.952 A 4 4 0 1 1 575.0039999993334 153.95199800000017 Z"
+                                  opacity="1" class="highcharts-point tag-23 tag-3"></path>
+                            <path fill="#ddd"
+                                  d="M 598 162.36700000000002 A 4 4 0 1 1 598.0039999993334 162.3669980000002 Z"
+                                  opacity="1" class="highcharts-point tag-0"></path>
+                            <path fill="#ddd"
+                                  d="M 656 146.59300000000002 A 4 4 0 1 1 656.0039999993334 146.5929980000002 Z"
+                                  opacity="1" class="highcharts-point tag-0"></path>
+                            <path fill="#ddd"
+                                  d="M 673 148.40800000000002 A 4 4 0 1 1 673.0039999993334 148.4079980000002 Z"
+                                  opacity="1" class="highcharts-point tag-0"></path>
+                            <path fill="#ddd" d="M 673 130.489 A 4 4 0 1 1 673.0039999993334 130.48899800000018 Z"
+                                  opacity="1" class="highcharts-point tag-0"></path>
+                            <path fill="#ddd"
+                                  d="M 716 166.12900000000002 A 4 4 0 1 1 716.0039999993334 166.1289980000002 Z"
+                                  opacity="1" class="highcharts-point tag-24"></path>
+                            <path fill="#ddd" d="M 717 186.787 A 4 4 0 1 1 717.0039999993334 186.78699800000018 Z"
+                                  opacity="1" class="highcharts-point tag-23"></path>
+                            <path fill="#ddd" d="M 717 182.893 A 4 4 0 1 1 717.0039999993334 182.89299800000018 Z"
+                                  opacity="1" class="highcharts-point tag-23"></path>
+                            <path fill="#ddd" d="M 717 165.469 A 4 4 0 1 1 717.0039999993334 165.46899800000017 Z"
+                                  opacity="1" class="highcharts-point tag-23"></path>
+                            <path fill="#ddd"
+                                  d="M 718 157.41700000000003 A 4 4 0 1 1 718.0039999993334 157.4169980000002 Z"
+                                  opacity="1" class="highcharts-point tag-0"></path>
+                            <path fill="#ddd"
+                                  d="M 719 146.59300000000002 A 4 4 0 1 1 719.0039999993334 146.5929980000002 Z"
+                                  opacity="1" class="highcharts-point tag-0"></path>
+                            <path fill="#ddd"
+                                  d="M 719 68.51500000000001 A 4 4 0 1 1 719.0039999993334 68.51499800000018 Z"
+                                  opacity="1" class="highcharts-point tag-0"></path>
+                            <path fill="#ddd" d="M 732 175.039 A 4 4 0 1 1 732.0039999993334 175.03899800000016 Z"
+                                  opacity="1" class="highcharts-point tag-23"></path>
+                            <path fill="#ddd" d="M 735 164.842 A 4 4 0 1 1 735.0039999993334 164.8419980000002 Z"
+                                  opacity="1" class="highcharts-point tag-23"></path>
+                            <path fill="#ddd" d="M 769 189.955 A 4 4 0 1 1 769.0039999993334 189.9549980000002 Z"
+                                  opacity="1" class="highcharts-point tag-24"></path>
+                            <path fill="#ddd"
+                                  d="M 781 161.77300000000002 A 4 4 0 1 1 781.0039999993334 161.7729980000002 Z"
+                                  opacity="1" class="highcharts-point tag-21"></path>
+                            <path fill="#ddd"
+                                  d="M 781 161.54200000000003 A 4 4 0 1 1 781.0039999993334 161.5419980000002 Z"
+                                  opacity="1" class="highcharts-point tag-21"></path>
+                            <path fill="#ddd" d="M 784 122.536 A 4 4 0 1 1 784.0039999993334 122.53599800000016 Z"
+                                  opacity="1" class="highcharts-point tag-21"></path>
+                            <path fill="#ddd" d="M 791 169.66 A 4 4 0 1 1 791.0039999993334 169.65999800000017 Z"
+                                  opacity="1" class="highcharts-point tag-23"></path>
+                            <path fill="#ddd" d="M 810 142.93 A 4 4 0 1 1 810.0039999993334 142.92999800000018 Z"
+                                  opacity="1" class="highcharts-point tag-21"></path>
+                            <path fill="#ddd" d="M 814 194.047 A 4 4 0 1 1 814.0039999993334 194.04699800000017 Z"
+                                  opacity="1" class="highcharts-point tag-24"></path>
+                            <path fill="#ddd"
+                                  d="M 817 170.25400000000002 A 4 4 0 1 1 817.0039999993334 170.2539980000002 Z"
+                                  opacity="1" class="highcharts-point tag-22 tag-23"></path>
+                            <path fill="#ddd" d="M 820 162.994 A 4 4 0 1 1 820.0039999993334 162.99399800000018 Z"
+                                  opacity="1" class="highcharts-point tag-0"></path>
+                            <path fill="#ddd" d="M 820 161.344 A 4 4 0 1 1 820.0039999993334 161.34399800000017 Z"
+                                  opacity="1" class="highcharts-point tag-0"></path>
+                            <path fill="#ddd"
+                                  d="M 840 171.11200000000002 A 4 4 0 1 1 840.0039999993334 171.1119980000002 Z"
+                                  opacity="1" class="highcharts-point tag-0"></path>
+                            <path fill="#ddd"
+                                  d="M 847 130.88500000000002 A 4 4 0 1 1 847.0039999993334 130.8849980000002 Z"
+                                  opacity="1" class="highcharts-point tag-0"></path>
+                            <path fill="#ddd" d="M 860 160.387 A 4 4 0 1 1 860.0039999993334 160.38699800000018 Z"
+                                  opacity="1" class="highcharts-point tag-0"></path>
+                            <path fill="#ddd" d="M 863 171.442 A 4 4 0 1 1 863.0039999993334 171.44199800000018 Z"
+                                  opacity="1" class="highcharts-point tag-23"></path>
+                            <path fill="#ddd" d="M 894 193.849 A 4 4 0 1 1 894.0039999993334 193.84899800000017 Z"
+                                  opacity="1" class="highcharts-point tag-23"></path>
+                            <path fill="#ddd" d="M 894 174.082 A 4 4 0 1 1 894.0039999993334 174.08199800000017 Z"
+                                  opacity="1" class="highcharts-point tag-0"></path>
+                            <path fill="#ddd" d="M 901 96.5122 A 4 4 0 1 1 901.0039999993334 96.51219800000017 Z"
+                                  opacity="1" class="highcharts-point tag-23"></path>
+                            <path fill="#ddd"
+                                  d="M 931 86.83000000000001 A 4 4 0 1 1 931.0039999993334 86.82999800000017 Z"
+                                  opacity="1" class="highcharts-point tag-22"></path>
+                            <path fill="#ddd" d="M 932 194.839 A 4 4 0 1 1 932.0039999993334 194.83899800000017 Z"
+                                  opacity="1" class="highcharts-point tag-21 tag-24"></path>
+                            <path fill="#ddd" d="M 932 194.311 A 4 4 0 1 1 932.0039999993334 194.31099800000018 Z"
+                                  opacity="1" class="highcharts-point tag-0"></path>
+                            <path fill="#ddd" d="M 932 179.263 A 4 4 0 1 1 932.0039999993334 179.26299800000018 Z"
+                                  opacity="1" class="highcharts-point tag-21 tag-24"></path>
+                            <path fill="#ddd"
+                                  d="M 934 192.69400000000002 A 4 4 0 1 1 934.0039999993334 192.6939980000002 Z"
+                                  opacity="1" class="highcharts-point tag-23"></path>
+                            <path fill="#ddd" d="M 945 188.8 A 4 4 0 1 1 945.0039999993334 188.7999980000002 Z"
+                                  opacity="1" class="highcharts-point tag-0"></path>
+                            <path fill="#ddd"
+                                  d="M 950 186.91899999999998 A 4 4 0 1 1 950.0039999993334 186.91899800000016 Z"
+                                  opacity="1" class="highcharts-point tag-4"></path>
+                            <path fill="#ddd" d="M 950 180.022 A 4 4 0 1 1 950.0039999993334 180.02199800000017 Z"
+                                  opacity="1" class="highcharts-point tag-4"></path>
+                            <path fill="#ddd" d="M 1012 191.506 A 4 4 0 1 1 1012.0039999993334 191.50599800000018 Z"
+                                  opacity="1" class="highcharts-point tag-24 tag-138"></path>
+                            <path fill="#ddd"
+                                  d="M 1019 194.54200000000003 A 4 4 0 1 1 1019.0039999993334 194.5419980000002 Z"
+                                  opacity="1" class="highcharts-point tag-0"></path>
+                        </g>
+                        <g class="highcharts-series highcharts-series-3 highcharts-line-series" data-z-index="2"
+                           opacity="1" transform="translate(70,10) scale(1 1)" clip-path="url(#highcharts-5ak6p94-56-)">
+                            <path fill="none"
+                                  d="M 10.393213759558 101.31000000000003 L 62.780791806001 116.16000000000003 L 204.28746813834 126.38999999999999 L 225.36293057082 139.887 L 339.17042770619 149.391 L 511.9892196525 155.232 L 530.05390173748 157.014 L 588.46304047892 160.38 L 714.31365900428 162.69 L 717.92659542128 183.81 L 718.52875149077 187.539 L 814.87372261067 190.74 L 932.89631223254 191.07"
+                                  class="highcharts-graph" data-z-index="1" stroke="#21ccc7" stroke-width="2"
+                                  stroke-linejoin="round" stroke-linecap="round"></path>
+                            <path fill="none"
+                                  d="M 10.393213759558 101.31000000000003 L 62.780791806001 116.16000000000003 L 204.28746813834 126.38999999999999 L 225.36293057082 139.887 L 339.17042770619 149.391 L 511.9892196525 155.232 L 530.05390173748 157.014 L 588.46304047892 160.38 L 714.31365900428 162.69 L 717.92659542128 183.81 L 718.52875149077 187.539 L 814.87372261067 190.74 L 932.89631223254 191.07"
+                                  visibility="visible" data-z-index="2" class="highcharts-tracker-line"
+                                  stroke-linecap="round" stroke-linejoin="round" stroke="rgba(192,192,192,0.0001)"
+                                  stroke-width="22"></path>
+                        </g>
+                        <g class="highcharts-markers highcharts-series-3 highcharts-line-series highcharts-tracker"
+                           data-z-index="2" opacity="1" transform="translate(70,10) scale(1 1)" clip-path="none">
+                            <path fill="#21ccc7" d="M 225 139.887 A 0 0 0 1 1 225 139.887 Z"
+                                  class="highcharts-halo highcharts-color-undefined tag-23" data-z-index="-1"
+                                  fill-opacity="0.25" visibility="hidden"></path>
+                            <path fill="#21ccc7"
+                                  d="M 10 105.31000000000003 A 4 4 0 1 1 10.003999999333336 105.30999800000019 Z"
+                                  opacity="1" class="highcharts-point tag-23"></path>
+                            <path fill="#21ccc7"
+                                  d="M 62 120.16000000000003 A 4 4 0 1 1 62.00399999933334 120.15999800000019 Z"
+                                  opacity="1" class="highcharts-point tag-23"></path>
+                            <path fill="#21ccc7" d="M 204 130.39 A 4 4 0 1 1 204.00399999933333 130.38999800000016 Z"
+                                  opacity="1" class="highcharts-point tag-23"></path>
+                            <path fill="#21ccc7" d="M 225 143.887 A 4 4 0 1 1 225.00399999933333 143.88699800000018 Z"
+                                  opacity="1" class="highcharts-point tag-23"
+                                  stroke-width="0.0015819147410403023"></path>
+                            <path fill="#21ccc7" d="M 339 153.391 A 4 4 0 1 1 339.00399999933336 153.39099800000017 Z"
+                                  opacity="1" class="highcharts-point tag-23"></path>
+                            <path fill="#21ccc7" d="M 511 159.232 A 4 4 0 1 1 511.00399999933336 159.23199800000017 Z"
+                                  opacity="1" class="highcharts-point tag-23"></path>
+                            <path fill="#21ccc7" d="M 530 161.014 A 4 4 0 1 1 530.0039999993334 161.01399800000019 Z"
+                                  opacity="1" class="highcharts-point tag-23"></path>
+                            <path fill="#21ccc7" d="M 588 164.38 A 4 4 0 1 1 588.0039999993334 164.37999800000017 Z"
+                                  opacity="1" class="highcharts-point tag-23"></path>
+                            <path fill="#21ccc7" d="M 714 166.69 A 4 4 0 1 1 714.0039999993334 166.68999800000017 Z"
+                                  opacity="1" class="highcharts-point tag-23"></path>
+                            <path fill="#21ccc7" d="M 717 187.81 A 4 4 0 1 1 717.0039999993334 187.80999800000018 Z"
+                                  opacity="1" class="highcharts-point tag-23"></path>
+                            <path fill="#21ccc7" d="M 718 191.539 A 4 4 0 1 1 718.0039999993334 191.53899800000016 Z"
+                                  opacity="1" class="highcharts-point tag-24"></path>
+                            <path fill="#21ccc7" d="M 814 194.74 A 4 4 0 1 1 814.0039999993334 194.73999800000018 Z"
+                                  opacity="1" class="highcharts-point tag-24"></path>
+                            <path fill="#21ccc7" d="M 932 195.07 A 4 4 0 1 1 932.0039999993334 195.06999800000017 Z"
+                                  opacity="1" class="highcharts-point tag-21 tag-24"></path>
+                        </g>
+                        <g class="highcharts-series highcharts-series-1 highcharts-errorbar-series highcharts-tracker"
+                           data-z-index="3" opacity="1" transform="translate(70,10) scale(1 1)"
+                           clip-path="url(#highcharts-5ak6p94-56-)"></g>
+                        <g class="highcharts-markers highcharts-series-1 highcharts-errorbar-series" data-z-index="3"
+                           opacity="1" transform="translate(70,10) scale(1 1)" clip-path="none"></g>
+                        <g class="highcharts-series highcharts-series-2 highcharts-errorbar-series highcharts-tracker"
+                           data-z-index="3" opacity="1" transform="translate(70,10) scale(1 1)"
+                           clip-path="url(#highcharts-5ak6p94-56-)"></g>
+                        <g class="highcharts-markers highcharts-series-2 highcharts-errorbar-series" data-z-index="3"
+                           opacity="1" transform="translate(70,10) scale(1 1)" clip-path="none"></g>
+                    </g>
+                    <g class="highcharts-data-labels highcharts-series-3 highcharts-line-series highcharts-tracker"
+                       data-z-index="3" opacity="1" transform="translate(70,10) scale(1 1)">
+                        <g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined"
+                           data-z-index="1" transform="translate(-5,79)">
+                            <text x="5" data-z-index="1" y="16"
+                                  style="color:#4a4a4a;font-size:11px;font-weight:normal;fill:#4a4a4a;">
+                                <tspan class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF"
+                                       stroke-width="2px" stroke-linejoin="round" style="">WGAN-GP
+                                    <tspan x="5" y="16">​</tspan>
+                                </tspan>
+                                WGAN-GP
+                            </text>
+                        </g>
+                        <g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined"
+                           data-z-index="1" transform="translate(-5,94)">
+                            <text x="5" data-z-index="1" y="16"
+                                  style="color:#4a4a4a;font-size:11px;font-weight:normal;fill:#4a4a4a;">
+                                <tspan class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF"
+                                       stroke-width="2px" stroke-linejoin="round" style="">WGAN-GP + TT Update Rule
+                                    <tspan x="5" y="16">​</tspan>
+                                </tspan>
+                                WGAN-GP + TT Update Rule
+                            </text>
+                        </g>
+                        <g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined"
+                           data-z-index="1" transform="translate(174,104)">
+                            <text x="5" data-z-index="1" y="16"
+                                  style="color:#4a4a4a;font-size:11px;font-weight:normal;fill:#4a4a4a;">
+                                <tspan class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF"
+                                       stroke-width="2px" stroke-linejoin="round" style="">SN-GANs
+                                    <tspan x="5" y="16">​</tspan>
+                                </tspan>
+                                SN-GANs
+                            </text>
+                        </g>
+                        <g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined"
+                           data-z-index="1" transform="translate(195,118)">
+                            <text x="5" data-z-index="1" y="16"
+                                  style="color:#4a4a4a;font-size:11px;font-weight:normal;fill:#4a4a4a;">
+                                <tspan class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF"
+                                       stroke-width="2px" stroke-linejoin="round" style="">Dist-GAN
+                                    <tspan x="5" y="16">​</tspan>
+                                </tspan>
+                                Dist-GAN
+                            </text>
+                        </g>
+                        <g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined"
+                           data-z-index="1" transform="translate(314,127)">
+                            <text x="5" data-z-index="1" y="16"
+                                  style="color:#4a4a4a;font-size:11px;font-weight:normal;fill:#4a4a4a;">
+                                <tspan class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF"
+                                       stroke-width="2px" stroke-linejoin="round" style="">BigGAN
+                                    <tspan x="5" y="16">​</tspan>
+                                </tspan>
+                                BigGAN
+                            </text>
+                        </g>
+                        <g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined"
+                           data-z-index="1" transform="translate(477,133)">
+                            <text x="5" data-z-index="1" y="16"
+                                  style="color:#4a4a4a;font-size:11px;font-weight:normal;fill:#4a4a4a;">
+                                <tspan class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF"
+                                       stroke-width="2px" stroke-linejoin="round" style="">WGAN-ALP
+                                    <tspan x="5" y="16">​</tspan>
+                                </tspan>
+                                WGAN-ALP
+                            </text>
+                        </g>
+                        <g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-data-label-hidden"
+                           data-z-index="1" transform="translate(501,135)" opacity="0" style="pointer-events:none;">
+                            <text x="5" data-z-index="1" y="16"
+                                  style="color:#4a4a4a;font-size:11px;font-weight:normal;fill:#4a4a4a;">
+                                <tspan class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF"
+                                       stroke-width="2px" stroke-linejoin="round" style="">AutoGAN
+                                    <tspan x="5" y="16">​</tspan>
+                                </tspan>
+                                AutoGAN
+                            </text>
+                        </g>
+                        <g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined"
+                           data-z-index="1" transform="translate(564,138)">
+                            <text x="5" data-z-index="1" y="16"
+                                  style="color:#4a4a4a;font-size:11px;font-weight:normal;fill:#4a4a4a;">
+                                <tspan class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF"
+                                       stroke-width="2px" stroke-linejoin="round" style="">MSGAN
+                                    <tspan x="5" y="16">​</tspan>
+                                </tspan>
+                                MSGAN
+                            </text>
+                        </g>
+                        <g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined"
+                           data-z-index="1" transform="translate(687,141)">
+                            <text x="5" data-z-index="1" y="16"
+                                  style="color:#4a4a4a;font-size:11px;font-weight:normal;fill:#4a4a4a;">
+                                <tspan class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF"
+                                       stroke-width="2px" stroke-linejoin="round" style="">PPOGAN
+                                    <tspan x="5" y="16">​</tspan>
+                                </tspan>
+                                PPOGAN
+                            </text>
+                        </g>
+                        <g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined"
+                           data-z-index="1" transform="translate(645,162)">
+                            <text x="5" data-z-index="1" y="16"
+                                  style="color:#4a4a4a;font-size:11px;font-weight:normal;fill:#4a4a4a;">
+                                <tspan class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF"
+                                       stroke-width="2px" stroke-linejoin="round" style="">DiffAugment-CR-BigGAN
+                                    <tspan x="5" y="16">​</tspan>
+                                </tspan>
+                                DiffAugment-CR-BigGAN
+                            </text>
+                        </g>
+                        <g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-data-label-hidden"
+                           data-z-index="1" transform="translate(661,166)" opacity="0" style="pointer-events:none;">
+                            <text x="5" data-z-index="1" y="16"
+                                  style="color:#4a4a4a;font-size:11px;font-weight:normal;fill:#4a4a4a;">
+                                <tspan class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF"
+                                       stroke-width="2px" stroke-linejoin="round" style="">Denoising Diffusion
+                                    <tspan x="5" y="16">​</tspan>
+                                </tspan>
+                                Denoising Diffusion
+                            </text>
+                        </g>
+                        <g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined"
+                           data-z-index="1" transform="translate(786,169)">
+                            <text x="5" data-z-index="1" y="16"
+                                  style="color:#4a4a4a;font-size:11px;font-weight:normal;fill:#4a4a4a;">
+                                <tspan class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF"
+                                       stroke-width="2px" stroke-linejoin="round" style="">NCSN++
+                                    <tspan x="5" y="16">​</tspan>
+                                </tspan>
+                                NCSN++
+                            </text>
+                        </g>
+                        <g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined"
+                           data-z-index="1" transform="translate(899,169)">
+                            <text x="5" data-z-index="1" y="16"
+                                  style="color:#4a4a4a;font-size:11px;font-weight:normal;fill:#4a4a4a;">
+                                <tspan class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF"
+                                       stroke-width="2px" stroke-linejoin="round" style="">LSGM (FID)
+                                    <tspan x="5" y="16">​</tspan>
+                                </tspan>
+                                LSGM (FID)
+                            </text>
+                        </g>
+                    </g>
+                    <g class="highcharts-exporting-group" data-z-index="3">
+                        <rect fill="#ffffff" class="highcharts-button-box" x="0.5" y="0.5" width="24" height="22" rx="2"
+                              ry="2" stroke="none" stroke-width="1"></rect>
+                        <text x="0" data-z-index="1" y="15.5"
+                              style="color:#333333;font-weight:normal;fill:#333333;"></text>
+                    </g>
+                    </g>
+                    <text x="555" text-anchor="middle" class="highcharts-title" data-z-index="4"
+                          style="color:#333333;font-size:18px;fill:#333333;" y="24"></text>
+                    <text x="555" text-anchor="middle" class="highcharts-subtitle" data-z-index="4"
+                          style="color:#666666;fill:#666666;" y="24"></text>
+                    <text x="10" text-anchor="start" class="highcharts-caption" data-z-index="4"
+                          style="color:#666666;fill:#666666;" y="347"></text>
+                    <g class="highcharts-legend highcharts-no-tooltip" data-z-index="7" transform="translate(392,307)">
+                        <rect fill="#ffffff" class="highcharts-legend-box" rx="0" ry="0" x="0" y="0" width="326"
+                              height="28" visibility="visible"></rect>
+                        <g data-z-index="1">
+                            <g>
+                                <g class="highcharts-legend-item highcharts-scatter-series highcharts-color-undefined highcharts-series-0"
+                                   data-z-index="1" transform="translate(8,3)">
+                                    <path fill="none" d="M 0 13 L 16 13" class="highcharts-graph"></path>
+                                    <path fill="#ddd" d="M 8 17 A 4 4 0 1 1 8.003999999333336 16.99999800000017 Z"
+                                          class="highcharts-point" opacity="1"></path>
+                                    <text x="21"
+                                          style="color:#414141;cursor:pointer;font-size:14px;font-weight:normal;fill:#414141;"
+                                          text-anchor="start" data-z-index="2" y="17">Other models
+                                    </text>
+                                </g>
+                                <g class="highcharts-legend-item highcharts-line-series highcharts-color-undefined highcharts-series-3"
+                                   data-z-index="1" transform="translate(141.234375,3)">
+                                    <path fill="none" d="M 0 13 L 16 13" class="highcharts-graph" stroke="#21ccc7"
+                                          stroke-width="2"></path>
+                                    <path fill="#21ccc7" d="M 8 17 A 4 4 0 1 1 8.003999999333336 16.99999800000017 Z"
+                                          class="highcharts-point" opacity="1"></path>
+                                    <text x="21" y="17"
+                                          style="color:#414141;cursor:pointer;font-size:14px;font-weight:normal;fill:#414141;"
+                                          text-anchor="start" data-z-index="2">Models with lowest FID
+                                    </text>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g class="highcharts-axis-labels highcharts-xaxis-labels" data-z-index="7">
+                        <text x="135.7915721535" style="color:#666666;cursor:default;font-size:11px;fill:#666666;"
+                              text-anchor="middle" transform="translate(0,0)" y="293" opacity="1">Jul '17
+                        </text>
+                        <text x="246.58828894137" style="color:#666666;cursor:default;font-size:11px;fill:#666666;"
+                              text-anchor="middle" transform="translate(0,0)" y="293" opacity="1">Jan '18
+                        </text>
+                        <text x="355.57853752075" style="color:#666666;cursor:default;font-size:11px;fill:#666666;"
+                              text-anchor="middle" transform="translate(0,0)" y="293" opacity="1">Jul '18
+                        </text>
+                        <text x="466.37525430863" style="color:#666666;cursor:default;font-size:11px;fill:#666666;"
+                              text-anchor="middle" transform="translate(0,0)" y="293" opacity="1">Jan '19
+                        </text>
+                        <text x="575.36550288801" style="color:#666666;cursor:default;font-size:11px;fill:#666666;"
+                              text-anchor="middle" transform="translate(0,0)" y="293" opacity="1">Jul '19
+                        </text>
+                        <text x="686.16221967589" style="color:#666666;cursor:default;font-size:11px;fill:#666666;"
+                              text-anchor="middle" transform="translate(0,0)" y="293" opacity="1">Jan '20
+                        </text>
+                        <text x="795.75462432477" style="color:#666666;cursor:default;font-size:11px;fill:#666666;"
+                              text-anchor="middle" transform="translate(0,0)" y="293" opacity="1">Jul '20
+                        </text>
+                        <text x="906.55134111264" style="color:#666666;cursor:default;font-size:11px;fill:#666666;"
+                              text-anchor="middle" transform="translate(0,0)" y="293" opacity="1">Jan '21
+                        </text>
+                        <text x="1015.541589692" style="color:#666666;cursor:default;font-size:11px;fill:#666666;"
+                              text-anchor="middle" transform="translate(0,0)" y="293" opacity="1">Jul '21
+                        </text>
+                    </g>
+                    <g class="highcharts-axis-labels highcharts-yaxis-labels" data-z-index="7">
+                        <text x="55" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end"
+                              transform="translate(0,0)" y="279" opacity="1">-20
+                        </text>
+                        <text x="55" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end"
+                              transform="translate(0,0)" y="213" opacity="1">0
+                        </text>
+                        <text x="55" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end"
+                              transform="translate(0,0)" y="147" opacity="1">20
+                        </text>
+                        <text x="55" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end"
+                              transform="translate(0,0)" y="81" opacity="1">40
+                        </text>
+                        <text x="55" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end"
+                              transform="translate(0,0)" y="15" opacity="1">60
+                        </text>
+                    </g>
+                    <g class="highcharts-label highcharts-tooltip highcharts-color-undefined"
+                       style="cursor:default;white-space:nowrap;pointer-events:none;" data-z-index="8"
+                       transform="translate(291,-9999)" opacity="0" visibility="hidden">
+                        <path fill="none" class="highcharts-label-box highcharts-tooltip-box highcharts-shadow"
+                              d="M 3.5 0.5 L 128.5 0.5 C 131.5 0.5 131.5 0.5 131.5 3.5 L 131.5 28.5 C 131.5 31.5 131.5 31.5 128.5 31.5 L 70.5 31.5 L 64.5 37.5 L 58.5 31.5 L 3.5 31.5 C 0.5 31.5 0.5 31.5 0.5 28.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5"
+                              stroke="#000000" stroke-opacity="0.049999999999999996" stroke-width="5"
+                              transform="translate(1, 1)"></path>
+                        <path fill="none" class="highcharts-label-box highcharts-tooltip-box highcharts-shadow"
+                              d="M 3.5 0.5 L 128.5 0.5 C 131.5 0.5 131.5 0.5 131.5 3.5 L 131.5 28.5 C 131.5 31.5 131.5 31.5 128.5 31.5 L 70.5 31.5 L 64.5 37.5 L 58.5 31.5 L 3.5 31.5 C 0.5 31.5 0.5 31.5 0.5 28.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5"
+                              stroke="#000000" stroke-opacity="0.09999999999999999" stroke-width="3"
+                              transform="translate(1, 1)"></path>
+                        <path fill="none" class="highcharts-label-box highcharts-tooltip-box highcharts-shadow"
+                              d="M 3.5 0.5 L 128.5 0.5 C 131.5 0.5 131.5 0.5 131.5 3.5 L 131.5 28.5 C 131.5 31.5 131.5 31.5 128.5 31.5 L 70.5 31.5 L 64.5 37.5 L 58.5 31.5 L 3.5 31.5 C 0.5 31.5 0.5 31.5 0.5 28.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5"
+                              stroke="#000000" stroke-opacity="0.15" stroke-width="1"
+                              transform="translate(1, 1)"></path>
+                        <path fill="rgba(247,247,247,0.85)" class="highcharts-label-box highcharts-tooltip-box"
+                              d="M 3.5 0.5 L 128.5 0.5 C 131.5 0.5 131.5 0.5 131.5 3.5 L 131.5 28.5 C 131.5 31.5 131.5 31.5 128.5 31.5 L 70.5 31.5 L 64.5 37.5 L 58.5 31.5 L 3.5 31.5 C 0.5 31.5 0.5 31.5 0.5 28.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5"
+                              stroke="#ddd" stroke-width="1"></path>
+                        <text x="8" data-z-index="1" y="20" style="color:#333333;font-size:12px;fill:#333333;">
+                            <tspan style="font-weight:bold;">RSGAN-GP:</tspan>
+                            25.600
+                        </text>
+                    </g>
+                </svg>
                 <p data-id="2"><small style="font-size: small;">Source: <a
-                        href="https://paperswithcode.com/sota/image-generation-on-cifar-10">Papers with code</a></small></p>
+                        href="https://paperswithcode.com/sota/image-generation-on-cifar-10">Papers with code</a></small>
+                </p>
             </section>
             <section class="smaller-font">
                 <h4>Computing the FID</h4>
@@ -569,17 +1132,18 @@
                     </div>
                 </div>
                 $$
-                    \operatorname{FID}\left(\mu_{r}, \Sigma_{r}, \mu_{f}, \Sigma_{f}\right)=\left\|\mu_{r}-\mu_{f}\right
-                    \|_{2}^{2}+\operatorname{tr}\left(\Sigma_{r}+\Sigma_{f}\right)-2 \cdot \operatorname{tr}\left(
-                    \sqrt{\Sigma_{r} \Sigma_{f}}\right)
+                \operatorname{FID}\left(\mu_{r}, \Sigma_{r}, \mu_{f}, \Sigma_{f}\right)=\left\|\mu_{r}-\mu_{f}\right
+                \|_{2}^{2}+\operatorname{tr}\left(\Sigma_{r}+\Sigma_{f}\right)-2 \cdot \operatorname{tr}\left(
+                \sqrt{\Sigma_{r} \Sigma_{f}}\right)
                 $$
             </section>
             <section>
                 $$
                 \operatorname{FID}\left(\mu_{r}, \Sigma_{r}, \mu_{f}, \Sigma_{f}\right)=
-                    \underbrace{\left\|\mu_{r}-\mu_{f}\right \|_{2}^{2}+\operatorname{tr}\left(\Sigma_{r}+\Sigma_{f}\right)}_{O(d)}
-                    -2 \cdot
-                    \underbrace{\operatorname{tr}\left( \sqrt{\Sigma_{r} \Sigma_{f}}\right) }_{O(d^3)}
+                \underbrace{\left\|\mu_{r}-\mu_{f}\right
+                \|_{2}^{2}+\operatorname{tr}\left(\Sigma_{r}+\Sigma_{f}\right)}_{O(d)}
+                -2 \cdot
+                \underbrace{\operatorname{tr}\left( \sqrt{\Sigma_{r} \Sigma_{f}}\right) }_{O(d^3)}
                 $$
                 <p class="text-purple">Computing $\operatorname{tr}\left( \sqrt{ \Sigma_{r} \Sigma_{f} } \right)$:</p>
                 <div>
@@ -595,9 +1159,10 @@
             </section>
             <section data-auto-animate>
                 <p><span class="text-purple">Problem:</span> $\Sigma_r \Sigma_f$ is too big! ($d \times d$)</p>
-                <p><span class="text-purple">Solution:</span> find equivalent computation of smaller matrix. ($m \times m$)</p>
+                <p><span class="text-purple">Solution:</span> find equivalent computation of smaller matrix. ($m \times
+                    m$)</p>
             </section>
-<!--            <section class="smaller-font" data-transition="none">-->
+            <!--            <section class="smaller-font" data-transition="none">-->
             <section class="smaller-font" data-auto-animate>
                 <div class="f-container">
                     <div class="f-col">
@@ -622,7 +1187,7 @@
                     </div>
                 </div>
             </section>
-<!--            <section class="smaller-font" data-transition="none">-->
+            <!--            <section class="smaller-font" data-transition="none">-->
             <section class="smaller-font" data-auto-animate>
                 <div class="f-container">
                     <div class="f-col">
@@ -655,11 +1220,11 @@
                     <div class="f-col">
                         <p>Real samples</p>
                         $$ X_{r}=\left[
-                            \begin{array}{ccc}
-                                \mid & & \mid \\
-                                A\left(r_{1}\right) & \ldots & A\left(r_{n}\right) \\
-                                \mid & & \mid
-                            \end{array}
+                        \begin{array}{ccc}
+                        \mid & & \mid \\
+                        A\left(r_{1}\right) & \ldots & A\left(r_{n}\right) \\
+                        \mid & & \mid
+                        \end{array}
                         \right]-\mu_{r} \mathbb{1}_{n}^{\top} $$
                         $$ C_{r}=\frac{1}{\sqrt{n-1}} X_{r} $$
                         $$ \Sigma_r = C_{r}C_{r}^\intercal $$
@@ -667,11 +1232,11 @@
                     <div class="f-col">
                         <p>Fake samples</p>
                         $$ X_{f}=\left[
-                            \begin{array}{ccc}
-                            \mid & & \mid \\
-                            A\left(f_{1}\right) & \ldots & A\left(f_{n}\right) \\
-                            \mid & & \mid
-                            \end{array}
+                        \begin{array}{ccc}
+                        \mid & & \mid \\
+                        A\left(f_{1}\right) & \ldots & A\left(f_{n}\right) \\
+                        \mid & & \mid
+                        \end{array}
                         \right]-\mu_{f} \mathbb{1}_{n}^{\top} $$
                         $$ C_{r}=\frac{1}{\sqrt{n-1}} X_{r} $$
                         $$ \Sigma_r = C_{r}C_{r}^\intercal $$
@@ -691,28 +1256,37 @@
                     two products are both square matrices.
                 </div>
                 \[
-                    \operatorname{tr}\left(\sqrt{\Sigma_{r} \Sigma_{f}}\right)
-                    =\sum_{i=1}^{d-1} \sqrt{\lambda_{i}\underbrace{\left(C_{r} C_{r}^{\top} C_{f} C_{f}^{\top}\right)}_{d\times d \text{ 👎}}}
-                    =\sum_{i=1}^{m-1} \sqrt{\lambda_{i}\underbrace{\left(C_{f}^{\top} C_{r} C_{r}^{\top} C_{f}\right)}_{m\times m \text{ 👍}}}
+                \operatorname{tr}\left(\sqrt{\Sigma_{r} \Sigma_{f}}\right)
+                =\sum_{i=1}^{d-1} \sqrt{\lambda_{i}\underbrace{\left(C_{r} C_{r}^{\top} C_{f}
+                C_{f}^{\top}\right)}_{d\times d \text{ 👎}}}
+                =\sum_{i=1}^{m-1} \sqrt{\lambda_{i}\underbrace{\left(C_{f}^{\top} C_{r} C_{r}^{\top}
+                C_{f}\right)}_{m\times m \text{ 👍}}}
                 \]
                 <p>Reduces time complexity from $O(d^3)$ to $O(m^3)$ $^*$</p>
                 <p style="margin-top: 2em;">
-                   <small>$^*$ Full running time is $O(d^2 m + m^3)$.</small>
+                    <small>$^*$ Full running time is $O(d^2 m + m^3)$.</small>
                 </p>
             </section>
             <section data-auto-animate>
                 <h4>Example</h4>
-                <p><span class="text-purple">Typically</span> $n = m = 10 000$ and $d = 2048$. <span style="margin-right: 1em""></span>Original ($2048^3$) $\ll$ FastFID ($10 000^3$) 🔥</p>
+                <p><span class="text-purple">Typically</span> $n = m = 10 000$ and $d = 2048$. <span
+                        style="margin-right: 1em"></span>Original ($2048^3$) $\ll$ FastFID ($10 000^3$) 🔥</p>
             </section>
             <section data-auto-animate>
                 <h4>Example</h4>
-                <p><span class="text-purple">Typically</span> $n = m = 10 000$ and $d = 2048$. <span style="margin-right: 1em""></span>Original ($2048^3$) $\ll$ FastFID ($10 000^3$) 🔥</p>
-                <p><span class="text-purple">During training</span> $n = 10 000$, $m=128$ and $d = 2048$. <span style="margin-right: 1em">Original ($\underset{\sim 10s}{2048^3}$) $\gg$ FastFID ($\underset{\sim0.1s}{128^3}$) 🏆</span></p>
+                <p><span class="text-purple">Typically</span> $n = m = 10 000$ and $d = 2048$. <span
+                        style="margin-right: 1em"></span>Original ($2048^3$) $\ll$ FastFID ($10 000^3$) 🔥</p>
+                <p><span class="text-purple">During training</span> $n = 10 000$, $m=128$ and $d = 2048$. <span
+                        style="margin-right: 1em">Original ($\underset{\sim 10s}{2048^3}$) $\gg$ FastFID ($\underset{\sim0.1s}{128^3}$) 🏆</span>
+                </p>
             </section>
             <section data-auto-animate>
                 <h4>Example</h4>
-                <p><span class="text-purple">Typically</span> $n = m = 10 000$ and $d = 2048$. <span style="margin-right: 1em""></span>Original ($2048^3$) $\ll$ FastFID ($10 000^3$) 🔥</p>
-                <p><span class="text-purple">During training</span> $n = 10 000$, $m=128$ and $d = 2048$. <span style="margin-right: 1em">Original ($\underset{\sim 10s}{2048^3}$) $\gg$ FastFID ($\underset{\sim0.1s}{128^3}$) 🏆</span></p>
+                <p><span class="text-purple">Typically</span> $n = m = 10 000$ and $d = 2048$. <span
+                        style="margin-right: 1em"></span>Original ($2048^3$) $\ll$ FastFID ($10 000^3$) 🔥</p>
+                <p><span class="text-purple">During training</span> $n = 10 000$, $m=128$ and $d = 2048$. <span
+                        style="margin-right: 1em">Original ($\underset{\sim 10s}{2048^3}$) $\gg$ FastFID ($\underset{\sim0.1s}{128^3}$) 🏆</span>
+                </p>
                 <img src="assets/fastfid_runningtimes.png" style="width: 100%;"/>
             </section>
             <section>
@@ -742,7 +1316,267 @@
             </p>
         </section>
         <section data-state="cf-header">
-            <p>header1 example</p>
+            <section data-auto-animate data-auto-animate-id="a">
+                <h4>Counterfactual Examples</h4>
+                <div class="f-container vertical-align-parent">
+                    <div class="f-col vertical-align" width=300 data-auto-animate-id="a">
+                        <img src="assets/not_smile.png">
+                    </div>
+                    <div class="f-col vertical-align" data-auto-animate-id="b">
+                        <img src="assets/svgs/min/p6_v1.svg" height="300"/>
+                    </div>
+                    <div class="f-col vertical-align" data-auto-animate-id="c">
+                        <p style="width: 150px">"Not Smile"</p>
+                    </div>
+                </div>
+            </section>
+            <section data-auto-animate data-auto-animate-id="a">
+                <h4>Counterfactual Examples</h4>
+                <div class="f-container vertical-align-parent">
+                    <div class="f-col vertical-align" width="300" data-auto-animate-id="a">
+                        <img src="assets/smile.png">
+                    </div>
+                    <div class="f-col vertical-align" data-auto-animate-id="b">
+                        <img src="assets/svgs/min/p6_v1.svg" height="300"/>
+                    </div>
+                    <div class="f-col vertical-align" data-auto-animate-id="c">
+                        <p style="width:150px;">"Smile"</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h4>Applications</h4>
+                <ul>
+                    <li>Medical imaging (teaching doctors)</li>
+                    <li>Drug discovery (drugs without side effects)</li>
+                    <li>Model bias inspection (surveillance)</li>
+                </ul>
+            </section>
+            <section data-auto-animate data-auto-animate-id="gradient-descent">
+                <h4 style="display: inline;">Solution #1</h4>
+                <p style="display: inline"> - Gradient descent [19, 53, 87]</p>
+            </section>
+            <section data-auto-animate data-auto-animate-id="gradient-descent">
+                <h4 style="display: inline;">Solution #1</h4>
+                <p style="display: inline"> - Gradient descent [19, 53, 87]</p>
+                <div data-auto-animate-id="a">
+                    \[
+                    \underset{\hat{x}}{\arg \min}\: \underbrace{ d_1(f(\hat{x}),q)}_{\text {"prediction" }}+ \lambda
+                    \underbrace{d_2(\hat x, x)}_{\text {"closeness" }}
+                    \]
+                </div>
+            </section>
+            <section data-auto-animate data-auto-animate-id="gradient-descent">
+                <h4 style="display: inline;">Solution #1</h4>
+                <p style="display: inline"> - Gradient descent [19, 53, 87]</p>
+                <div data-auto-animate-id="a">
+                    \[
+                    \underset{\hat{x}}{\arg \min}\: \underbrace{ d_1(f(\hat{x}),q)}_{\text {"prediction" }}+ \lambda
+                    \underbrace{d_2(\hat x, x)}_{\text {"closeness" }}
+                    \]
+                </div>
+                <div data-auto-animate-id="c">
+                    <p class="text-turkis">Example:</p>
+                    [53] $\underset{\hat{x}}{\arg \min } \:\underbrace{c \cdot f_{\kappa}^{\text {hinge }}(\hat{x},
+                    y)}_{\text {"prediction"
+                    }}+\underbrace{\beta\|x-\hat{x}\|_{1}+\|x-\hat{x}\|_{2}^{2}+\gamma\|\hat{x}-\mathrm{AE}(\hat{x})\|_{2}^{2}
+                    + \theta \|\hat x - proto \|_2^2}_{\text {"closeness" }}$
+                </div>
+            </section>
+            <section data-auto-animate data-auto-animate-id="gradient-descent">
+                <h4 style="display: inline;">Solution #1</h4>
+                <p style="display: inline"> - Gradient descent [19, 53, 87]</p>
+                <div data-auto-animate-id="a">
+                    \[
+                    \underset{\hat{x}}{\arg \min}\: \underbrace{ d_1(f(\hat{x}),q)}_{\text {"prediction" }}+ \lambda
+                    \underbrace{d_2(\hat x, x)}_{\text {"closeness" }}
+                    \]
+                </div>
+                <div data-auto-animate-id="c">
+                    <p class="text-turkis">Example:</p>
+                    [53] $\underset{\hat{x}}{\arg \min } \:\underbrace{c \cdot f_{\kappa}^{\text {hinge }}(\hat{x},
+                    y)}_{\text {"prediction"
+                    }}+\underbrace{\beta\|x-\hat{x}\|_{1}+\|x-\hat{x}\|_{2}^{2}+\gamma\|\hat{x}-\mathrm{AE}(\hat{x})\|_{2}^{2}
+                    + \theta \|\hat x - proto \|_2^2}_{\text {"closeness" }}$
+                </div>
+                <div style="margin-top: 50px;" data-auto-animate-id="c">
+                    <img src="assets/seven.jpeg" height="80"/>
+                    <img src="assets/vanlooveren.png" height="85"/>
+                </div>
+            </section>
+            <section data-auto-animate data-auto-animate-id="gradient-descent">
+                <h4 style="display: inline;">Solution #1</h4>
+                <p style="display: inline"> - Gradient descent [19, 53, 87]</p>
+                <div data-auto-animate-id="a">
+                    \[
+                    \underset{\hat{x}}{\arg \min}\: \underbrace{ d_1(f(\hat{x}),q)}_{\text {"prediction" }}+ \lambda
+                    \underbrace{d_2(\hat x, x)}_{\text {"closeness" }}
+                    \]
+                </div>
+                <div data-auto-animate-id="c">
+                    <p class="text-turkis">Example:</p>
+                    [53] $\underset{\hat{x}}{\arg \min } \:\underbrace{c \cdot f_{\kappa}^{\text {hinge }}(\hat{x},
+                    y)}_{\text {"prediction"
+                    }}+\underbrace{\beta\|x-\hat{x}\|_{1}+\|x-\hat{x}\|_{2}^{2}+\gamma\|\hat{x}-\mathrm{AE}(\hat{x})\|_{2}^{2}
+                    + \theta \|\hat x - proto \|_2^2}_{\text {"closeness" }}$
+                </div>
+                <div style="margin-top: 50px;" data-auto-animate-id="c">
+                    <img src="assets/seven.jpeg" height="80"/>
+                    <img src="assets/vanlooveren.png" height="85"/>
+                </div>
+                <div>
+                    <p>Require many iterations (1000) 🐢 and low quality images 👎</p>
+                </div>
+            </section>
+            <section data-auto-animate data-auto-animate-id="generative-models">
+                <h4 style="display: inline;">Solution #2</h4>
+                <p style="display: inline"> - Generative models [22, 38, 75, 79]</p>
+            </section>
+            <section data-auto-animate data-auto-animate-id="generative-models">
+                <h4 style="display: inline;">Solution #2</h4>
+                <p style="display: inline"> - Generative models [22, 38, 75, 79]</p>
+                <div data-auto-animate-id="a">
+                    \[
+                    \hat{z}=\arg \min _{z \in \mathbb{R}^{d}}[\lambda \underbrace{d_1(f(G(z)), q)}_{\text {"prediction"
+                    }}+\underbrace{d_2(x, G(z))}_{\text {"closeness" }}]
+                    \]
+                    \[
+                    \hat{x}=G(\hat{z})
+                    \]
+                </div>
+            </section>
+            <section data-auto-animate data-auto-animate-id="generative-models">
+                <h4 style="display: inline;">Solution #2</h4>
+                <p style="display: inline"> - Generative models [22, 38, 75, 79]</p>
+                <div data-auto-animate-id="a">
+                    \[
+                    \hat{z}=\arg \min _{z \in \mathbb{R}^{d}}[\lambda \underbrace{d_1(f(G(z)), q)}_{\text {"prediction"
+                    }}+\underbrace{d_2(x, G(z))}_{\text {"closeness" }}]
+                    \]
+                    \[
+                    \hat{x}=G(\hat{z})
+                    \]
+                </div>
+                <div data-auto-animate-id="b">
+                    <img src="assets/generative.png" height="250"/>
+                    <small><b>Old vs. young.</b> First row VAE [75] and second row GAN [79]</small>
+                </div>
+            </section>
+            <section data-auto-animate data-auto-animate-id="ecinn">
+                <h3>ECINN: Efficient Counterfactuals from Invertible Neural Networks</h3>
+            </section>
+            <section data-auto-animate data-auto-animate-id="ecinn">
+                <h3 style="color: var(--au-gray); font-size: smaller">ECINN: Efficient Counterfactuals from Invertible Neural Networks</h3>
+                <p><span class="text-turkis">Idea: </span>use invertible classifier $f(x)$ to get analytical solution.</p>
+                <img src="assets/svgs/min/p6_v1.svg"/>
+            </section>
+            <section data-auto-animate data-auto-animate-id="ecinn">
+                <h3 style="color: var(--au-gray); font-size: smaller">ECINN: Efficient Counterfactuals from Invertible Neural Networks</h3>
+                <p><span class="text-turkis">Idea: </span>use invertible classifier $f(x)$ to get analytical solution.</p>
+                <img src="assets/svgs/min/p7_v1.svg"/>
+            </section>
+            <section data-auto-animate data-auto-animate-id="ecinn">
+                <h3 style="color: var(--au-gray); font-size: smaller">ECINN: Efficient Counterfactuals from Invertible Neural Networks</h3>
+                <p><span class="text-turkis">Idea: </span>use invertible classifier $f(x)$ to get analytical solution.</p>
+                <img src="assets/ecinn_highlevel.png" height="250"/>
+            </section>
+            <section data-auto-animate data-auto-animate-id="ecinn">
+                <h3 style="color: var(--au-gray); font-size: smaller">ECINN: Efficient Counterfactuals from Invertible Neural Networks</h3>
+                <p><span class="text-turkis">Idea: </span>use invertible classifier $f(x)$ to get analytical solution.</p>
+                <img src="assets/svgs/min/p8_v1.svg" height="290"/>
+                <p><small>Internal representation $f(x)$</small></p>
+            </section>
+            <section>
+                <table class="table-center">
+                    <thead>
+                        <tr>
+                            <td>Method</td>
+                            <td>Fast</td>
+                            <td>Validity</td>
+                            <td>High quality</td>
+                            <td>Analytic</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: left">Iterative [19, 53, 87]</td>
+                            <td><i class="fa fa-times text-red"></i></td> <!-- fast -->
+                            <td><i class="fa fa-times text-red"></i></td> <!-- validity -->
+                            <td><i class="fa fa-times text-red"></i></td> <!-- high quality -->
+                            <td><i class="fa fa-times text-red"></i></td> <!-- analytic -->
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Generative [19, 53, 87]</td>
+                            <td><i class="fa fa-check text-turkis"></i></td> <!-- fast -->
+                            <td>-</td> <!-- validity -->
+                            <td><i class="fa fa-check text-turkis"></i></td> <!-- high quality -->
+                            <td><i class="fa fa-times text-red"></i></td> <!-- analytic -->
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--au-gray);">
+                            <td style="text-align: left;">ECINN (ours)</td>
+                            <td><i class="fa fa-check text-turkis"></i></td> <!-- fast -->
+                            <td><i class="fa fa-check text-turkis"></i></td> <!-- validity -->
+                            <td><i class="fa fa-check text-turkis"></i></td> <!-- high quality -->
+                            <td><i class="fa fa-check text-turkis"></i></td> <!-- analytic -->
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section data-auto-animate data-auto-animate-id="ecinn_experiments">
+                <h4>Experiments</h4>
+                <div class="r-stack">
+                    <img src="assets/mnist_all_to_one.png" height="300" class="fragment fade-in-then-out">
+                    <img src="assets/mnist_one_to_all.png" height="300" class="fragment fade-in-then-out">
+                    <img src="assets/ecinn_celeba.png" class="fragment fade-in-then-out">
+                </div>
+            </section>
+            <section data-auto-animate data-auto-animate-id="ecinn_experiments">
+                <h4>Experiments</h4>
+                <div class="f-container vertical-align-parent">
+                    <div class="f-col vertical-align">
+                        <img src="assets/ecinn_compare.png" height="300">
+                        <p>
+                            <small>Rows: Input, [87], [53], ECINN.</small>
+                        </p>
+                    </div>
+                    <div class="f-col vertical-align">
+                        <table class="table-center">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>Mean (std)</td>
+                                <td>n</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>[87]</td>
+                                <td>21.64</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>[53]</td>
+                                <td>16.85</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>ECINN (ours)</td>
+                                <td>0.003 (0.0002)</td>
+                                <td>10 000</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </section>
+            <section class="no-bar" data-background-color="var(--au-turkis-dark)">
+                <h4>ECINN: Efficient Counterfactuals from Invertible Neural Networks</h4>
+                <ul>
+                    <li>Fast algorithm 🏃💨</li>
+                    <li>Analytical solution 🤩</li>
+                </ul>
+            </section>
         </section>
         <!--
              Generating Visual Counterfactual Examples
@@ -758,7 +1592,6 @@
             </p>
         </section>
         <section data-state="eval-header">
-
         </section>
 
         <!--
@@ -784,7 +1617,15 @@
             <ul>
                 <li>[8] Christian Bischof and Charles Van Loan. The WY Representation for Products
                     of Householder Matrices. SIAM Journal on Scientific and Statistical Computing,
-                    1987.</li>
+                    1987.
+                </li>
+                <li>[19]</li>
+                <li>[22]</li>
+                <li>[38]</li>
+                <li>[53]</li>
+                <li>[75]</li>
+                <li>[79]</li>
+                <li>[82]</li>
                 <li>[93] Jiong Zhang, Qi Lei, and Inderjit S. Dhillon. Stabilizing gradients for deep
                     neural networks via efficient SVD parameterization. In ICML, 2018. 8, 10, 11, 12
                 </li>
@@ -810,25 +1651,25 @@
 <script src="plugin/highlight/highlight.js"></script>
 <script type="text/javascript">
     const key_presses = [];
-    const append = function(arr, item) {
+    const append = function (arr, item) {
         const idx = arr.length;
-        arr.splice( idx, 0, item );
+        arr.splice(idx, 0, item);
     }
-    const pop = function(arr) {
+    const pop = function (arr) {
         const l = arr.length;
-        if (l === 0){
+        if (l === 0) {
             return false;
         }
-        return arr.splice(l-1,l)[0];
+        return arr.splice(l - 1, l)[0];
     };
-    const go_to_slide = function(evt) {
+    const go_to_slide = function (evt) {
         if (evt.keyCode === 13) { // enter
-            if (key_presses.indexOf('enter') !== -1){
+            if (key_presses.indexOf('enter') !== -1) {
                 let val = pop(key_presses);
                 let size = 1;
                 let v = 0;
-                while(val !== 'enter') {
-                    v = v + size *  val;
+                while (val !== 'enter') {
+                    v = v + size * val;
                     size = size * 10;
                     val = pop(key_presses)
                 }
@@ -836,12 +1677,12 @@
                 let h = 0;
                 size = 1;
                 val = pop(key_presses);
-                while(val !== false) {
+                while (val !== false) {
                     h = h + size * val;
                     size = size * 10;
                     val = pop(key_presses);
                 }
-                Reveal.slide(h-1, v-1);
+                Reveal.slide(h - 1, v - 1);
             } else {
                 append(key_presses, 'enter');
             }
@@ -886,7 +1727,7 @@
         },
 
         // Learn about plugins: https://revealjs.com/plugins/
-        plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax2 ]
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax2]
     });
 </script>
 </body>

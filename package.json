@@ -57,6 +57,7 @@
     "rollup": "^2.48.0",
     "rollup-plugin-terser": "^7.0.2",
     "sass": "^1.39.2",
+    "through2": "^4.0.2",
     "yargs": "^15.1.0"
   },
   "browserslist": "> 0.5%, IE 11, not dead",
@@ -98,5 +99,4 @@
       "no-unused-expressions": 0
     }
   },
-  "dependencies": {}
 }

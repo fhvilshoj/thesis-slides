@@ -31,15 +31,15 @@
         <section data-state="no-bar" style="font-size: larger" data-auto-animate>
             <h3 data-id="title" class="r-fit-text">Fast and Explainable Deep Neural Networks</h3>
 
-            <ul class="text-blue">
-                <li><i style="color:darkred;">5</i> sections</li> <!-- TODO -->
-                <li><i style="color: darkred">Y</i> images</li> <!-- TODO -->
+            <ul class="text-blue smaller-font">
+                <li><i style="color:darkred;">5</i> sections</li>
+                <li><i style="color: darkred">34</i> images</li>
                 <li>Slide numbers and questions.</li>
             </ul>
             <div class="section-footer" style="margin-top: 30px">
                 <small class="text-gray">
                     By <a class="text-blue" href="https://fhvilshoj.github.com" target="_blank">Frederik Hvilshøj</a>,
-                    Supervised by
+                    supervised by
                     <a class="text-blue"
                        href="https://pure.au.dk/portal/en/persons/ira-assent(012c1c28-bfa9-4107-bd8f-97dae008b06d).html"
                        target="_blank">Ira Assent</a>
@@ -98,6 +98,9 @@
                         href="https://developer.nvidia.com/blog/using-deepspeed-and-megatron-to-train-megatron-turing-nlg-530b-the-worlds-largest-and-most-powerful-generative-language-model/">NVIDIA
                     Developer blog</a></small></p>
             </section>
+            <section>
+                How can we reason about such complex beasts? 🦄
+            </section>
         </section>
 
         <section data-state="motivation-header">
@@ -114,28 +117,28 @@
                 </div>
                 <div class="f-container">
                     <div class="f-col" data-id="rq1">
-                        <div class="f-definition f-col">
-                            <div class="f-header" style="background-color: var(--au-purple-dark)">RQ1</div>
-                            <div class="f-content">
-                                How can the <i class="f-emph">efficiency</i> of machine learning <i class="f-emph">algorithms</i>
+                        <div data-id="1" class="f-definition f-col">
+                            <div data-id="1.1" class="f-header" style="background-color: var(--au-purple-dark)">Research Question 1</div>
+                            <div data-id="1.2" class="f-content">
+                                How can the <i data-id="1.2.1" class="f-emph">efficiency</i> of machine learning <i data-id="1.2.2" class="f-emph">algorithms</i>
                                 be improved?
                             </div>
                         </div>
                     </div>
-                    <div class="f-col" style="visibility: hidden;" data-id="rq2">
-                        <div class="f-definition f-col">
-                            <div class="f-header" style="background-color: var(--au-turkis-dark)">RQ2</div>
-                            <div class="f-content">
-                                How can <i class="f-emph">generative models</i> be utilized for <i class="f-emph">explaining</i>
+                    <div class="f-col invisible" data-id="rq2">
+                        <div data-id="2" class="f-definition f-col">
+                            <div data-id="2.1" class="f-header" style="background-color: var(--au-turkis-dark)">Research Question 2</div>
+                            <div data-id="2.2" class="f-content">
+                                How can <i data-id="2.2.1" class="f-emph">generative models</i> be utilized for <i data-id="2.2.2" class="f-emph">explaining</i>
                                 neural networks?
                             </div>
                         </div>
                     </div>
-                    <div class="f-col" style="visibility: hidden;" data-id="rq3">
-                        <div class="f-definition">
-                            <div class="f-header" style="background-color: var(--au-green-dark)">RQ3</div>
-                            <div class="f-content">
-                                How are methods for explaining neural networks best <i class="f-emph">evaluated</i>?
+                    <div class="f-col invisible" data-id="rq3">
+                        <div data-id="3" class="f-definition">
+                            <div data-id="3.1"class="f-header" style="background-color: var(--au-green-dark)">Research Question 3</div>
+                            <div data-id="3.2" class="f-content">
+                                How are methods for explaining neural networks best <i data-id="3.2.1" class="f-emph">evaluated</i>?
                             </div>
                         </div>
                     </div>
@@ -148,28 +151,28 @@
                 </div>
                 <div class="f-container">
                     <div class="f-col" data-id="rq1">
-                        <div class="f-definition f-col">
-                            <div class="f-header" style="background-color: var(--au-purple-dark)">RQ1</div>
-                            <div class="f-content">
-                                How can the <i class="f-emph">efficiency</i> of machine learning <i class="f-emph">algorithms</i>
+                        <div data-id="1" class="f-definition f-col">
+                            <div data-id="1.1" class="f-header" style="background-color: var(--au-purple-dark)">Research Question 1</div>
+                            <div data-id="1.2" class="f-content">
+                                How can the <i data-id="1.2.1" class="f-emph">efficiency</i> of machine learning <i data-id="1.2.2" class="f-emph">algorithms</i>
                                 be improved?
                             </div>
                         </div>
                     </div>
                     <div class="f-col" data-id="rq2">
-                        <div class="f-definition f-col">
-                            <div class="f-header" style="background-color: var(--au-turkis-dark)">RQ2</div>
-                            <div class="f-content">
-                                How can <i class="f-emph">generative models</i> be utilized for <i class="f-emph">explaining</i>
+                        <div data-id="2" class="f-definition f-col">
+                            <div data-id="2.1" class="f-header" style="background-color: var(--au-turkis-dark)">Research Question 2</div>
+                            <div data-id="2.2" class="f-content">
+                                How can <i data-id="2.2.1" class="f-emph">generative models</i> be utilized for <i data-id="2.2.2" class="f-emph">explaining</i>
                                 neural networks?
                             </div>
                         </div>
                     </div>
-                    <div class="f-col" style="visibility: hidden" data-id="rq3">
-                        <div class="f-definition">
-                            <div class="f-header" style="background-color: var(--au-green-dark)">RQ3</div>
-                            <div class="f-content">
-                                How are methods for explaining neural networks best <i class="f-emph">evaluated</i>?
+                    <div class="f-col invisible" data-id="rq3">
+                        <div data-id="3" class="f-definition">
+                            <div data-id="3.1"class="f-header" style="background-color: var(--au-green-dark)">Research Question 3</div>
+                            <div data-id="3.2" class="f-content">
+                                How are methods for explaining neural networks best <i data-id="3.2.1" class="f-emph">evaluated</i>?
                             </div>
                         </div>
                     </div>
@@ -182,28 +185,28 @@
                 </div>
                 <div class="f-container">
                     <div class="f-col" data-id="rq1">
-                        <div class="f-definition f-col">
-                            <div class="f-header" style="background-color: var(--au-purple-dark)">RQ1</div>
-                            <div class="f-content">
-                                How can the <i class="f-emph">efficiency</i> of machine learning <i class="f-emph">algorithms</i>
+                        <div data-id="1" class="f-definition f-col">
+                            <div data-id="1.1" class="f-header" style="background-color: var(--au-purple-dark)">Research Question 1</div>
+                            <div data-id="1.2" class="f-content">
+                                How can the <i data-id="1.2.1" class="f-emph">efficiency</i> of machine learning <i data-id="1.2.2" class="f-emph">algorithms</i>
                                 be improved?
                             </div>
                         </div>
                     </div>
                     <div class="f-col" data-id="rq2">
-                        <div class="f-definition f-col">
-                            <div class="f-header" style="background-color: var(--au-turkis-dark)">RQ2</div>
-                            <div class="f-content">
-                                How can <i class="f-emph">generative models</i> be utilized for <i class="f-emph">explaining</i>
+                        <div data-id="2" class="f-definition f-col">
+                            <div data-id="2.1" class="f-header" style="background-color: var(--au-turkis-dark)">Research Question 2</div>
+                            <div data-id="2.2" class="f-content">
+                                How can <i data-id="2.2.1" class="f-emph">generative models</i> be utilized for <i data-id="2.2.2" class="f-emph">explaining</i>
                                 neural networks?
                             </div>
                         </div>
                     </div>
                     <div class="f-col" data-id="rq3">
-                        <div class="f-definition">
-                            <div class="f-header" style="background-color: var(--au-green-dark)">RQ3</div>
-                            <div class="f-content">
-                                How are methods for explaining neural networks best <i class="f-emph">evaluated</i>?
+                        <div data-id="3" class="f-definition">
+                            <div data-id="3.1"class="f-header" style="background-color: var(--au-green-dark)">Research Question 3</div>
+                            <div data-id="3.2" class="f-content">
+                                How are methods for explaining neural networks best <i data-id="3.2.1" class="f-emph">evaluated</i>?
                             </div>
                         </div>
                     </div>
@@ -262,8 +265,8 @@
                 \]
                 </span>
                 <span data-id="2">
-                   $ W = U \Sigma V^\intercal,$
-                    <span style="margin-left: 20px; font-size: smaller; color: var(--au-gray)">
+                   <span data-id="2.1">$ W = U \Sigma V^\intercal,$</span>
+                    <span data-id="2.2" style="margin-left: 20px; font-size: smaller; color: var(--au-gray)">
                         $U,V,\Sigma \in \mathbb{R}^{d\times d}$
                     </span>
                 </span>
@@ -277,8 +280,8 @@
                 \]
                 </span>
                 <span data-id="2">
-                   $ W = U \Sigma V^\intercal,$
-                    <span style="margin-left: 20px; font-size: smaller; color: var(--au-gray)">
+                   <span data-id="2.1">$ W = U \Sigma V^\intercal,$</span>
+                    <span data-id="2.2" style="margin-left: 20px; font-size: smaller; color: var(--au-gray)">
                         $U,V,\Sigma \in \mathbb{R}^{d\times d}$
                     </span>
                 </span>
@@ -288,10 +291,10 @@
                     \]
                 </span>
             </section>
-            <section data-transition="none">
+            <section data-auto-animate>
                 <span data-id="2" class="text-gray">
-                   $ W = U \Sigma V^\intercal,$
-                    <span style="margin-left: 20px; font-size: smaller; color: var(--au-gray)">
+                   <span data-id="2.1">$ W = U \Sigma V^\intercal,$</span>
+                    <span data-id="2.2" style="margin-left: 20px; font-size: smaller; color: var(--au-gray)">
                         $U,V,\Sigma \in \mathbb{R}^{d\times d}$
                     </span>
                 </span>
@@ -303,38 +306,17 @@
                 </span>
                 <div data-id="4">
                     <p>The neural network setting</p>
-                    \[
-                    y = \sigma( \color{blue}Wx ) \quad \color{blue}W^{\color{blue}-\color{blue}1}\sigma^{-1}(y) = x
-                    \]
-                </div>
-
-            </section>
-            <section data-transition="none">
-                <span data-id="2" class="text-gray">
-                   $ W = U \Sigma V^\intercal,$
-                    <span style="margin-left: 20px; font-size: smaller; color: var(--au-gray)">
-                        $U,V,\Sigma \in \mathbb{R}^{d\times d}$
+                    <span data-id="4.1">
+                        \[
+                        y = \sigma( \color{blue}Wx ) \quad \color{blue}W^{\color{blue}-\color{blue}1}\sigma^{-1}(y) = x
+                        \]
                     </span>
-                </span>
-
-                <span data-id="3" class="text-gray">
-                    \[
-                        U^{-1} = U^\intercal, V^{-1} = V^\intercal \quad\Rightarrow\quad W^{-1} = V\Sigma^{-1} U^\intercal
-                    \]
-                </span>
-                <div data-id="4">
-                    <p>The neural network setting</p>
-                    \[
-                    y = \sigma( \color{blue}U\color{blue}\Sigma \color{blue}V^{\color{blue}\intercal} x ) \quad
-                    \color{blue}V\color{blue}\Sigma^{\color{blue}-\color{blue}1}\color{blue}U^{\color{blue}\intercal}\sigma^{-1}(y)
-                    = x
-                    \]
                 </div>
             </section>
-            <section data-transition="none">
+            <section data-auto-animate>
                 <span data-id="2" class="text-gray">
-                   $ W = U \Sigma V^\intercal,$
-                    <span style="margin-left: 20px; font-size: smaller; color: var(--au-gray)">
+                    <span data-id="2.1">$ W = U \Sigma V^\intercal,$</span>
+                    <span data-id="2.2" style="margin-left: 20px; font-size: smaller; color: var(--au-gray)">
                         $U,V,\Sigma \in \mathbb{R}^{d\times d}$
                     </span>
                 </span>
@@ -346,11 +328,37 @@
                 </span>
                 <div data-id="4">
                     <p>The neural network setting</p>
+                    <span data-id="4.1">
+                        \[
+                        y = \sigma( \color{blue}U\color{blue}\Sigma \color{blue}V^{\color{blue}\intercal} x ) \quad
+                        \color{blue}V\color{blue}\Sigma^{\color{blue}-\color{blue}1}\color{blue}U^{\color{blue}\intercal}\sigma^{-1}(y)
+                        = x
+                        \]
+                    </span>
+                </div>
+            </section>
+            <section data-auto-animate>
+                <span data-id="2" class="text-gray">
+                    <span data-id="2.1">$ W = U \Sigma V^\intercal,$</span>
+                    <span data-id="2.2" style="margin-left: 20px; font-size: smaller; color: var(--au-gray)">
+                        $U,V,\Sigma \in \mathbb{R}^{d\times d}$
+                    </span>
+                </span>
+
+                <span data-id="3" class="text-gray">
                     \[
-                    y = \sigma( \color{blue}U\color{blue}\Sigma \color{blue}V^{\color{blue}\intercal} x ) \quad
-                    \color{blue}V\color{blue}\Sigma^{\color{blue}-\color{blue}1}\color{blue}U^{\color{blue}\intercal}\sigma^{-1}(y)
-                    = x
+                        U^{-1} = U^\intercal, V^{-1} = V^\intercal \quad\Rightarrow\quad W^{-1} = V\Sigma^{-1} U^\intercal
                     \]
+                </span>
+                <div data-id="4">
+                    <p>The neural network setting</p>
+                    <span data-id="4.1">
+                        \[
+                        y = \sigma( \color{blue}U\color{blue}\Sigma \color{blue}V^{\color{blue}\intercal} x ) \quad
+                        \color{blue}V\color{blue}\Sigma^{\color{blue}-\color{blue}1}\color{blue}U^{\color{blue}\intercal}\sigma^{-1}(y)
+                        = x
+                        \]
+                    </span>
                 </div>
                 <p data-id="5">$O(d^3)$ to $O(d)$</p>
             </section>
@@ -412,37 +420,39 @@
                 </p><br/>
             </section>
             <section data-auto-animate>
-                <h4 style="display: inline" class="text-purple">Solution: </h4>
-                <p style="display: inline;">Compute sub-products in parallel.</p>
-            </section>
-            <section data-auto-animate>
-                <h4 style="display: inline" class="text-purple">Solution: </h4>
-                <p style="display: inline;">Compute sub-products in parallel.</p>
-                <div data-auto-animate-id="1" class="lemma smaller-font">
-                    <p>
-                        <b>Lemma 1: [8]</b>
-                        For any $t$ Householder matrices $H_1,...,H_t$, there exists $W, Y\in \mathbb{R}^{d\times t}$
-                        st.
-                        $I− WY^\intercal = H_1 \cdots H_t$. <br/>
-                        Computing $W$ and $Y$ takes $O(dt^2)$ time and $t$ sequential matrix-matrix multiplications.
-                    </p>
+                <div data-id="title">
+                    <h4 style="display: inline" class="text-purple">Solution: </h4>
+                    <p style="display: inline;">Compute sub-products in parallel.</p>
                 </div>
             </section>
             <section data-auto-animate>
-                <h4 style="display: inline" class="text-purple">Solution: </h4>
-                <p style="display: inline;">Compute sub-products in parallel.</p>
-                <div data-auto-animate-id="1" class="lemma smaller-font">
-                    <p>
-                        <b>Lemma 1: [8]</b>
-                        For any $t$ Householder matrices $H_1,...,H_t$, there exists $W, Y\in \mathbb{R}^{d\times t}$
-                        st.
-                        $I− WY^\intercal = H_1 \cdots H_t$. <br/>
-                        Computing $W$ and $Y$ takes $O(dt^2)$ time and $t$ sequential matrix-matrix multiplications.
-                    </p>
+                <div data-id="title">
+                    <h4 style="display: inline" class="text-purple">Solution: </h4>
+                    <p style="display: inline;">Compute sub-products in parallel.</p>
+                </div>
+                <div data-id="1" class="lemma smaller-font">
+                    <b data-id="1.1">Lemma 1: [8]</b>
+                    For any $t$ Householder matrices $H_1,...,H_t$, there exists $W, Y\in \mathbb{R}^{d\times t}$
+                    st.
+                    $I− WY^\intercal = H_1 \cdots H_t$. <br/>
+                    Computing $W$ and $Y$ takes $O(dt^2)$ time and $t$ sequential matrix-matrix multiplications.
+                </div>
+            </section>
+            <section data-auto-animate>
+                <div data-id="title">
+                    <h4 style="display: inline" class="text-purple">Solution: </h4>
+                    <p style="display: inline;">Compute sub-products in parallel.</p>
+                </div>
+                <div data-id="1" class="lemma smaller-font">
+                    <b data-id="1.1">Lemma 1: [8]</b>
+                    For any $t$ Householder matrices $H_1,...,H_t$, there exists $W, Y\in \mathbb{R}^{d\times t}$
+                    st.
+                    $I− WY^\intercal = H_1 \cdots H_t$. <br/>
+                    Computing $W$ and $Y$ takes $O(dt^2)$ time and $t$ sequential matrix-matrix multiplications.
                 </div>
                 <div class="smaller-font">
                     <p><span class="text-purple">Step 1:</span> Compute sub-products in parallel.</p>
-                    <p>$
+                    <p data-id="matrix">$
                         \begin{array}{cccc}
                         H_{1} \ldots H_{t} & H_{t+1} \ldots H_{2 t} & \ldots & H_{d-t+1} \ldots H_{d} \\
                         \| & \| & \ldots & \| \\
@@ -453,20 +463,20 @@
                 </div>
             </section>
             <section data-auto-animate>
-                <h4 style="display: inline" class="text-purple">Solution: </h4>
-                <p style="display: inline;">Compute sub-products in parallel.</p>
-                <div data-auto-animate-id="1" class="lemma smaller-font">
-                    <p>
-                        <b>Lemma 1: [8]</b>
-                        For any $t$ Householder matrices $H_1,...,H_t$, there exists $W, Y\in \mathbb{R}^{d\times t}$
-                        st.
-                        $I− WY^\intercal = H_1 \cdots H_t$. <br/>
-                        Computing $W$ and $Y$ takes $O(dt^2)$ time and $t$ sequential matrix-matrix multiplications.
-                    </p>
+                <div data-id="title">
+                    <h4 style="display: inline" class="text-purple">Solution: </h4>
+                    <p style="display: inline;">Compute sub-products in parallel.</p>
+                </div>
+                <div data-id="1" class="lemma smaller-font">
+                    <b data-id="1.1">Lemma 1: [8]</b>
+                    For any $t$ Householder matrices $H_1,...,H_t$, there exists $W, Y\in \mathbb{R}^{d\times t}$
+                    st.
+                    $I− WY^\intercal = H_1 \cdots H_t$. <br/>
+                    Computing $W$ and $Y$ takes $O(dt^2)$ time and $t$ sequential matrix-matrix multiplications.
                 </div>
                 <div class="smaller-font">
                     <p><span class="text-purple">Step 1:</span> Compute sub-products in parallel.</p>
-                    <p>$
+                    <p data-id="matrix">$
                         \begin{array}{cccc}
                         H_{1} \ldots H_{t} & H_{t+1} \ldots H_{2 t} & \ldots & H_{d-t+1} \ldots H_{d} \\
                         \| & \| & \ldots & \| \\
@@ -485,9 +495,9 @@
             </section>
             <section data-auto-animate>
                 <h4>Time complexity:</h4>
-                <div data-auto-animate-id="1" class="smaller-font">
+                <div data-id="1" class="smaller-font">
                     <p>Asymptotic running time:</p>
-                    <table>
+                    <table data-id="1.1">
                         <tr>
                             <td><i class="text-purple">Step 1:</i></td>
                             <td>Computing $d/t$ products:</td>
@@ -508,9 +518,9 @@
             </section>
             <section data-auto-animate>
                 <h4>Time complexity:</h4>
-                <div data-auto-animate-id="1" class="smaller-font">
+                <div data-id="1" class="smaller-font">
                     <p>Asymptotic running time:</p>
-                    <table>
+                    <table data-id="1.1">
                         <tr>
                             <td><i class="text-purple">Step 1:</i></td>
                             <td>Computing $d/t$ products:</td>
@@ -529,9 +539,9 @@
                     </table>
                 </div>
 
-                <div data-auto-animate-id="2" class="smaller-font">
+                <div data-id="2" class="smaller-font">
                     <p>Sequential work.</p>
-                    <table>
+                    <table data-id="2.2">
                         <tr>
                             <td><i class="text-purple">Step 1:</i></td>
                             <td>Computing $d/t$ products:</td>
@@ -1114,39 +1124,109 @@
                         href="https://paperswithcode.com/sota/image-generation-on-cifar-10">Papers with code</a></small>
                 </p>
             </section>
-            <section class="smaller-font">
-                <h4>Computing the FID</h4>
-                <p>Let $A(x)$ be an "encoding network."</p>
+            <section data-auto-animate>
+                <div data-id="titld">
+                    <h4>Computing the FID</h4>
+                    <p>Let $A(x)$ be an "encoding network."</p>
+                </div>
                 <div class="f-container">
-                    <div class="f-col">
+                    <div data-id="left" class="f-col">
                         <p class="text-purple">Real samples</p>
-                        $$ r_1, ..., r_n \sim p(x) $$
-                        $$ \hat r_i = A(r_i)$$
-                        Compute $\mu_r$ and $\Sigma_r$
+                        <div data-id="left.a">$$ r_1, ..., r_n \sim p(x) $$</div>
+                        <div data-id="left.b">$$ \hat r_i = A(r_i)$$</div>
+                        <div data-id="left.c">Compute $\mu_r$ and $\Sigma_r$</div>
                     </div>
-                    <div class="f-col">
+                    <div data-id="right" class="f-col invisible">
                         <p class="text-purple">Fake samples</p>
-                        $$ f_1, ..., f_n \sim p(x) $$
-                        $$ \hat f_i = A(f_i)$$
-                        Compute $\mu_f$ and $\Sigma_f$
+                        <div data-id="right.a">$$ f_1, ..., f_n \sim p(x) $$</div>
+                        <div data-id="right.b">$$ \hat f_i = A(f_i)$$</div>
+                        <div data-id="right.c">Compute $\mu_f$ and $\Sigma_f$</div>
                     </div>
                 </div>
-                $$
-                \operatorname{FID}\left(\mu_{r}, \Sigma_{r}, \mu_{f}, \Sigma_{f}\right)=\left\|\mu_{r}-\mu_{f}\right
-                \|_{2}^{2}+\operatorname{tr}\left(\Sigma_{r}+\Sigma_{f}\right)-2 \cdot \operatorname{tr}\left(
-                \sqrt{\Sigma_{r} \Sigma_{f}}\right)
-                $$
+                <div data-id="fid" class="invisible">
+                    \[
+                    \operatorname{FID}\left(\mu_{r}, \Sigma_{r}, \mu_{f}, \Sigma_{f}\right)=\left\|\mu_{r}-\mu_{f}\right
+                    \|_{2}^{2}+\operatorname{tr}\left(\Sigma_{r}+\Sigma_{f}\right)-2 \cdot \operatorname{tr}\left(
+                    \sqrt{\Sigma_{r} \Sigma_{f}}\right)
+                    \]
+                </div>
             </section>
-            <section>
-                $$
-                \operatorname{FID}\left(\mu_{r}, \Sigma_{r}, \mu_{f}, \Sigma_{f}\right)=
-                \underbrace{\left\|\mu_{r}-\mu_{f}\right
-                \|_{2}^{2}+\operatorname{tr}\left(\Sigma_{r}+\Sigma_{f}\right)}_{O(d)}
-                -2 \cdot
-                \underbrace{\operatorname{tr}\left( \sqrt{\Sigma_{r} \Sigma_{f}}\right) }_{O(d^3)}
-                $$
-                <p class="text-purple">Computing $\operatorname{tr}\left( \sqrt{ \Sigma_{r} \Sigma_{f} } \right)$:</p>
-                <div>
+            <section data-auto-animate>
+                <div data-id="titld">
+                    <h4>Computing the FID</h4>
+                    <p>Let $A(x)$ be an "encoding network."</p>
+                </div>
+                <div class="f-container">
+                    <div data-id="left" class="f-col">
+                        <p class="text-purple">Real samples</p>
+                        <div data-id="left.a">$$ r_1, ..., r_n \sim p(x) $$</div>
+                        <div data-id="left.b">$$ \hat r_i = A(r_i)$$</div>
+                        <div data-id="left.c">Compute $\mu_r$ and $\Sigma_r$</div>
+                    </div>
+                    <div data-id="right" class="f-col">
+                        <p class="text-purple">Fake samples</p>
+                        <div data-id="right.a">$$ f_1, ..., f_n \sim p(x) $$</div>
+                        <div data-id="right.b">$$ \hat f_i = A(f_i)$$</div>
+                        <div data-id="right.c">Compute $\mu_f$ and $\Sigma_f$</div>
+                    </div>
+                </div>
+                <div data-id="fid" class="invisible">
+                    \[
+                    \operatorname{FID}\left(\mu_{r}, \Sigma_{r}, \mu_{f}, \Sigma_{f}\right)=\left\|\mu_{r}-\mu_{f}\right
+                    \|_{2}^{2}+\operatorname{tr}\left(\Sigma_{r}+\Sigma_{f}\right)-2 \cdot \operatorname{tr}\left(
+                    \sqrt{\Sigma_{r} \Sigma_{f}}\right)
+                    \]
+                </div>
+            </section>
+            <section data-auto-animate>
+                <div data-id="titld">
+                    <h4>Computing the FID</h4>
+                    <p>Let $A(x)$ be an "encoding network."</p>
+                </div>
+                <div class="f-container">
+                    <div data-id="left" class="f-col">
+                        <p class="text-purple">Real samples</p>
+                        <div data-id="left.a">$$ r_1, ..., r_n \sim p(x) $$</div>
+                        <div data-id="left.b">$$ \hat r_i = A(r_i)$$</div>
+                        <div data-id="left.c">Compute $\mu_r$ and $\Sigma_r$</div>
+                    </div>
+                    <div data-id="right" class="f-col">
+                        <p class="text-purple">Fake samples</p>
+                        <div data-id="right.a">$$ f_1, ..., f_n \sim p(x) $$</div>
+                        <div data-id="right.b">$$ \hat f_i = A(f_i)$$</div>
+                        <div data-id="right.c">Compute $\mu_f$ and $\Sigma_f$</div>
+                    </div>
+                </div>
+                <div data-id="fid">
+                    \[
+                    \operatorname{FID}\left(\mu_{r}, \Sigma_{r}, \mu_{f}, \Sigma_{f}\right)=\left\|\mu_{r}-\mu_{f}\right
+                    \|_{2}^{2}+\operatorname{tr}\left(\Sigma_{r}+\Sigma_{f}\right)-2 \cdot \operatorname{tr}\left(
+                    \sqrt{\Sigma_{r} \Sigma_{f}}\right)
+                    \]
+                </div>
+            </section>
+            <section data-auto-animate>
+                <div data-id="fid">
+                    \[
+                    \operatorname{FID}\left(\mu_{r}, \Sigma_{r}, \mu_{f}, \Sigma_{f}\right)=\left\|\mu_{r}-\mu_{f}\right
+                    \|_{2}^{2}+\operatorname{tr}\left(\Sigma_{r}+\Sigma_{f}\right)-2 \cdot \operatorname{tr}\left(
+                    \sqrt{\Sigma_{r} \Sigma_{f}}\right)
+                    \]
+                </div>
+                <p data-id="comment" class="text-purple">Computing $\operatorname{tr}\left( \sqrt{ \Sigma_{r} \Sigma_{f}
+                    } \right)$ is expensive:</p>
+            </section>
+            <section data-auto-animate>
+                <div data-id="fid">
+                    \[
+                    \operatorname{FID}\left(\mu_{r}, \Sigma_{r}, \mu_{f}, \Sigma_{f}\right)=\left\|\mu_{r}-\mu_{f}\right
+                    \|_{2}^{2}+\operatorname{tr}\left(\Sigma_{r}+\Sigma_{f}\right)-2 \cdot \operatorname{tr}\left(
+                    \sqrt{\Sigma_{r} \Sigma_{f}}\right)
+                    \]
+                </div>
+                <p data-id="comment" class="text-purple">Computing $\operatorname{tr}\left( \sqrt{ \Sigma_{r} \Sigma_{f}
+                    } \right)$ is expensive:</p>
+                <div data-id="steps">
                     <p>Compute Schur decomposition: $\Sigma_r\Sigma_f = QVQ^\intercal$.</p>
                     <p>Compute $U$ such that $U^2 = V$.</p>
                     <p>Then $\sqrt{ \Sigma_r \Sigma_f } = QUQ^\intercal$.</p>
@@ -1159,113 +1239,166 @@
             </section>
             <section data-auto-animate>
                 <p><span class="text-purple">Problem:</span> $\Sigma_r \Sigma_f$ is too big! ($d \times d$)</p>
-                <p><span class="text-purple">Solution:</span> find equivalent computation of smaller matrix. ($m \times
+                <p data-id="title"><span class="text-purple">Solution:</span> find equivalent computation of smaller
+                    matrix. ($m \times
                     m$)</p>
             </section>
             <!--            <section class="smaller-font" data-transition="none">-->
             <section class="smaller-font" data-auto-animate>
+                <p data-id="title"><span class="text-purple">Solution:</span> find equivalent computation of smaller
+                    matrix. ($m \times
                 <div class="f-container">
-                    <div class="f-col">
+                    <div data-id="l" class="f-col">
                         <p>Real samples</p>
-                        $$ X_{r}=\left[
-                        \begin{array}{ccc}
-                        \mid & & \mid \\
-                        A\left(r_{1}\right) & \ldots & A\left(r_{n}\right) \\
-                        \mid & & \mid
-                        \end{array}
-                        \right]-\mu_{r} \mathbb{1}_{n}^{\top} $$
+                        <div data-id="l.1">
+                            $$ X_{r}=\left[
+                            \begin{array}{ccc}
+                            \mid & & \mid \\
+                            A\left(r_{1}\right) & \ldots & A\left(r_{n}\right) \\
+                            \mid & & \mid
+                            \end{array}
+                            \right]-\mu_{r} \mathbb{1}_{n}^{\top} $$
+                        </div>
                     </div>
-                    <div class="f-col">
+                    <div data-id="r" class="f-col">
                         <p>Fake samples</p>
-                        $$ X_{f}=\left[
-                        \begin{array}{ccc}
-                        \mid & & \mid \\
-                        A\left(f_{1}\right) & \ldots & A\left(f_{n}\right) \\
-                        \mid & & \mid
-                        \end{array}
-                        \right]-\mu_{f} \mathbb{1}_{n}^{\top} $$
+                        <div data-id="r.1">
+                            $$ X_{f}=\left[
+                            \begin{array}{ccc}
+                            \mid & & \mid \\
+                            A\left(f_{1}\right) & \ldots & A\left(f_{m}\right) \\
+                            \mid & & \mid
+                            \end{array}
+                            \right]-\mu_{f} \mathbb{1}_{m}^{\top} $$
+                        </div>
                     </div>
                 </div>
             </section>
             <!--            <section class="smaller-font" data-transition="none">-->
             <section class="smaller-font" data-auto-animate>
+                <p data-id="title"><span class="text-purple">Solution:</span> find equivalent computation of smaller
+                    matrix. ($m \times
                 <div class="f-container">
-                    <div class="f-col">
+                    <div data-id="l" class="f-col">
                         <p>Real samples</p>
-                        $$ X_{r}=\left[
-                        \begin{array}{ccc}
-                        \mid & & \mid \\
-                        A\left(r_{1}\right) & \ldots & A\left(r_{n}\right) \\
-                        \mid & & \mid
-                        \end{array}
-                        \right]-\mu_{r} \mathbb{1}_{n}^{\top} $$
-                        $$ C_{r}=\frac{1}{\sqrt{n-1}} X_{r} $$
+                        <div data-id="l.1">
+                            $$ X_{r}=\left[
+                            \begin{array}{ccc}
+                            \mid & & \mid \\
+                            A\left(r_{1}\right) & \ldots & A\left(r_{n}\right) \\
+                            \mid & & \mid
+                            \end{array}
+                            \right]-\mu_{r} \mathbb{1}_{n}^{\top} $$
+                        </div>
+                        <div data-id="l.2">$$ C_{r}=\frac{1}{\sqrt{n-1}} X_{r} $$</div>
                     </div>
-                    <div class="f-col">
+                    <div data-id="r" class="f-col">
                         <p>Fake samples</p>
-                        $$ X_{f}=\left[
-                        \begin{array}{ccc}
-                        \mid & & \mid \\
-                        A\left(f_{1}\right) & \ldots & A\left(f_{n}\right) \\
-                        \mid & & \mid
-                        \end{array}
-                        \right]-\mu_{f} \mathbb{1}_{n}^{\top} $$
-                        $$ C_{r}=\frac{1}{\sqrt{n-1}} X_{r} $$
+                        <div data-id="r.1">
+                            $$ X_{f}=\left[
+                            \begin{array}{ccc}
+                            \mid & & \mid \\
+                            A\left(f_{1}\right) & \ldots & A\left(f_{m}\right) \\
+                            \mid & & \mid
+                            \end{array}
+                            \right]-\mu_{f} \mathbb{1}_{m}^{\top} $$
+                        </div>
+                        <div data-id="r.2">$$ C_{f}=\frac{1}{\sqrt{m-1}} X_{f} $$</div>
                     </div>
                 </div>
             </section>
             <!--                <section class="smaller-font" data-transition="none">-->
             <section class="smaller-font" data-auto-animate>
+                <p data-id="title"><span class="text-purple">Solution:</span> find equivalent computation of smaller
+                    matrix. ($m \times
                 <div class="f-container">
-                    <div class="f-col">
+                    <div data-id="l" class="f-col">
                         <p>Real samples</p>
-                        $$ X_{r}=\left[
-                        \begin{array}{ccc}
-                        \mid & & \mid \\
-                        A\left(r_{1}\right) & \ldots & A\left(r_{n}\right) \\
-                        \mid & & \mid
-                        \end{array}
-                        \right]-\mu_{r} \mathbb{1}_{n}^{\top} $$
-                        $$ C_{r}=\frac{1}{\sqrt{n-1}} X_{r} $$
-                        $$ \Sigma_r = C_{r}C_{r}^\intercal $$
+                        <div data-id="l.1">
+                            $$ X_{r}=\left[
+                            \begin{array}{ccc}
+                            \mid & & \mid \\
+                            A\left(r_{1}\right) & \ldots & A\left(r_{n}\right) \\
+                            \mid & & \mid
+                            \end{array}
+                            \right]-\mu_{r} \mathbb{1}_{n}^{\top} $$
+                        </div>
+                        <div data-id="l.2">$$ C_{r}=\frac{1}{\sqrt{n-1}} X_{r} $$</div>
+                        <div data-id="l.3">$$ \Sigma_r = C_{r}C_{r}^\intercal $$</div>
                     </div>
-                    <div class="f-col">
+                    <div data-id="r" class="f-col">
                         <p>Fake samples</p>
-                        $$ X_{f}=\left[
-                        \begin{array}{ccc}
-                        \mid & & \mid \\
-                        A\left(f_{1}\right) & \ldots & A\left(f_{n}\right) \\
-                        \mid & & \mid
-                        \end{array}
-                        \right]-\mu_{f} \mathbb{1}_{n}^{\top} $$
-                        $$ C_{r}=\frac{1}{\sqrt{n-1}} X_{r} $$
-                        $$ \Sigma_r = C_{r}C_{r}^\intercal $$
+                        <div data-id="r.1">
+                            $$ X_{f}=\left[
+                            \begin{array}{ccc}
+                            \mid & & \mid \\
+                            A\left(f_{1}\right) & \ldots & A\left(f_{m}\right) \\
+                            \mid & & \mid
+                            \end{array}
+                            \right]-\mu_{f} \mathbb{1}_{m}^{\top} $$
+                        </div>
+                        <div data-id="r.2">$$ C_{f}=\frac{1}{\sqrt{m-1}} X_{f} $$</div>
+                        <div data-id="r.3">$$ \Sigma_f = C_{f}C_{f}^\intercal $$</div>
                     </div>
                 </div>
             </section>
-            <section>
-                <div class="lemma">
-                    <p>
-                        <b>Lemma 2 [69].</b> For a matrix $A\in \mathbb{R}^{d\times d}$ with eigenvalues $\lambda_i(A)$,
-                        $\operatorname{tr}(A) = \sum_{i=1}^d \lambda_i(A)$.
-                    </p>
+            <section data-auto-animate data-auto-animate-id="proof">
+                <div data-id="lemma1" class="lemma">
+                    <b>Lemma 2 [69].</b> For a matrix $A\in \mathbb{R}^{d\times d}$ with eigenvalues $\lambda_i(A)$,
+                    $\operatorname{tr}(A) = \sum_{i=1}^d \lambda_i(A)$.
                 </div>
-                <div class="lemma" style="margin-top: 10px;">
-                    <b>Lemma 3 [64].</b>
-                    For two matrices $A$, $B$, the eigenvalues of $AB$ and $BA$ are the same if the
-                    two products are both square matrices.
+                <div data-id="lemma2" class="lemma" style="margin-top: 10px;">
+                    <b data-id="lemma2.a">Lemma 3 [64].</b>
+                    For two matrices <span data-id="lemma2.a.a">$A$</span>, <span data-id="lemma2.a.b">$B$</span>, the
+                    eigenvalues of <span data-id="lemma2.a.c">$AB$</span> and <span data-id="lemma2.a.d">$BA$</span>
+                    are the same if the two products are both square matrices.
                 </div>
-                \[
-                \operatorname{tr}\left(\sqrt{\Sigma_{r} \Sigma_{f}}\right)
-                =\sum_{i=1}^{d-1} \sqrt{\lambda_{i}\underbrace{\left(C_{r} C_{r}^{\top} C_{f}
-                C_{f}^{\top}\right)}_{d\times d \text{ 👎}}}
-                =\sum_{i=1}^{m-1} \sqrt{\lambda_{i}\underbrace{\left(C_{f}^{\top} C_{r} C_{r}^{\top}
-                C_{f}\right)}_{m\times m \text{ 👍}}}
-                \]
-                <p>Reduces time complexity from $O(d^3)$ to $O(m^3)$ $^*$</p>
-                <p style="margin-top: 2em;">
+            </section>
+            <section data-auto-animate data-auto-animate-id="proof">
+                <div data-id="lemma1" class="lemma">
+                    <b>Lemma 2 [69].</b> For a matrix $A\in \mathbb{R}^{d\times d}$ with eigenvalues $\lambda_i(A)$,
+                    $\operatorname{tr}(A) = \sum_{i=1}^d \lambda_i(A)$.
+                </div>
+                <div data-id="lemma2" class="lemma" style="margin-top: 10px;">
+                    <b data-id="lemma2.a">Lemma 3 [64].</b>
+                    For two matrices <span data-id="lemma2.a.a">$A$</span>, <span data-id="lemma2.a.b">$B$</span>, the
+                    eigenvalues of <span data-id="lemma2.a.c">$AB$</span> and <span data-id="lemma2.a.d">$BA$</span>
+                    are the same if the two products are both square matrices.
+                </div>
+                <div data-id="trick">
+                    \[
+                    \operatorname{tr}\left(\sqrt{\Sigma_{r} \Sigma_{f}}\right)
+                    =\sum_{i=1}^{d-1} \sqrt{\lambda_{i}\underbrace{\left(C_{r} C_{r}^{\top} C_{f}
+                    C_{f}^{\top}\right)}_{d\times d \text{ 👎}}}
+                    =\sum_{i=1}^{m-1} \sqrt{\lambda_{i}\underbrace{\left(C_{f}^{\top} C_{r} C_{r}^{\top}
+                    C_{f}\right)}_{m\times m \text{ 👍}}}
+                    \]
+                </div>
+            </section>
+            <section data-auto-animate data-auto-animate-id="proof">
+                <div data-id="lemma1" class="lemma">
+                    <b>Lemma 2 [69].</b> For a matrix $A\in \mathbb{R}^{d\times d}$ with eigenvalues $\lambda_i(A)$,
+                    $\operatorname{tr}(A) = \sum_{i=1}^d \lambda_i(A)$.
+                </div>
+                <div data-id="lemma2" class="lemma" style="margin-top: 10px;">
+                    <b data-id="lemma2.a">Lemma 3 [64].</b>
+                    For two matrices <span data-id="lemma2.a.a">$A$</span>, <span data-id="lemma2.a.b">$B$</span>, the
+                    eigenvalues of <span data-id="lemma2.a.c">$AB$</span> and <span data-id="lemma2.a.d">$BA$</span>
+                    are the same if the two products are both square matrices.
+                </div>
+                <div data-id="trick">
+                    \[
+                    \operatorname{tr}\left(\sqrt{\Sigma_{r} \Sigma_{f}}\right)
+                    =\sum_{i=1}^{d-1} \sqrt{\lambda_{i}\underbrace{\left(C_{r} C_{r}^{\top} C_{f}
+                    C_{f}^{\top}\right)}_{d\times d \text{ 👎}}}
+                    =\sum_{i=1}^{m-1} \sqrt{\lambda_{i}\underbrace{\left(C_{f}^{\top} C_{r} C_{r}^{\top}
+                    C_{f}\right)}_{m\times m \text{ 👍}}}
+                    \]
+                </div>
+                <div data-id="comment">
+                    <p>Reduces time complexity from $O(d^3)$ to $O(m^3)$ $^*$</p>
                     <small>$^*$ Full running time is $O(d^2 m + m^3)$.</small>
-                </p>
+                </div>
             </section>
             <section data-auto-animate>
                 <h4>Example</h4>
@@ -1319,13 +1452,13 @@
             <section data-auto-animate data-auto-animate-id="a">
                 <h4>Counterfactual Examples</h4>
                 <div class="f-container vertical-align-parent">
-                    <div class="f-col vertical-align" width=300 data-auto-animate-id="a">
+                    <div class="f-col vertical-align" width=300 data-id="a">
                         <img src="assets/not_smile.png">
                     </div>
-                    <div class="f-col vertical-align" data-auto-animate-id="b">
+                    <div class="f-col vertical-align" data-id="b">
                         <img src="assets/svgs/min/p6_v1.svg" height="300"/>
                     </div>
-                    <div class="f-col vertical-align" data-auto-animate-id="c">
+                    <div class="f-col vertical-align" data-id="c">
                         <p style="width: 150px">"Not Smile"</p>
                     </div>
                 </div>
@@ -1333,13 +1466,13 @@
             <section data-auto-animate data-auto-animate-id="a">
                 <h4>Counterfactual Examples</h4>
                 <div class="f-container vertical-align-parent">
-                    <div class="f-col vertical-align" width="300" data-auto-animate-id="a">
+                    <div class="f-col vertical-align" width="300" data-id="a">
                         <img src="assets/smile.png">
                     </div>
-                    <div class="f-col vertical-align" data-auto-animate-id="b">
+                    <div class="f-col vertical-align" data-id="b">
                         <img src="assets/svgs/min/p6_v1.svg" height="300"/>
                     </div>
-                    <div class="f-col vertical-align" data-auto-animate-id="c">
+                    <div class="f-col vertical-align" data-id="c">
                         <p style="width:150px;">"Smile"</p>
                     </div>
                 </div>
@@ -1357,9 +1490,11 @@
                 <p style="display: inline"> - Gradient descent [19, 53, 87]</p>
             </section>
             <section data-auto-animate data-auto-animate-id="gradient-descent">
-                <h4 style="display: inline;">Solution #1</h4>
-                <p style="display: inline"> - Gradient descent [19, 53, 87]</p>
-                <div data-auto-animate-id="a">
+                <div data-id="title">
+                    <h4 style="display: inline;">Solution #1</h4>
+                    <p style="display: inline"> - Gradient descent [19, 53, 87]</p>
+                </div>
+                <div data-id="a">
                     \[
                     \underset{\hat{x}}{\arg \min}\: \underbrace{ d_1(f(\hat{x}),q)}_{\text {"prediction" }}+ \lambda
                     \underbrace{d_2(\hat x, x)}_{\text {"closeness" }}
@@ -1367,75 +1502,93 @@
                 </div>
             </section>
             <section data-auto-animate data-auto-animate-id="gradient-descent">
-                <h4 style="display: inline;">Solution #1</h4>
-                <p style="display: inline"> - Gradient descent [19, 53, 87]</p>
-                <div data-auto-animate-id="a">
+                <div data-id="title">
+                    <h4 style="display: inline;">Solution #1</h4>
+                    <p style="display: inline"> - Gradient descent [19, 53, 87]</p>
+                </div>
+                <div data-id="a">
                     \[
                     \underset{\hat{x}}{\arg \min}\: \underbrace{ d_1(f(\hat{x}),q)}_{\text {"prediction" }}+ \lambda
                     \underbrace{d_2(\hat x, x)}_{\text {"closeness" }}
                     \]
                 </div>
-                <div data-auto-animate-id="c">
-                    <p class="text-turkis">Example:</p>
-                    [53] $\underset{\hat{x}}{\arg \min } \:\underbrace{c \cdot f_{\kappa}^{\text {hinge }}(\hat{x},
-                    y)}_{\text {"prediction"
-                    }}+\underbrace{\beta\|x-\hat{x}\|_{1}+\|x-\hat{x}\|_{2}^{2}+\gamma\|\hat{x}-\mathrm{AE}(\hat{x})\|_{2}^{2}
-                    + \theta \|\hat x - proto \|_2^2}_{\text {"closeness" }}$
+                <div data-id="b">
+                    <p><span data-id="b.a" class="text-turkis">Example: </span> [53]</p>
+                    <div data-id="b.b">
+                        $\underset{\hat{x}}{\arg \min } \:\underbrace{c \cdot f_{\kappa}^{\text {hinge }}(\hat{x},
+                        y)}_{\text {"prediction"
+                        }}+\underbrace{\beta\|x-\hat{x}\|_{1}+\|x-\hat{x}\|_{2}^{2}+\gamma\|\hat{x}-\mathrm{AE}(\hat{x})\|_{2}^{2}
+                        + \theta \|\hat x - proto \|_2^2}_{\text {"closeness" }}$
+                    </div>
                 </div>
             </section>
             <section data-auto-animate data-auto-animate-id="gradient-descent">
-                <h4 style="display: inline;">Solution #1</h4>
-                <p style="display: inline"> - Gradient descent [19, 53, 87]</p>
-                <div data-auto-animate-id="a">
+                <div data-id="title">
+                    <h4 style="display: inline;">Solution #1</h4>
+                    <p style="display: inline"> - Gradient descent [19, 53, 87]</p>
+                </div>
+                <div data-id="a">
                     \[
                     \underset{\hat{x}}{\arg \min}\: \underbrace{ d_1(f(\hat{x}),q)}_{\text {"prediction" }}+ \lambda
                     \underbrace{d_2(\hat x, x)}_{\text {"closeness" }}
                     \]
                 </div>
-                <div data-auto-animate-id="c">
-                    <p class="text-turkis">Example:</p>
-                    [53] $\underset{\hat{x}}{\arg \min } \:\underbrace{c \cdot f_{\kappa}^{\text {hinge }}(\hat{x},
-                    y)}_{\text {"prediction"
-                    }}+\underbrace{\beta\|x-\hat{x}\|_{1}+\|x-\hat{x}\|_{2}^{2}+\gamma\|\hat{x}-\mathrm{AE}(\hat{x})\|_{2}^{2}
-                    + \theta \|\hat x - proto \|_2^2}_{\text {"closeness" }}$
+                <div data-id="b">
+                    <p><span data-id="b.a" class="text-turkis">Example: </span> [53]</p>
+                    <div data-id="b.b">
+                        $\underset{\hat{x}}{\arg \min } \:\underbrace{c \cdot f_{\kappa}^{\text {hinge }}(\hat{x},
+                        y)}_{\text {"prediction"
+                        }}+\underbrace{\beta\|x-\hat{x}\|_{1}+\|x-\hat{x}\|_{2}^{2}+\gamma\|\hat{x}-\mathrm{AE}(\hat{x})\|_{2}^{2}
+                        + \theta \|\hat x - proto \|_2^2}_{\text {"closeness" }}$
+                    </div>
                 </div>
-                <div style="margin-top: 50px;" data-auto-animate-id="c">
+                <div data-id="c" style="margin-top: 50px;">
                     <img src="assets/seven.jpeg" height="80"/>
                     <img src="assets/vanlooveren.png" height="85"/>
                 </div>
             </section>
             <section data-auto-animate data-auto-animate-id="gradient-descent">
-                <h4 style="display: inline;">Solution #1</h4>
-                <p style="display: inline"> - Gradient descent [19, 53, 87]</p>
-                <div data-auto-animate-id="a">
+                <div data-id="title">
+                    <h4 style="display: inline;">Solution #1</h4>
+                    <p style="display: inline"> - Gradient descent [19, 53, 87]</p>
+                </div>
+                <div data-id="a">
                     \[
                     \underset{\hat{x}}{\arg \min}\: \underbrace{ d_1(f(\hat{x}),q)}_{\text {"prediction" }}+ \lambda
                     \underbrace{d_2(\hat x, x)}_{\text {"closeness" }}
                     \]
                 </div>
-                <div data-auto-animate-id="c">
-                    <p class="text-turkis">Example:</p>
-                    [53] $\underset{\hat{x}}{\arg \min } \:\underbrace{c \cdot f_{\kappa}^{\text {hinge }}(\hat{x},
-                    y)}_{\text {"prediction"
-                    }}+\underbrace{\beta\|x-\hat{x}\|_{1}+\|x-\hat{x}\|_{2}^{2}+\gamma\|\hat{x}-\mathrm{AE}(\hat{x})\|_{2}^{2}
-                    + \theta \|\hat x - proto \|_2^2}_{\text {"closeness" }}$
+                <div data-id="b">
+                    <p><span data-id="b.a" class="text-turkis">Example: </span> [53]</p>
+                    <div data-id="b.b">
+                        $\underset{\hat{x}}{\arg \min } \:\underbrace{c \cdot f_{\kappa}^{\text {hinge }}(\hat{x},
+                        y)}_{\text {"prediction"
+                        }}+\underbrace{\beta\|x-\hat{x}\|_{1}+\|x-\hat{x}\|_{2}^{2}+\gamma\|\hat{x}-\mathrm{AE}(\hat{x})\|_{2}^{2}
+                        + \theta \|\hat x - proto \|_2^2}_{\text {"closeness" }}$
+                    </div>
                 </div>
-                <div style="margin-top: 50px;" data-auto-animate-id="c">
+                <div data-id="c" style="margin-top: 50px;">
                     <img src="assets/seven.jpeg" height="80"/>
                     <img src="assets/vanlooveren.png" height="85"/>
                 </div>
-                <div>
+                <div data-id="d">
                     <p>Require many iterations (1000) 🐢 and low quality images 👎</p>
                 </div>
             </section>
+
+
             <section data-auto-animate data-auto-animate-id="generative-models">
-                <h4 style="display: inline;">Solution #2</h4>
-                <p style="display: inline"> - Generative models [22, 38, 75, 79]</p>
+                <div data-id="title">
+                    <h4 style="display: inline;">Solution #2</h4>
+                    <p style="display: inline"> - Generative models [22, 38, 75, 79]</p>
+                </div>
             </section>
             <section data-auto-animate data-auto-animate-id="generative-models">
-                <h4 style="display: inline;">Solution #2</h4>
-                <p style="display: inline"> - Generative models [22, 38, 75, 79]</p>
-                <div data-auto-animate-id="a">
+                <div data-id="title">
+                    <h4 style="display: inline;">Solution #2</h4>
+                    <p style="display: inline"> - Generative models [22, 38, 75, 79]</p>
+                </div>
+                <div data-id="a">
                     \[
                     \hat{z}=\arg \min _{z \in \mathbb{R}^{d}}[\lambda \underbrace{d_1(f(G(z)), q)}_{\text {"prediction"
                     }}+\underbrace{d_2(x, G(z))}_{\text {"closeness" }}]
@@ -1446,9 +1599,11 @@
                 </div>
             </section>
             <section data-auto-animate data-auto-animate-id="generative-models">
-                <h4 style="display: inline;">Solution #2</h4>
-                <p style="display: inline"> - Generative models [22, 38, 75, 79]</p>
-                <div data-auto-animate-id="a">
+                <div data-id="title">
+                    <h4 style="display: inline;">Solution #2</h4>
+                    <p style="display: inline"> - Generative models [22, 38, 75, 79]</p>
+                </div>
+                <div data-id="a">
                     \[
                     \hat{z}=\arg \min _{z \in \mathbb{R}^{d}}[\lambda \underbrace{d_1(f(G(z)), q)}_{\text {"prediction"
                     }}+\underbrace{d_2(x, G(z))}_{\text {"closeness" }}]
@@ -1457,7 +1612,7 @@
                     \hat{x}=G(\hat{z})
                     \]
                 </div>
-                <div data-auto-animate-id="b">
+                <div data-id="b">
                     <img src="assets/generative.png" height="250"/>
                     <small><b>Old vs. young.</b> First row VAE [75] and second row GAN [79]</small>
                 </div>
@@ -1466,59 +1621,68 @@
                 <h3>ECINN: Efficient Counterfactuals from Invertible Neural Networks</h3>
             </section>
             <section data-auto-animate data-auto-animate-id="ecinn">
-                <h3 style="color: var(--au-gray); font-size: smaller">ECINN: Efficient Counterfactuals from Invertible Neural Networks</h3>
-                <p><span class="text-turkis">Idea: </span>use invertible classifier $f(x)$ to get analytical solution.</p>
-                <img src="assets/svgs/min/p6_v1.svg"/>
+                <h3 style="color: var(--au-gray); font-size: smaller">ECINN: Efficient Counterfactuals from Invertible
+                    Neural Networks</h3>
+                <p><span class="text-turkis">Idea: </span>use invertible classifier $f(x)$ to get analytical solution.
+                </p>
+                <img data-id="a" src="assets/svgs/min/p6_v1.svg"/>
             </section>
             <section data-auto-animate data-auto-animate-id="ecinn">
-                <h3 style="color: var(--au-gray); font-size: smaller">ECINN: Efficient Counterfactuals from Invertible Neural Networks</h3>
-                <p><span class="text-turkis">Idea: </span>use invertible classifier $f(x)$ to get analytical solution.</p>
-                <img src="assets/svgs/min/p7_v1.svg"/>
+                <h3 style="color: var(--au-gray); font-size: smaller">ECINN: Efficient Counterfactuals from Invertible
+                    Neural Networks</h3>
+                <p><span class="text-turkis">Idea: </span>use invertible classifier $f(x)$ to get analytical solution.
+                </p>
+                <img data-id="a" src="assets/svgs/min/p7_v1.svg"/>
+                <p><small class="text-gray-dark">Conditional Normalizing Flow</small></p>
             </section>
             <section data-auto-animate data-auto-animate-id="ecinn">
-                <h3 style="color: var(--au-gray); font-size: smaller">ECINN: Efficient Counterfactuals from Invertible Neural Networks</h3>
-                <p><span class="text-turkis">Idea: </span>use invertible classifier $f(x)$ to get analytical solution.</p>
+                <h3 style="color: var(--au-gray); font-size: smaller">ECINN: Efficient Counterfactuals from Invertible
+                    Neural Networks</h3>
+                <p><span class="text-turkis">Idea: </span>use invertible classifier $f(x)$ to get analytical solution.
+                </p>
                 <img src="assets/ecinn_highlevel.png" height="250"/>
             </section>
             <section data-auto-animate data-auto-animate-id="ecinn">
-                <h3 style="color: var(--au-gray); font-size: smaller">ECINN: Efficient Counterfactuals from Invertible Neural Networks</h3>
-                <p><span class="text-turkis">Idea: </span>use invertible classifier $f(x)$ to get analytical solution.</p>
+                <h3 style="color: var(--au-gray); font-size: smaller">ECINN: Efficient Counterfactuals from Invertible
+                    Neural Networks</h3>
+                <p><span class="text-turkis">Idea: </span>use invertible classifier $f(x)$ to get analytical solution.
+                </p>
                 <img src="assets/svgs/min/p8_v1.svg" height="290"/>
                 <p><small>Internal representation $f(x)$</small></p>
             </section>
             <section>
                 <table class="table-center">
                     <thead>
-                        <tr>
-                            <td>Method</td>
-                            <td>Fast</td>
-                            <td>Validity</td>
-                            <td>High quality</td>
-                            <td>Analytic</td>
-                        </tr>
+                    <tr>
+                        <td>Method</td>
+                        <td>Fast</td>
+                        <td>Validity</td>
+                        <td>High quality</td>
+                        <td>Analytic</td>
+                    </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td style="text-align: left">Iterative [19, 53, 87]</td>
-                            <td><i class="fa fa-times text-red"></i></td> <!-- fast -->
-                            <td><i class="fa fa-times text-red"></i></td> <!-- validity -->
-                            <td><i class="fa fa-times text-red"></i></td> <!-- high quality -->
-                            <td><i class="fa fa-times text-red"></i></td> <!-- analytic -->
-                        </tr>
-                        <tr>
-                            <td style="text-align: left;">Generative [19, 53, 87]</td>
-                            <td><i class="fa fa-check text-turkis"></i></td> <!-- fast -->
-                            <td>-</td> <!-- validity -->
-                            <td><i class="fa fa-check text-turkis"></i></td> <!-- high quality -->
-                            <td><i class="fa fa-times text-red"></i></td> <!-- analytic -->
-                        </tr>
-                        <tr style="border-bottom: 1px solid var(--au-gray);">
-                            <td style="text-align: left;">ECINN (ours)</td>
-                            <td><i class="fa fa-check text-turkis"></i></td> <!-- fast -->
-                            <td><i class="fa fa-check text-turkis"></i></td> <!-- validity -->
-                            <td><i class="fa fa-check text-turkis"></i></td> <!-- high quality -->
-                            <td><i class="fa fa-check text-turkis"></i></td> <!-- analytic -->
-                        </tr>
+                    <tr>
+                        <td style="text-align: left">Iterative [19, 53, 87]</td>
+                        <td><i class="fa fa-times text-red"></i></td> <!-- fast -->
+                        <td><i class="fa fa-times text-red"></i></td> <!-- validity -->
+                        <td><i class="fa fa-times text-red"></i></td> <!-- high quality -->
+                        <td><i class="fa fa-times text-red"></i></td> <!-- analytic -->
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">Generative [19, 53, 87]</td>
+                        <td><i class="fa fa-check text-turkis"></i></td> <!-- fast -->
+                        <td>-</td> <!-- validity -->
+                        <td><i class="fa fa-check text-turkis"></i></td> <!-- high quality -->
+                        <td><i class="fa fa-times text-red"></i></td> <!-- analytic -->
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--au-gray);">
+                        <td style="text-align: left;">ECINN (ours)</td>
+                        <td><i class="fa fa-check text-turkis"></i></td> <!-- fast -->
+                        <td><i class="fa fa-check text-turkis"></i></td> <!-- validity -->
+                        <td><i class="fa fa-check text-turkis"></i></td> <!-- high quality -->
+                        <td><i class="fa fa-check text-turkis"></i></td> <!-- analytic -->
+                    </tr>
                     </tbody>
                 </table>
             </section>
@@ -1592,6 +1756,280 @@
             </p>
         </section>
         <section data-state="eval-header">
+            <section data-auto-animate>
+                <p><span class="text-green">Objective:</span> Quantify "goodness" of counterfactual examples.</p>
+            </section>
+            <section data-state="eval-header" data-auto-animate>
+                <p><span class="text-green">Objective:</span> Quantify "goodness" of counterfactual examples.</p>
+                <p><i class="text-green">Procedure</i></p>
+                <p data-auto-animate-id="a">What properties do we want?</p>
+                <p>What metrics are there?</p>
+                <p>What is missing?</p>
+                <p>How do metrics perform?</p>
+            </section>
+            <section data-auto-animate>
+                <p class="h4-style" data-auto-animate-id="a">What properties do we want?</p>
+                <ol>
+                    <li class="text-blue-dark">Validity <small class="text-gray">*</small></li>
+                    <li class="text-purple-dark">Sparsity <small class="text-gray">*</small></li>
+                    <li class="text-purple-dark">Proximity <small class="text-gray">*</small></li>
+                    <li class="text-turkis-dark">Diversity <small class="text-gray">*</small></li>
+                    <li class="text-green-dark">Realistic changes</li>
+                </ol>
+                <p class="text-gray" style="font-size: medium;"><small>*</small> Originates from [63]</p>
+            </section>
+            <section data-auto-animate>
+                <p class="h4-style" data-auto-animate-id="a">What properties do we want?</p>
+                <ol>
+                    <li class="text-blue-dark">Validity <small class="text-gray">*</small></li>
+                    <li class="text-purple-dark">Minimal</li>
+                    <li class="text-green-dark">Realistic changes</li>
+                    <li class="text-gray">Diversity <small class="text-gray">*</small></li>
+                </ol>
+                <p class="text-gray" style="font-size: medium;"><small>*</small> Originates from [63]</p>
+            </section>
+            <section data-auto-animate data-auto-animate-id="what">
+                <h4>What metrics are there?</h4>
+            </section>
+            <section data-auto-animate data-auto-animate-id="what">
+                <h4>What metrics are there?</h4>
+                <p class="text-green smaller-bottom-margin">Target-class validity</p>
+                <div data-id="eq1">
+                    \[
+                    \operatorname{TCV}=\frac{1}{|X|} \sum_{x \in X} 1_{[f(x) \neq f(c(x))]}
+                    \]
+                </div>
+            </section>
+            <section data-auto-animate data-auto-animate-id="what">
+                <h4>What metrics are there?</h4>
+                <p class="text-green smaller-bottom-margin">Target-class validity</p>
+                <div data-id="eq1">
+                    \[
+                    \operatorname{TCV}=\frac{1}{|X|} \sum_{x \in X} 1_{[f(x) \neq f(c(x))]}
+                    \]
+                </div>
+                <p class="text-green smaller-bottom-margin">The "interpretability metrics"</p>
+                <div class="f-container">
+                    <div data-id="eq2" class="f-col">
+                        \[
+                        \operatorname{IM} 1(x, p,
+                        q)=\frac{\left\|c(x)-\operatorname{AE}_{q}(c(x))\right\|_{2}^{2}}{\left\|c(x)-\operatorname{AE}_{p}(c(x))\right\|_{2}^{2}+\varepsilon}
+                        \]
+                    </div>
+                    <div data-id="eq3" class="f-col">
+                        \[
+                        \operatorname{IM} 2(x, q) = \frac{\left\|\operatorname{AE}_q(c(x)) -
+                        \operatorname{AE}(c(d))\right\|_2^2}{\left\|c(x)\right\|_1 + \varepsilon}
+                        \]
+                    </div>
+                </div>
+            </section>
+            <section data-auto-animate data-auto-animate-id="what">
+                <h4>What metrics are there?</h4>
+                <p class="text-green smaller-bottom-margin">Target-class validity</p>
+                <div data-id="eq1">
+                    \[
+                    \operatorname{TCV}=\frac{1}{|X|} \sum_{x \in X} 1_{[f(x) \neq f(c(x))]}
+                    \]
+                </div>
+                <p class="text-green smaller-bottom-margin">The "interpretability metrics"</p>
+                <div class="f-container">
+                    <div data-id="eq2" class="f-col">
+                        \[
+                        \operatorname{IM} 1(x, p,
+                        q)=\frac{\left\|c(x)-\operatorname{AE}_{q}(c(x))\right\|_{2}^{2}}{\left\|c(x)-\operatorname{AE}_{p}(c(x))\right\|_{2}^{2}+\varepsilon}
+                        \]
+                    </div>
+                    <div data-id="eq3" class="f-col">
+                        \[
+                        \operatorname{IM} 2(x, q) = \frac{\left\|\operatorname{AE}_q(c(x)) -
+                        \operatorname{AE}(c(d))\right\|_2^2}{\left\|c(x)\right\|_1 + \varepsilon}
+                        \]
+                    </div>
+                </div>
+                <p class="text-green smaller-bottom-margin">FID</p>
+                <div data-id="eq4">
+                    \[
+                    \operatorname{FID} = \|\mu_1 - \mu_2\|_2^2 + \operatorname{tr}\left[\Sigma_r + \Sigma_c\right] -
+                    2\operatorname{tr}\left[\sqrt{\Sigma_r\Sigma_c}\right]
+                    \]
+                </div>
+                <p><small>Note that we use other embedding network.</small></p>
+            </section>
+            <section>
+                <h4>What is missing?</h4>
+            </section>
+            <section data-auto-animate>
+                <h4>What is missing?</h4>
+                <div class="f-container vertical-align-parent">
+                    <div data-id="img" class="f-col vertical-align">
+                        <img src="assets/celeba_compare.png" height="450">
+                    </div>
+                    <div data-id="tbl" class="f-col vertical-align">
+                        <table class="table-center" style="opacity: 0%;">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>TCV</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td style="text-align: left">GB</td>
+                                <td>96%</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left">GL</td>
+                                <td>81%</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left">ECINN</td>
+                                <td>99%</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section data-auto-animate>
+                <h4>What is missing?</h4>
+                <div class="f-container vertical-align-parent">
+                    <div data-id="img" class="f-col vertical-align">
+                        <img src="assets/celeba_compare.png" height="450">
+                    </div>
+                    <div data-id="table" class="f-col vertical-align">
+                        <table class="table-center">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>TCV</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td style="text-align: left">GB</td>
+                                <td>96%</td> <!-- im1 -->
+                            </tr>
+                            <tr>
+                                <td style="text-align: left">GL</td>
+                                <td>81%</td> <!-- im1 -->
+                            </tr>
+                            <tr style="border-bottom: solid 1px var(--au-gray);">
+                                <td style="text-align: left">ECINN</td>
+                                <td>99%</td> <!-- im1 -->
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h4><span class="text-green">Solution: </span> Oracle score.</h4>
+                Let $o(x)$ be a different "softmax-classifier".
+                \[
+                \text { Oracle }=\frac{1}{|X|} \sum_{x \in X} \mathbb{1}_{[f(c(x))=o(c(x))]}
+                \]
+            </section>
+            <section>
+                <h4><span class="text-green">Solution: </span> Oracle score.</h4>
+                <div class="f-container vertical-align-parent">
+                    <div class="f-col vertical-align">
+                        <img src="assets/celeba_compare.png" height="450">
+                    </div>
+                    <div class="f-col vertical-align">
+                        <table class="table-center">
+                            <thead>
+                            <tr>
+                                <td>Method</td>
+                                <td>TCV</td>
+                                <td>Oracle</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td style="text-align: left">GB</td>
+                                <td>96%</td> <!-- im1 -->
+                                <td>82%</td> <!-- im1 -->
+                            </tr>
+                            <tr>
+                                <td style="text-align: left">GL</td>
+                                <td>81%</td> <!-- im1 -->
+                                <td>32%</td> <!-- im1 -->
+                            </tr>
+                            <tr style="border-bottom: solid 1px var(--au-gray);">
+                                <td style="text-align: left">ECINN</td>
+                                <td>99%</td> <!-- im1 -->
+                                <td>90%</td> <!-- im1 -->
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section data-auto-animate>
+                <h4>Extending Idea to Multi-class Datasets</h4>
+            </section>
+            <section data-auto-animate>
+                <h4>Extending Idea to Multi-class Datasets</h4>
+                <div data-id="def">
+                    Let $o_l(x)$ be a "softmat-classifier" trained on class label $l$.
+                    \[
+                    \operatorname{LVS}_{l}=\frac{1}{|X|} \sum_{x \in X} D_{j s}\left[o_{l}(x) \| o_{l}(c(x))\right]
+                    \]
+                </div>
+            </section>
+            <section data-auto-animate>
+                <h4>Extending Idea to Multi-class Datasets</h4>
+                <div data-id="def">
+                    Let $o_l(x)$ be a "softmat-classifier" trained on class label $l$.
+                    \[
+                    \operatorname{LVS}_{l}=\frac{1}{|X|} \sum_{x \in X} D_{j s}\left[o_{l}(x) \| o_{l}(c(x))\right]
+                    \]
+                </div>
+                <img src="assets/lvs.png" height="250">
+                <p class="smaller-font">CelebA-HQ classes.</p>
+            </section>
+            <section class="no-bar" data-background-color="var(--au-green-dark)">
+                <h4>ECINN: Efficient Counterfactuals from Invertible Neural Networks</h4>
+                <ul>
+                    <li>Insights into what metrics capture 📌</li>
+                    <li>Two new metrics 📊</li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>Increasing data complexity</h4>
+                <table class="table-center">
+                    <thead>
+                    <tr>
+                        <td>Dataset</td>
+                        <td>IM1</td>
+                        <td>IM2</td>
+                        <td>FID</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>FakeMNIST</td>
+                        <td>1.22, 1.03, 0.68</td>
+                        <td>0.49, 1.23, 0.21</td>
+                        <td>252, 309, 0.12</td>
+                    </tr>
+                    <tr>
+                        <td>MNIST</td>
+                        <td>0.99, 0.99, 0.88</td>
+                        <td>0.55, 0.53, 0.17</td>
+                        <td>50, 508, 90</td>
+                    </tr>
+                    <tr style="border-bottom: solid 1px var(--au-gray);">
+                        <td>CelebA-HQ</td>
+                        <td>0.98, 0.99, 1.03</td>
+                        <td>0.47, 0.52, 0.53</td>
+                        <td>205, 484, 98</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
         </section>
 
         <!--
@@ -1605,7 +2043,282 @@
         </section>
 
         <section data-state="conclusion-header">
-            <h2>Hello there!</h2>
+            <section data-auto-animate>
+                <div class="hypothesis f-conclusion" data-id="a">
+                    We hypothesize that crossing generative models with explainability can
+                    produce state-of-the-art methods for explaining neural networks.
+                </div>
+            </section>
+            <section data-auto-animate>
+                <div class="hypothesis f-conclusion" data-id="a">
+                    We hypothesize that crossing generative models with explainability can
+                    produce state-of-the-art methods for explaining neural networks.
+                </div>
+                <div data-id="conclusion-rq1">
+                    <div data-id="test">RQ1:</div>
+                    How can the efficiency of machine learning algorithms be improved?
+                    <br/>
+                    <ul>
+                        <li>Two fast algorithms</li>
+                        <li>potentially improving generative models</li>
+                        <li>potentially improving explainability methods</li>
+                    </ul>
+                </div>
+                <div class="invisible" data-id="conclusion-rq2">
+                    <span style="color: rgb(101, 90, 159)">RQ2: </span>
+                    How can generative models be utilized for explaining neural networks?
+                    <br/>
+                    <ul>
+                        <li>Fast counterafactual explanations</li>
+                        <li>Analytical solution</li>
+                    </ul>
+                </div>
+                <div class="invisible" data-id="conclusion-rq3">
+                    <span style="color: rgb(101, 90, 159)">RQ3: </span>
+                    How are methods for explaining neural networks best evaluated?
+                    <br/>
+                    <ul>
+                        <li>Insights into what metrics capture</li>
+                        <li>Two new metrics</li>
+                    </ul>
+                </div>
+            </section>
+            <section data-auto-animate>
+                <div class="hypothesis f-conclusion" data-id="a">
+                    We hypothesize that crossing generative models with explainability can
+                    produce state-of-the-art methods for explaining neural networks.
+                </div>
+                <div data-id="conclusion-rq1">
+                    <div data-id="test">RQ1:</div>
+                    How can the efficiency of machine learning algorithms be improved?
+                    <br/>
+                    <ul>
+                        <li>Two fast algorithms</li>
+                        <li>potentially improving generative models</li>
+                        <li>potentially improving explainability methods</li>
+                    </ul>
+                </div>
+                <div data-id="conclusion-rq2">
+                    <span style="color: rgb(101, 90, 159)">RQ2: </span>
+                    How can generative models be utilized for explaining neural networks?
+                    <br/>
+                    <ul>
+                        <li>Fast counterafactual explanations</li>
+                        <li>Analytical solution</li>
+                    </ul>
+                </div>
+                <div class="invisible" data-id="conclusion-rq3">
+                    <span style="color: rgb(101, 90, 159)">RQ3: </span>
+                    How are methods for explaining neural networks best evaluated?
+                    <br/>
+                    <ul>
+                        <li>Insights into what metrics capture</li>
+                        <li>Two new metrics</li>
+                    </ul>
+                </div>
+            </section>
+            <section data-auto-animate>
+                <div class="hypothesis f-conclusion" data-id="a">
+                    We hypothesize that crossing generative models with explainability can
+                    produce state-of-the-art methods for explaining neural networks.
+                </div>
+                <div data-id="conclusion-rq1">
+                    <div data-id="test">RQ1:</div>
+                    How can the efficiency of machine learning algorithms be improved?
+                    <br/>
+                    <ul>
+                        <li>Two fast algorithms</li>
+                        <li>potentially improving generative models</li>
+                        <li>potentially improving explainability methods</li>
+                    </ul>
+                </div>
+                <div data-id="conclusion-rq2">
+                    <span style="color: rgb(101, 90, 159);">RQ2: </span>
+                    How can generative models be utilized for explaining neural networks?
+                    <br/>
+                    <ul>
+                        <li>Fast counterafactual explanations</li>
+                        <li>Analytical solution</li>
+                    </ul>
+                </div>
+                <div data-id="conclusion-rq3">
+                    <span style="color: rgb(101, 90, 159);">RQ3: </span>
+                    How are methods for explaining neural networks best evaluated?
+                    <br/>
+                    <ul>
+                        <li>Insights into what metrics capture</li>
+                        <li>Two new metrics</li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+        <section>
+            <!--            THIS IS THE SAME AGAIN -->
+            <section data-auto-animate>
+                <div class="hypothesis f-conclusion" data-id="a">
+                    We hypothesize that crossing generative models with explainability can
+                    produce state-of-the-art methods for explaining neural networks.
+                </div>
+            </section>
+            <section data-state="conclusion-header" data-auto-animate>
+                <div class="hypothesis f-conclusion" data-id="a">
+                    We hypothesize that crossing generative models with explainability can
+                    produce state-of-the-art methods for explaining neural networks.
+                </div>
+                <div class="f-container">
+                    <div class="f-col" data-id="b">
+                        <div class="f-definition f-col">
+                            <div data-id="b.a" class="f-header" style="background-color: var(--au-purple-dark)">RQ1
+                            </div>
+                            <div data-id="b.b" class="f-content f-conclusion">
+                                How can the efficiency of machine learning algorithms be improved?
+                            </div>
+                            <div data-id="b.c" class="f-content">
+                                <ul>
+                                    <li>Two fast algorithms 🏃💨</li>
+                                    <li>$\Rightarrow$ potentially improving generative models 🧬</li>
+                                    <li>$\Rightarrow$ potentially improving explainability methods 🪄</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-col invisible" data-id="c">
+                        <div class="f-definition f-col">
+                            <div data-id="c.a" class="f-header" style="background-color: var(--au-turkis-dark)">RQ2
+                            </div>
+                            <div data-id="c.b" class="f-content f-conclusion">
+                                How can generative models be utilized for explaining neural networks?
+                            </div>
+                            <div data-id="c.c" class="f-summary">
+                                <ul>
+                                    <li>Fast counterafactual explanations 🏃💨</li>
+                                    <li>Analytical solution 🤩</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-col invisible" data-id="d">
+                        <div class="f-definition">
+                            <div data-id="d.a" class="f-header" style="background-color: var(--au-green-dark)">RQ3</div>
+                            <div data-id="d.b" class="f-content f-conclusion">
+                                How are methods for explaining neural networks best evaluated?
+                            </div>
+                            <div data-id="d.c" class="f-summary">
+                                <ul>
+                                    <li>Insights into what metrics capture 📌</li>
+                                    <li>Two new metrics 📊</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section data-state="conclusion-header" data-auto-animate>
+                <div class="hypothesis f-conclusion" data-id="a">
+                    We hypothesize that crossing generative models with explainability can
+                    produce state-of-the-art methods for explaining neural networks.
+                </div>
+                <div class="f-container">
+                    <div class="f-col" data-id="b">
+                        <div class="f-definition f-col">
+                            <div data-id="b.a" class="f-header" style="background-color: var(--au-purple-dark)">RQ1
+                            </div>
+                            <div data-id="b.b" class="f-content f-conclusion">
+                                How can the efficiency of machine learning algorithms be improved?
+                            </div>
+                            <div data-id="b.c" class="f-content">
+                                <ul>
+                                    <li>Two fast algorithms 🏃💨</li>
+                                    <li>$\Rightarrow$ potentially improving generative models 🧬</li>
+                                    <li>$\Rightarrow$ potentially improving explainability methods 🪄</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-col" data-id="c">
+                        <div class="f-definition f-col">
+                            <div data-id="c.a" class="f-header" style="background-color: var(--au-turkis-dark)">RQ2
+                            </div>
+                            <div data-id="c.b" class="f-content f-conclusion">
+                                How can generative models be utilized for explaining neural networks?
+                            </div>
+                            <div data-id="c.c" class="f-summary">
+                                <ul>
+                                    <li>Fast counterafactual explanations 🏃💨</li>
+                                    <li>Analytical solution 🤩</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-col invisible" data-id="d">
+                        <div class="f-definition">
+                            <div data-id="d.a" class="f-header" style="background-color: var(--au-green-dark)">RQ3</div>
+                            <div data-id="d.b" class="f-content f-conclusion">
+                                How are methods for explaining neural networks best evaluated?
+                            </div>
+                            <div data-id="d.c" class="f-summary">
+                                <ul>
+                                    <li>Insights into what metrics capture 📌</li>
+                                    <li>Two new metrics 📊</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section data-state="conclusion-header" data-auto-animate>
+                <div class="hypothesis f-conclusion" data-id="a">
+                    We hypothesize that crossing generative models with explainability can
+                    produce state-of-the-art methods for explaining neural networks.
+                </div>
+                <div class="f-container">
+                    <div class="f-col" data-id="b">
+                        <div class="f-definition f-col">
+                            <div data-id="b.a" class="f-header" style="background-color: var(--au-purple-dark)">RQ1
+                            </div>
+                            <div data-id="b.b" class="f-content f-conclusion">
+                                How can the efficiency of machine learning algorithms be improved?
+                            </div>
+                            <div data-id="b.c" class="f-content">
+                                <ul>
+                                    <li>Two fast algorithms 🏃💨</li>
+                                    <li>$\Rightarrow$ potentially improving generative models 🧬</li>
+                                    <li>$\Rightarrow$ potentially improving explainability methods 🪄</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-col" data-id="c">
+                        <div class="f-definition f-col">
+                            <div data-id="c.a" class="f-header" style="background-color: var(--au-turkis-dark)">RQ2
+                            </div>
+                            <div data-id="c.b" class="f-content f-conclusion">
+                                How can generative models be utilized for explaining neural networks?
+                            </div>
+                            <div data-id="c.c" class="f-summary">
+                                <ul>
+                                    <li>Fast counterafactual explanations 🏃💨</li>
+                                    <li>Analytical solution 🤩</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-col" data-id="d">
+                        <div class="f-definition">
+                            <div data-id="d.a" class="f-header" style="background-color: var(--au-green-dark)">RQ3</div>
+                            <div data-id="d.b" class="f-content f-conclusion">
+                                How are methods for explaining neural networks best evaluated?
+                            </div>
+                            <div data-id="d.c" class="f-summary">
+                                <ul>
+                                    <li>Insights into what metrics capture 📌</li>
+                                    <li>Two new metrics 📊</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
         <!--
              Discussion
@@ -1623,6 +2336,7 @@
                 <li>[22]</li>
                 <li>[38]</li>
                 <li>[53]</li>
+                <li>[63]</li>
                 <li>[75]</li>
                 <li>[79]</li>
                 <li>[82]</li>

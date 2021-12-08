@@ -6,6 +6,23 @@ section .vertical-align-parent {
     display: block;
 }
 
+.reveal .h4-style {
+    margin: var(--r-heading-margin);
+    color: var(--r-heading-color);
+    font-family: var(--r-heading-font);
+    font-weight: var(--r-heading-font-weight);
+    line-height: var(--r-heading-line-height);
+    letter-spacing: var(--r-heading-letter-spacing);
+    /*text-transform: var(--r-heading-text-transform);*/
+    text-shadow: var(--r-heading-text-shadow);
+    word-wrap: break-word;
+
+}
+
+.reveal p.smaller-bottom-margin {
+    margin-bottom: 5px;
+}
+
 .table-center tr td {
     border: 0 !important;
     text-align: center;
@@ -103,9 +120,20 @@ div.f-definition .f-header {
 div.f-definition .f-content {
     display: block;
     text-align: left;
+    margin-bottom: 10px;
+}
+div.f-definition .f-content.f-conclusion {
+    height: 120px;
+    border-bottom: solid 1px var(--au-gray);
 }
 
+.invisible {
+    opacity: 0%;
+}
 
+div.hypothesis.f-conclusion {
+    margin-bottom: 1em;
+}
 :root {
     --au-blue: rgb(0, 61, 115);
     --au-blue-dark: rgb(0, 37, 70);
@@ -200,22 +228,22 @@ footer .f-progress-conclusion { background-color: var(--au-blue); }
 .no-bar header { visibility: hidden; }
 .no-bar footer { visibility: hidden; }
 
-.motivation-header footer .f-progress-motivation { background-color: var(--au-blue-dark); opacity: 1; }
+.motivation-header footer .f-progress-motivation { background-color: var(--au-blue-dark); opacity: 1; margin-bottom: 5px;}
 .motivation-header header { background-color: var(--au-blue-dark); }
 .motivation-header header:after { content: "Motivation"; }
 
-.algo-header footer .f-progress-algo { background-color: var(--au-purple-dark); opacity: 1; }
+.algo-header footer .f-progress-algo { background-color: var(--au-purple-dark); opacity: 1; margin-bottom: 5px;}
 .algo-header header { background-color: var(--au-purple-dark); }
 .algo-header header:before { content: "Efficient Neural Network Training"; }
 
-.cf-header footer .f-progress-ecinn { background-color: var(--au-turkis-dark); opacity: 1; }
+.cf-header footer .f-progress-ecinn { background-color: var(--au-turkis-dark); opacity: 1; margin-bottom: 5px;}
 .cf-header header { background-color: var(--au-turkis-dark); }
 .cf-header header:after { content: "Counterfactual Examples"; }
 
-.eval-header footer .f-progress-eval { background-color: var(--au-green-dark); opacity: 1; }
+.eval-header footer .f-progress-eval { background-color: var(--au-green-dark); opacity: 1; margin-bottom: 5px;}
 .eval-header header { background-color: var(--au-green-dark); }
 .eval-header header:after { content: "Evaluating Counterfactual Examples"; }
 
-.conclusion-header footer .f-progress-conclusion { background-color: var(--au-blue-dark); opacity: 1; }
+.conclusion-header footer .f-progress-conclusion { background-color: var(--au-blue-dark); opacity: 1; margin-bottom: 5px;}
 .conclusion-header header { background-color: var(--au-blue-dark); }
 .conclusion-header header:after { content: "Conclusion"; }

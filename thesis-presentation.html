@@ -78,15 +78,15 @@
                         href="https://fortune.com/2020/11/30/deepmind-solved-protein-folding-alphafold/">Fortune.com</a></small>
                 </p>
             </section>
-            <section data-auto-animate>
-                <p>Scaling is expensive</p>
-                <p><small class="text-blue-dark">ImageNet Image classification</small></p>
-                <!--                <img data-id="1" src="assets/param-chart.svg" style="max-width: 80%; max-height: 60%">-->
-                <img data-id="1" src="assets/param-chart.svg" class="r-stretch">
-                <p data-id="2"><small style="font-size: small">Source: <a
-                        href="https://paperswithcode.com/sota/image-classification-on-imagenet?metric=Top%205%20Accuracy&dimension=Number%20of%20params">Papers
-                    with code.</a></small></p>
-            </section>
+<!--            <section data-auto-animate>-->
+<!--                <p>Scaling is expensive</p>-->
+<!--                <p><small class="text-blue-dark">ImageNet Image classification</small></p>-->
+<!--                &lt;!&ndash;                <img data-id="1" src="assets/param-chart.svg" style="max-width: 80%; max-height: 60%">&ndash;&gt;-->
+<!--                <img data-id="1" src="assets/param-chart.svg" class="r-stretch">-->
+<!--                <p data-id="2"><small style="font-size: small">Source: <a-->
+<!--                        href="https://paperswithcode.com/sota/image-classification-on-imagenet?metric=Top%205%20Accuracy&dimension=Number%20of%20params">Papers-->
+<!--                    with code.</a></small></p>-->
+<!--            </section>-->
             <section data-auto-animate>
                 <p>Scaling is expensive</p>
                 <p><small class="text-blue-dark">Generative language models</small></p>
@@ -1138,7 +1138,7 @@
                     </div>
                     <div data-id="right" class="f-col invisible">
                         <p class="text-purple">Fake samples</p>
-                        <div data-id="right.a">$$ f_1, ..., f_n \sim p(x) $$</div>
+                        <div data-id="right.a">$$ f_1, ..., f_n \sim q(x) $$</div>
                         <div data-id="right.b">$$ \hat f_i = A(f_i)$$</div>
                         <div data-id="right.c">Compute $\mu_f$ and $\Sigma_f$</div>
                     </div>
@@ -1165,7 +1165,7 @@
                     </div>
                     <div data-id="right" class="f-col">
                         <p class="text-purple">Fake samples</p>
-                        <div data-id="right.a">$$ f_1, ..., f_n \sim p(x) $$</div>
+                        <div data-id="right.a">$$ f_1, ..., f_n \sim q(x) $$</div>
                         <div data-id="right.b">$$ \hat f_i = A(f_i)$$</div>
                         <div data-id="right.c">Compute $\mu_f$ and $\Sigma_f$</div>
                     </div>
@@ -1246,7 +1246,7 @@
             <!--            <section class="smaller-font" data-transition="none">-->
             <section class="smaller-font" data-auto-animate>
                 <p data-id="title"><span class="text-purple">Solution:</span> find equivalent computation of smaller
-                    matrix. ($m \times
+                    matrix. ($m \times m$)
                 <div class="f-container">
                     <div data-id="l" class="f-col">
                         <p>Real samples</p>
@@ -1725,7 +1725,7 @@
                             </tr>
                             <tr>
                                 <td>ECINN (ours)</td>
-                                <td>0.003 (0.0002)</td>
+                                <td>0.003</td>
                                 <td>10 000</td>
                             </tr>
                             </tbody>
@@ -1734,7 +1734,7 @@
                     </div>
                 </div>
             </section>
-            <section class="no-bar" data-background-color="var(--au-turkis-dark)">
+            <section data-state="no-bar" data-background-color="var(--au-turkis-dark)">
                 <h4>ECINN: Efficient Counterfactuals from Invertible Neural Networks</h4>
                 <ul>
                     <li>Fast algorithm 🏃💨</li>
@@ -1765,7 +1765,6 @@
                 <p data-auto-animate-id="a">What properties do we want?</p>
                 <p>What metrics are there?</p>
                 <p>What is missing?</p>
-                <p>How do metrics perform?</p>
             </section>
             <section data-auto-animate>
                 <p class="h4-style" data-auto-animate-id="a">What properties do we want?</p>
@@ -1850,7 +1849,7 @@
                 <p class="text-green smaller-bottom-margin">FID</p>
                 <div data-id="eq4">
                     \[
-                    \operatorname{FID} = \|\mu_1 - \mu_2\|_2^2 + \operatorname{tr}\left[\Sigma_r + \Sigma_c\right] -
+                    \operatorname{FID} = \|\mu_r - \mu_f\|_2^2 + \operatorname{tr}\left[\Sigma_r + \Sigma_c\right] -
                     2\operatorname{tr}\left[\sqrt{\Sigma_r\Sigma_c}\right]
                     \]
                 </div>
@@ -1989,7 +1988,7 @@
                 <img src="assets/lvs.png" height="250">
                 <p class="smaller-font">CelebA-HQ classes.</p>
             </section>
-            <section class="no-bar" data-background-color="var(--au-green-dark)">
+            <section data-state="no-bar" data-background-color="var(--au-green-dark)">
                 <h4>ECINN: Efficient Counterfactuals from Invertible Neural Networks</h4>
                 <ul>
                     <li>Insights into what metrics capture 📌</li>
@@ -2041,7 +2040,7 @@
         <section data-state="no-bar" data-background-color="var(--au-blue-dark)">
             <h2>Conclusion</h2>
         </section>
-
+        </section>
         <section data-state="conclusion-header">
             <section data-auto-animate>
                 <div class="hypothesis f-conclusion" data-id="a">
@@ -2049,117 +2048,7 @@
                     produce state-of-the-art methods for explaining neural networks.
                 </div>
             </section>
-            <section data-auto-animate>
-                <div class="hypothesis f-conclusion" data-id="a">
-                    We hypothesize that crossing generative models with explainability can
-                    produce state-of-the-art methods for explaining neural networks.
-                </div>
-                <div data-id="conclusion-rq1">
-                    <div data-id="test">RQ1:</div>
-                    How can the efficiency of machine learning algorithms be improved?
-                    <br/>
-                    <ul>
-                        <li>Two fast algorithms</li>
-                        <li>potentially improving generative models</li>
-                        <li>potentially improving explainability methods</li>
-                    </ul>
-                </div>
-                <div class="invisible" data-id="conclusion-rq2">
-                    <span style="color: rgb(101, 90, 159)">RQ2: </span>
-                    How can generative models be utilized for explaining neural networks?
-                    <br/>
-                    <ul>
-                        <li>Fast counterafactual explanations</li>
-                        <li>Analytical solution</li>
-                    </ul>
-                </div>
-                <div class="invisible" data-id="conclusion-rq3">
-                    <span style="color: rgb(101, 90, 159)">RQ3: </span>
-                    How are methods for explaining neural networks best evaluated?
-                    <br/>
-                    <ul>
-                        <li>Insights into what metrics capture</li>
-                        <li>Two new metrics</li>
-                    </ul>
-                </div>
-            </section>
-            <section data-auto-animate>
-                <div class="hypothesis f-conclusion" data-id="a">
-                    We hypothesize that crossing generative models with explainability can
-                    produce state-of-the-art methods for explaining neural networks.
-                </div>
-                <div data-id="conclusion-rq1">
-                    <div data-id="test">RQ1:</div>
-                    How can the efficiency of machine learning algorithms be improved?
-                    <br/>
-                    <ul>
-                        <li>Two fast algorithms</li>
-                        <li>potentially improving generative models</li>
-                        <li>potentially improving explainability methods</li>
-                    </ul>
-                </div>
-                <div data-id="conclusion-rq2">
-                    <span style="color: rgb(101, 90, 159)">RQ2: </span>
-                    How can generative models be utilized for explaining neural networks?
-                    <br/>
-                    <ul>
-                        <li>Fast counterafactual explanations</li>
-                        <li>Analytical solution</li>
-                    </ul>
-                </div>
-                <div class="invisible" data-id="conclusion-rq3">
-                    <span style="color: rgb(101, 90, 159)">RQ3: </span>
-                    How are methods for explaining neural networks best evaluated?
-                    <br/>
-                    <ul>
-                        <li>Insights into what metrics capture</li>
-                        <li>Two new metrics</li>
-                    </ul>
-                </div>
-            </section>
-            <section data-auto-animate>
-                <div class="hypothesis f-conclusion" data-id="a">
-                    We hypothesize that crossing generative models with explainability can
-                    produce state-of-the-art methods for explaining neural networks.
-                </div>
-                <div data-id="conclusion-rq1">
-                    <div data-id="test">RQ1:</div>
-                    How can the efficiency of machine learning algorithms be improved?
-                    <br/>
-                    <ul>
-                        <li>Two fast algorithms</li>
-                        <li>potentially improving generative models</li>
-                        <li>potentially improving explainability methods</li>
-                    </ul>
-                </div>
-                <div data-id="conclusion-rq2">
-                    <span style="color: rgb(101, 90, 159);">RQ2: </span>
-                    How can generative models be utilized for explaining neural networks?
-                    <br/>
-                    <ul>
-                        <li>Fast counterafactual explanations</li>
-                        <li>Analytical solution</li>
-                    </ul>
-                </div>
-                <div data-id="conclusion-rq3">
-                    <span style="color: rgb(101, 90, 159);">RQ3: </span>
-                    How are methods for explaining neural networks best evaluated?
-                    <br/>
-                    <ul>
-                        <li>Insights into what metrics capture</li>
-                        <li>Two new metrics</li>
-                    </ul>
-                </div>
-            </section>
-        </section>
-        <section>
-            <!--            THIS IS THE SAME AGAIN -->
-            <section data-auto-animate>
-                <div class="hypothesis f-conclusion" data-id="a">
-                    We hypothesize that crossing generative models with explainability can
-                    produce state-of-the-art methods for explaining neural networks.
-                </div>
-            </section>
+
             <section data-state="conclusion-header" data-auto-animate>
                 <div class="hypothesis f-conclusion" data-id="a">
                     We hypothesize that crossing generative models with explainability can
@@ -2182,7 +2071,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="f-col invisible" data-id="c">
+                    <div class="f-col fragment fade-in" data-id="c">
                         <div class="f-definition f-col">
                             <div data-id="c.a" class="f-header" style="background-color: var(--au-turkis-dark)">RQ2
                             </div>
@@ -2197,113 +2086,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="f-col invisible" data-id="d">
-                        <div class="f-definition">
-                            <div data-id="d.a" class="f-header" style="background-color: var(--au-green-dark)">RQ3</div>
-                            <div data-id="d.b" class="f-content f-conclusion">
-                                How are methods for explaining neural networks best evaluated?
-                            </div>
-                            <div data-id="d.c" class="f-summary">
-                                <ul>
-                                    <li>Insights into what metrics capture 📌</li>
-                                    <li>Two new metrics 📊</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section data-state="conclusion-header" data-auto-animate>
-                <div class="hypothesis f-conclusion" data-id="a">
-                    We hypothesize that crossing generative models with explainability can
-                    produce state-of-the-art methods for explaining neural networks.
-                </div>
-                <div class="f-container">
-                    <div class="f-col" data-id="b">
-                        <div class="f-definition f-col">
-                            <div data-id="b.a" class="f-header" style="background-color: var(--au-purple-dark)">RQ1
-                            </div>
-                            <div data-id="b.b" class="f-content f-conclusion">
-                                How can the efficiency of machine learning algorithms be improved?
-                            </div>
-                            <div data-id="b.c" class="f-content">
-                                <ul>
-                                    <li>Two fast algorithms 🏃💨</li>
-                                    <li>$\Rightarrow$ potentially improving generative models 🧬</li>
-                                    <li>$\Rightarrow$ potentially improving explainability methods 🪄</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="f-col" data-id="c">
-                        <div class="f-definition f-col">
-                            <div data-id="c.a" class="f-header" style="background-color: var(--au-turkis-dark)">RQ2
-                            </div>
-                            <div data-id="c.b" class="f-content f-conclusion">
-                                How can generative models be utilized for explaining neural networks?
-                            </div>
-                            <div data-id="c.c" class="f-summary">
-                                <ul>
-                                    <li>Fast counterafactual explanations 🏃💨</li>
-                                    <li>Analytical solution 🤩</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="f-col invisible" data-id="d">
-                        <div class="f-definition">
-                            <div data-id="d.a" class="f-header" style="background-color: var(--au-green-dark)">RQ3</div>
-                            <div data-id="d.b" class="f-content f-conclusion">
-                                How are methods for explaining neural networks best evaluated?
-                            </div>
-                            <div data-id="d.c" class="f-summary">
-                                <ul>
-                                    <li>Insights into what metrics capture 📌</li>
-                                    <li>Two new metrics 📊</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section data-state="conclusion-header" data-auto-animate>
-                <div class="hypothesis f-conclusion" data-id="a">
-                    We hypothesize that crossing generative models with explainability can
-                    produce state-of-the-art methods for explaining neural networks.
-                </div>
-                <div class="f-container">
-                    <div class="f-col" data-id="b">
-                        <div class="f-definition f-col">
-                            <div data-id="b.a" class="f-header" style="background-color: var(--au-purple-dark)">RQ1
-                            </div>
-                            <div data-id="b.b" class="f-content f-conclusion">
-                                How can the efficiency of machine learning algorithms be improved?
-                            </div>
-                            <div data-id="b.c" class="f-content">
-                                <ul>
-                                    <li>Two fast algorithms 🏃💨</li>
-                                    <li>$\Rightarrow$ potentially improving generative models 🧬</li>
-                                    <li>$\Rightarrow$ potentially improving explainability methods 🪄</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="f-col" data-id="c">
-                        <div class="f-definition f-col">
-                            <div data-id="c.a" class="f-header" style="background-color: var(--au-turkis-dark)">RQ2
-                            </div>
-                            <div data-id="c.b" class="f-content f-conclusion">
-                                How can generative models be utilized for explaining neural networks?
-                            </div>
-                            <div data-id="c.c" class="f-summary">
-                                <ul>
-                                    <li>Fast counterafactual explanations 🏃💨</li>
-                                    <li>Analytical solution 🤩</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="f-col" data-id="d">
+                    <div class="f-col fragment fade-in" data-id="d">
                         <div class="f-definition">
                             <div data-id="d.a" class="f-header" style="background-color: var(--au-green-dark)">RQ3</div>
                             <div data-id="d.b" class="f-content f-conclusion">
@@ -2413,6 +2196,7 @@
 
         history: true,
         transition: 'linear',
+        controlsTutorial: false,        // turn off arrow bumping
 
         keyboard: {
             13: go_to_slide,
